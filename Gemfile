@@ -8,7 +8,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 gem 'rails-ujs', '~> 5.1.0.beta1'
 gem 'jquery-rails'
-gem 'turbolinks'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
