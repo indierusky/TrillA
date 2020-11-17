@@ -34,7 +34,7 @@ render(){
 
             <form onSubmit ={this.handleSubmit}>
 
-            <label>Email Address:
+            <label>Email:
                 <input type='text' value={this.state.email} onChange={this.handleInput('email')}/>
 
             </label>

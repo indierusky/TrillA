@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_17_005449) do
+ActiveRecord::Schema.define(version: 2020_11_17_150859) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.integer "team_id", null: false
     t.string "title", null: false
     t.string "description", null: false
     t.date "due_date", null: false
@@ -39,7 +38,9 @@ ActiveRecord::Schema.define(version: 2020_11_17_005449) do
   create_table "comments", force: :cascade do |t|
     t.text "description"
     t.integer "author_id"
+    t.integer "card_id"
     t.index ["author_id"], name: "index_comments_on_author_id"
+    t.index ["card_id"], name: "index_comments_on_card_id"
   end
 
   create_table "lists", force: :cascade do |t|
@@ -50,13 +51,6 @@ ActiveRecord::Schema.define(version: 2020_11_17_005449) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_lists_on_board_id"
-  end
-
-  create_table "teams", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "type", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

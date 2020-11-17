@@ -13,3 +13,50 @@
  *= require_tree .
  *= require_self
  */
+
+
+ html, body, div {
+   padding: 0;
+   margin: 0;
+   font-family: sans-serif;
+ }
+
+
+ .session-form {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 90vh;
+   justify-content: center;
+   align-items: center;
+ }
+ .btns {
+     background-color: white;
+     padding: 20px;
+     box-shadow: 3px 3px 3px darkblue;
+     text-decoration: none;
+   }
+
+   form {
+     height: 500px;
+     width: 500px;
+     background: rgba(117, 9, 103, 0.089);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+   }
+   label {
+     color: #32405891;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: bold;
+    display: block;
+    width: 150px;
+   float: left;
+   }
+   button {
+     display: block;
+     padding: 20px;
+     margin: 35px;
+   }
+ 
