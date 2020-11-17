@@ -30,22 +30,22 @@ render(){
     return (
 
           <div className= 'session-form' >
-              <h2> Sign Up! </h2>
+              <h2 className="login-header"> Sign Up </h2>
 
             <form onSubmit ={this.handleSubmit}>
 
             <label>Email:
-                <input type='text' value={this.state.email} onChange={this.handleInput('email')}/>
+                <input type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')}/>
 
             </label>
                 <label>Username:
-                <input type='text' value={this.state.username} onChange={this.handleInput('username')} />
+                <input type='text' placeholder='enter username' value={this.state.username} onChange={this.handleInput('username')} />
 
                 </label>
                 <label>Password:
-                <input type='password' value={this.state.password} onChange={this.handleInput('password')} />
+                <input type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
                 </label>
-                <input type='submit' value="Sign Up"/>
+                <button className="login-btn" type='submit' > Sign Up </button>
             </form>
 
 

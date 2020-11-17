@@ -15,11 +15,11 @@ export default ({ currentUser, logout }) => {
             <div className="btns">
 
                 
-                <Link className="btns" to="/signup">Sign Up</Link>
+                <Link className="btn-signup" to="/signup">Sign Up</Link>
                 
                 
                
-                <Link className="btns" to="/login">Log In</Link>
+                <Link className="btn-login" to="/login">Log In</Link>
                 
             </div>
         );
