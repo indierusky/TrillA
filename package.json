@@ -23,8 +23,8 @@
     "test": "test"
   },
   "engines": {
-    "node": "12.5.0",
-    "npm": "6.9.0"
+    "node": "10.14",
+    "npm": "6.4.1"
   },
   "devDependencies": {
     "redux-devtools-extension": "^2.13.8"
