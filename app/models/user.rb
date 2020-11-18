@@ -10,12 +10,13 @@ validates :username, presence:true, uniqueness:true
 
 attr_reader :password 
 
-after_initialize :ensure_session_token
+after_initialize :ensure_session_token  
 
 has_many :boards,
 primary_key: :id,
 foreign_key: :user_id,
 class_name: 'Board'
+
 
 
 def self.find_by_credentials(email, password) 

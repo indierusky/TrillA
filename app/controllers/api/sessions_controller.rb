@@ -1,8 +1,10 @@
 class Api::SessionsController < ApplicationController
+  
+  before_action :current_user, only: [:destroy]
+  
   def create
  
-    @user = User.find_by_credentials(params[:user][:email], 
-                                    params[:user][:password])
+    @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
     if @user.nil?
       render json: ['There isn''t an account for that username'], status: 401
     else
@@ -12,7 +14,12 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
+   
     logout!
     render json: { message: 'Logging out........' }
   end
 end
+
+
+
+
