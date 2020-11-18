@@ -57,8 +57,9 @@
      text-decoration: none;
    }
 
-   input[type=text] {
+   input {
   background-color: white;
+  width: 100%;
   
 }
 
@@ -66,6 +67,12 @@
 
     color: gray;
   }
+
+  div.logo-img{
+position: absolute;
+top:0;
+left:0;
+}
 
    form {
      height: 500px;
@@ -78,7 +85,7 @@
    }
 
    label {
-     color: #32405891;
+     color: blue;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
      font-weight: bold;
     display: block;
@@ -89,7 +96,8 @@
      display: block;
      padding: 20px;
      margin: 35px;
-     color: white
+     color: white;
+     width: 100%;
    }
  
   
@@ -100,6 +108,17 @@
      padding: 20px;
      margin: 20px;
      color: white;
-     width: 140px;
-     height: 5px;
+     width: 100%;
+    
+   }
+
+   input.login-btn {
+     display: block;
+     background-color: white;
+     padding: 20px;
+     margin: 20px;
+     color:  green;
+     align-items: center;
+     width: 80%;
+    
    }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class Signin extends React.Component {
@@ -34,14 +35,14 @@ class Signin extends React.Component {
 
                 <form onSubmit={this.handleSubmit}>
 
-                    <label>Email:
-                <input type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />
+                    
+                <input className="login-btn" type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />
 
-                    </label>
-                    <label>Password:
-                <input type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
-                    </label>
+                  
+                <input className="login-btn" type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
+                   
                     <button className="login-btn" type='submit'  > Log In </button> 
+                    <Link to='/signup'> Can't log in? * Sign up for an account</Link>
                 </form>
 
 
