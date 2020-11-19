@@ -116,6 +116,15 @@ left:0;
  }
   
 
+ body { 
+    background: url('/images/trillabackground.jpg') repeat 0 0;
+    height: 100vh;
+}
+
+body{
+background-image:url(trillabackground.jpg);
+}
+
    button.login-btn {
      display: block;
      background-color: green;
@@ -125,6 +134,34 @@ left:0;
      width: 90%;
     
    }
+   .nav-buttons{
+     line-height: 12px;
+     width: 18px;
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     right:0;
+   }
+
+   .nav-buttons-child{
+    top: 10px;
+    right: 30px;
+    color:white;
+    background-color: blue;
+
+   }
+
+   .nav-buttons-child-login{
+    top: 10px;
+    right: 30px;
+    background-color: white;
+    color: blue;
+
+   }
+
 
 
 
@@ -145,6 +182,22 @@ left:0;
      width: 80%;
     
    }
+
+   .back-img{
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+   }
+
+   html { 
+  background: url(images/trillaback.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
    .modal-container {
    position: fixed;

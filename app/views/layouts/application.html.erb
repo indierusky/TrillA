@@ -2,10 +2,6 @@
 <html>
   <head>
 
-  <div className= "logo-img">
-      <img  src="https://i.ibb.co/X7GKK2t/Trilla-2.png" />
-      </div>
-
     <title></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -35,15 +31,14 @@
   </head>
 
   <body>
-   <ul>
- 
-  <% if flash[:errors] %>
-    <% flash[:errors].each do |error| %>
-      <li> <%= error %> </li>
-    <% end %>
-  <% end %>
-  </ul>
+
+  <div className= "back-img">
+    <img src="https://i.ibb.co/vdxV2VK/trillback.png" alt="trillback" width="1728" height="2304" data-load="full" style="">     
+    </div>
+
   
+
     <%= yield %>
   </body>
 </html>
+

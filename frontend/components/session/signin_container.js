@@ -12,9 +12,7 @@ const mapStateToProps = ({errors}) => {
             password: ''
     },
     
-    errors:  errors.session  
-    
-    
+        errors: errors.session
     }
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 
 
@@ -10,8 +10,23 @@ class Signin extends React.Component {
 
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
-
+        this.state = { hasError: false };
+        this.handleErrors = this.handleErrors.bind(this);
     };
+
+
+    
+
+
+  static getDerivedStateFromError(error) {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
+}
+
+componentDidCatch(error, errorInfo) {
+    // You can also log the error to an error reporting service
+    logErrorToMyService(error, errorInfo);
+}
 
     handleInput(field) {
 
@@ -30,7 +45,11 @@ class Signin extends React.Component {
     handleErrors() {
         const {errors} = this.props.errors;
 
-     
+        if(!errors || errors.length === 0){
+
+            return;
+        }else{
+        
         return (
             <ul>
                 {errors.map((error, idx) => (
@@ -40,7 +59,7 @@ class Signin extends React.Component {
                 ))}
             </ul>
         );
-   
+        }
           
     }
 
@@ -62,7 +81,7 @@ class Signin extends React.Component {
                     <br/>
                    Dont have an account? {this.props.other}
                     <div onClick={this.props.closeModal} className="close-x">X</div>
-                    {/* {this.handleErrors()} */}
+                     {this.handleErrors()}
                 <div className="login-form"> 
                         <br/>
                         <input className="login-btn" type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />

@@ -40,10 +40,10 @@ import { Link } from 'react-router-dom';
 const Nav = ({ currentUser, logout, openModal }) => {
 
     const sessionLinks = () => (
-        <nav >
-            <button className="buttonform" onClick={() => openModal('login')}>Login</button>
-      &nbsp;or&nbsp;
-            <button className="buttonform" onClick={() => openModal('signup')}>Signup</button>
+        <nav className="nav-buttons">
+            <button className="nav-buttons-child" onClick={() => openModal('login')}>Login</button>
+      &nbsp; &nbsp;
+            <button className="nav-buttons-child-login" onClick={() => openModal('signup')}>Signup</button>
         </nav>
     );
     const personalGreeting = () => (
