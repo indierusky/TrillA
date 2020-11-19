@@ -16,6 +16,7 @@ export default () => (
             <Link to="/" className="header" component={NavContainer}>
                 <h1>Trilla</h1>
             </Link>
+            
         {/* <Route path="/"  /> */}
         {/* <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={SigninContainer} /> */}
@@ -24,5 +25,7 @@ export default () => (
     </div>
 
 )
+
+
 
 

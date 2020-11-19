@@ -188,6 +188,10 @@ background-image:url(trillabackground.jpg);
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50%;
 
    }
 
@@ -197,6 +201,9 @@ background-image:url(trillabackground.jpg);
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
+  /* Full height */
+  height: 100%;
 }
 
    .modal-container {
