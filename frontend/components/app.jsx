@@ -25,8 +25,12 @@ export default () => (
             {/* <Link to="/" >
             </Link> */}
             <NavContainer />
-            <Route exact path="/" component={Home} />
+            
         </header>
+        <div className="home">
+
+            <Route exact path="/" component={Home} />
+        </div>
 
         {/* <Route path="/" component={NavContainer} /> */}
         {/* <Route exact path="/" component={Home} /> */}
