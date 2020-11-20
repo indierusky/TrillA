@@ -38,14 +38,14 @@ class Signin extends React.Component {
        
          const {errors} = this.props;
   
-       if(errors){
+       
         return this.props.errors.map((error, idx) => (
-                    <li key={`error-${idx}`}>
+            <li className="error-list" key={`error-${idx}`}>
                           {error}
                     </li>
                 ))
             
-       }    
+          
             
     }
            

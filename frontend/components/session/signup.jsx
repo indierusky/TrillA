@@ -31,7 +31,7 @@ handleErrors() {
 
     
         return this.props.errors.map((error, idx) => (
-            <li key={`error-${idx}`}>
+            <li className="error-list"  key={`error-${idx}`}>
                 {error}
             </li>
         ))
@@ -59,7 +59,7 @@ render(){
                   
                     {/* Have an account? {this.props.other}
                 <div onClick={this.props.closeModal} className="close-x" >X</div> */}
-                <ul>
+                <ul className="error-list">
                     {this.handleErrors()}
                 </ul>
                 <div className="login-form" > 
