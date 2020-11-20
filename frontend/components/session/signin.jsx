@@ -10,7 +10,7 @@ class Signin extends React.Component {
 
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = { hasError: false };
+      
         this.handleErrors = this.handleErrors.bind(this);
     };
 
@@ -18,15 +18,7 @@ class Signin extends React.Component {
     
 
 
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-}
-
-componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
-    logErrorToMyService(error, errorInfo);
-}
+  
 
     handleInput(field) {
 
@@ -38,63 +30,64 @@ componentDidCatch(error, errorInfo) {
     handleSubmit(e) {
 
         e.preventDefault();
-        this.props.login(this.state).then(this.props.closeModal);
-
+        this.props.login(this.state)
     }
 
     handleErrors() {
-        const {errors} = this.props.errors;
-
-        if(!errors || errors.length === 0){
-
-            return;
-        }else{
-        
-        return (
-            <ul>
-                {errors.map((error, idx) => (
+       
+       
+         const {errors} = this.props;
+  
+       if(errors){
+        return this.props.errors.map((error, idx) => (
                     <li key={`error-${idx}`}>
-                        {error}
+                          {error}
                     </li>
-                ))}
-            </ul>
-        );
-        }
-          
+                ))
+            
+       }    
+            
     }
+           
+        
+        
+          
+    
 
 
     render() {
-
         
       
         return (
 
             <div className='login-form-container' >
-                <h2 className= 'login-header' > Log in to Trilla </h2>
+               
+               <form onSubmit={this.handleSubmit} >
 
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+
+                    <h2 className='login-header' > Log in to Trilla </h2>
 
 
-                    
+                 
+                   {/* Dont have an account? {this.props.other}
+                    <div onClick={this.props.closeModal} className="close-x">X</div> */}
 
-                    <br/>
-                   Dont have an account? {this.props.other}
-                    <div onClick={this.props.closeModal} className="close-x">X</div>
-                     {this.handleErrors()}
-                <div className="login-form"> 
-                        <br/>
+                    <ul>
+                        {this.handleErrors()}
+                    </ul>
+                    <div className="login-form"> 
+                        
                         <input className="login-btn" type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />
 
-                         <br/>
+                        
                         <input className="login-btn" type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
-                        <br/>
-                        <button className="login-btn" type='submit'  > Log In </button> 
+                       
+                        <button className="login-btn" type='submit'> Log In </button> 
                  
-                    {/* <Link to='/signup'> Can't log in? * Sign up for an account</Link> */}
-             </div> 
+                    <Link to='/signup'> Can't log in? * Sign up for an account</Link>
+            
+</div> 
                 </form>
-
           
 
              

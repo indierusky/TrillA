@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {NavLink, Link } from 'react-router-dom';
 
 // export default ({ currentUser, logout }) => {
 //     const display = currentUser ? (
@@ -41,9 +41,9 @@ const Nav = ({ currentUser, logout, openModal }) => {
 
     const sessionLinks = () => (
         <nav className="nav-buttons">
-            <button className="nav-buttons-child" onClick={() => openModal('login')}>Login</button>
+            <NavLink to={"/login"}><button className="nav-buttons-child-login">Login</button></NavLink>
       &nbsp; &nbsp;
-            <button className="nav-buttons-child-login" onClick={() => openModal('signup')}>Signup</button>
+            <NavLink to={"/signup"}><button className="nav-buttons-child">Signup</button></NavLink>
         </nav>
     );
     const personalGreeting = () => (

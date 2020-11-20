@@ -14,6 +14,57 @@
  *= require_self
  */
 
+ html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+
+
+
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+} 
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  /*
+  Get rid of native styling. Read more here:
+  http://css-tricks.com/almanac/properties/a/appearance/
+  */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
 
  html, body, div {
    padding: 0;
@@ -22,9 +73,11 @@
  }
 
 
+
+
  .session-form {
    display: flex;
-   background-color: blue;
+   background-color: whitesmoke;
    flex-direction: column;
    width: 100%;
    height: 90vh;
@@ -34,7 +87,7 @@
 
  .login-form {
    display: flex;
-   background-color: blue;
+   background-color:whitesmoke;
    flex-direction: column;
    width: 100%;
    height: 90vh;
@@ -45,7 +98,7 @@
  .login-form-box {
    outline: 1px solid black;
    padding: 20px;
-   background:blue;
+   background:whitesmoke;
    position: relative;
    height: 450px;
    width: 450px;
@@ -87,11 +140,12 @@ left:0;
    form {
      height: 500px;
      width: 500px;
-     background: blue ;
+     background: whitesmoke;
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
+     align-self: center;
    }
 
    label {
@@ -115,7 +169,7 @@ left:0;
    margin-left: 5%;
  }
   
-
+/* 
  body { 
     background: url('/images/trillabackground.jpg') repeat 0 0;
     height: 100vh;
@@ -123,7 +177,7 @@ left:0;
 
 body{
 background-image:url(trillabackground.jpg);
-}
+} */
 
    button.login-btn {
      display: block;
@@ -132,34 +186,39 @@ background-image:url(trillabackground.jpg);
      margin: 20px;
      color: white;
      width: 90%;
+     text-align: center;
     
    }
    .nav-buttons{
-     line-height: 12px;
+     line-height: 18px;
      width: 18px;
-     font-size: 8pt;
+     font-size: 16pt;
      font-family: tahoma;
      margin-top: 1px;
      margin-right: 2px;
      position:absolute;
+     /* float: right; */
      top:0;
      right:0;
    }
 
    .nav-buttons-child{
-    top: 10px;
-    right: 30px;
+    top: 40px;
+    right: 40px;
     color:white;
     background-color: blue;
+    position: relative;
+    
 
    }
 
    .nav-buttons-child-login{
-    top: 10px;
-    right: 30px;
+    top: 40px;
+    right: 40px;
     background-color: white;
     color: blue;
-
+    position: relative;
+    
    }
 
 
@@ -177,7 +236,6 @@ background-image:url(trillabackground.jpg);
      background-color: white;
      padding: 20px;
      margin: 20px;
-     color:  green;
      align-items: center;
      width: 80%;
     
@@ -195,7 +253,7 @@ background-image:url(trillabackground.jpg);
 
    }
 
-   html { 
+   /* html { 
   background: url(images/trillaback.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -203,8 +261,8 @@ background-image:url(trillabackground.jpg);
   background-size: cover;
   
   /* Full height */
-  height: 100%;
-}
+  /* height: 100%; */
+/* } */ */
 
    .modal-container {
    position: fixed;

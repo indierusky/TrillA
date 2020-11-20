@@ -34,14 +34,14 @@ export const receiveErrors = errors => ({
 export const createNewUser = formUser => dispatch => (
 
     postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), error => 
-        dispatch(receiveErrors(error)) )
+        dispatch(receiveErrors(error.responseJSON)) )
 
 );
 
 export const login = formUser => dispatch => (
 
     postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), error => 
-        dispatch(receiveErrors(error)) )
+        dispatch(receiveErrors(error.responseJSON)) )
 
 );
 

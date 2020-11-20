@@ -5,6 +5,17 @@ import Signup from './signup';
 import { openModal, closeModal } from '../../actions/modal_actions'
 
 
+const mapStateToProps = ({ errors }) => {
+    
+    return {
+       
+
+        errors: errors.session
+    }
+}
+
+
+
 
 const mapDispatchToProps = dispatch => {
 
@@ -23,4 +34,4 @@ other: (
 }
 
 
-export default connect(null, mapDispatchToProps)(Signup);
+export default connect(mapStateToProps, mapDispatchToProps)(Signup);

@@ -6,6 +6,7 @@ import {openModal, closeModal} from '../../actions/modal_actions'
 
 
 const mapStateToProps = ({errors}) => {
+   
     return {
     user: {
             email: '',
@@ -13,10 +14,9 @@ const mapStateToProps = ({errors}) => {
     },
     
         errors: errors.session
-    }
 }
 
-
+}
 const mapDispatchToProps = dispatch => {
 
     return {
