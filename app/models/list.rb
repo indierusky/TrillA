@@ -1,4 +1,4 @@
-class List < ApplicatonRecord 
+class List < ApplicationRecord 
 
 validates :title, presence:true
 
