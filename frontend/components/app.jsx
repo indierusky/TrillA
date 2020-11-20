@@ -21,7 +21,7 @@ export default () => (
 
     <div>
         {/* <Modal /> */}
-        <header>
+        <header className="home">
             {/* <Link to="/" >
             </Link> */}
             <NavContainer />
@@ -29,7 +29,7 @@ export default () => (
         </header>
 
         {/* <Route path="/" component={NavContainer} /> */}
-        <Route exact path="/" component={Home} />
+        {/* <Route exact path="/" component={Home} /> */}
       
         <Switch>
              {/* <Route path="/" component={Home} /> */}
