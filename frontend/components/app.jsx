@@ -4,7 +4,7 @@ import SignupContainer from './session/signup_container';
 import SigninContainer from './session/signin_container';
 import NavContainer from './navigation/nav_container';
 import Modal from './modal/modal';
-import Home from './home/home';
+import Home from './home';
 import {AuthRoute, ProtectedRoute} from '../utils/route_utils';
 import {
     Route,
