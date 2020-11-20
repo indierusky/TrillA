@@ -16,7 +16,7 @@ class_name: 'List'
 
 has_many :cards, through: :lists
 
-has_many :comments 
+has_many :comments, 
 through: :lists,
 source: :cards 
 
