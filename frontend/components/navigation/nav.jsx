@@ -47,10 +47,10 @@ const Nav = ({ currentUser, logout, openModal }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <hgroup className="header-group">
-            <h2 className="header-name">Hi, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
+        <nav className="nav-button-logout">
+            <h2 className="nav-button-logout-child">Hi, {currentUser.username}!</h2>
+            <button className="nav-button-logout-child" onClick={logout}>Log Out</button>
+        </nav>
     );
 
     return (
