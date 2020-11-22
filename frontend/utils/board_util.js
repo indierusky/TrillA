@@ -12,7 +12,7 @@ export const fetchBoard = boardId => (
 
 export const updateBoard = board => (
 
-    $.ajax({ method: 'patch', url: `/api/boards/${boardId}`, data: {board} })
+    $.ajax({ method: 'patch', url: `/api/boards/${board.id}`, data: {board} })
 
 )
 
@@ -28,10 +28,5 @@ export const deleteBoard = boardId => (
     $.ajax({ method: 'delete', url: `/api/boards/${boardId}`})
 
 )
-
-
-
-
-
 
 

@@ -3,10 +3,10 @@ class Board < ApplicationRecord
 validates :title, presence:true 
 
 
-belongs_to :user,
-primary_key: :id,
-foreign_key: :user_id,
-class_name: 'User'
+# belongs_to :user,
+# primary_key: :id,
+# foreign_key: :user_id,
+# class_name: 'User'
 
 has_many :lists,
 primary_key: :id,
@@ -15,10 +15,18 @@ class_name: 'List'
 
 
 has_many :cards, through: :lists
+has_many :comments, through: :lists
 
-has_many :comments, 
-through: :lists,
-source: :cards 
+has_many :teams
+has_many :users, :through => :teams 
+
+# has_and_belongs_to_many :users  
+
+
+
+
+
+
 
 
 

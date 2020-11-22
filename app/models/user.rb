@@ -12,10 +12,10 @@ attr_reader :password
 
 after_initialize :ensure_session_token  
 
-has_many :boards,             
-primary_key: :id,
-foreign_key: :user_id,
-class_name: 'Board'
+# has_many :boards,             
+# primary_key: :id,
+# foreign_key: :user_id,
+# class_name: 'Board'
 
 has_many :comments,
 primary_key: :id,
@@ -24,6 +24,12 @@ class_name: 'Comment'
 
 has_many :lists, through: :boards
 has_many :cards, through: :lists
+has_many :teams
+has_many :boards, :through => :teams 
+# has_and_belongs_to_many :boards
+
+
+
 
 
 

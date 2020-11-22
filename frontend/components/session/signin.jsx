@@ -30,7 +30,7 @@ class Signin extends React.Component {
     handleSubmit(e) {
 
         e.preventDefault();
-        this.props.login(this.state)
+        this.props.login(this.state).then(() => this.props.history.push('/boards'));
     }
 
     handleErrors() {
@@ -89,7 +89,22 @@ class Signin extends React.Component {
 </div> 
                 </form>
           
+                <div className="bottom-img">
 
+                    <img src="https://i.ibb.co/2dhKd3b/trillalowerleft.png" />
+
+
+                </div>
+
+                <div className="bottom-img-left">
+
+                    <img src="https://i.ibb.co/gj52CcR/trilalowerright.png" />
+
+
+                </div>
+
+
+                            
              
             </div>
         );

@@ -21,7 +21,7 @@ handleInput(field){
 handleSubmit(e){
 
     e.preventDefault();
-    this.props.createNewUser(this.state)
+    this.props.createNewUser(this.state).then(() => this.props.history.push('/boards'));
 }
 
 handleErrors() {
@@ -80,6 +80,24 @@ render(){
                 </div>
             </form>
 
+          
+                <div className="bottom-img">
+
+                    <img src="https://i.ibb.co/YpykNgk/newtrellobest.png" />
+
+
+                </div>
+
+            <div className="bottom-img-left">
+
+                <img src="https://i.ibb.co/YX6SYVW/tacoicon.png" />
+                    <p>      Meet Taco, </p> <br/> <p> Our company's mascot, He says hello!   </p> <br/>
+                    <p>      He will be emailing you to confirm your registration.  </p>
+
+
+            </div>
+
+                   
 
 
 

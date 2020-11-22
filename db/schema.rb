@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_20_052959) do
+ActiveRecord::Schema.define(version: 2020_11_20_231617) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 2020_11_20_052959) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer "author_id"
-    t.integer "card_id"
+    t.integer "author_id", null: false
+    t.integer "card_id", null: false
     t.text "description", null: false
     t.index ["author_id"], name: "index_comments_on_author_id"
     t.index ["card_id"], name: "index_comments_on_card_id"
@@ -51,6 +51,13 @@ ActiveRecord::Schema.define(version: 2020_11_20_052959) do
     t.string "status"
     t.date "due_date"
     t.index ["board_id"], name: "index_lists_on_board_id"
+  end
+
+  create_table "teams", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "board_id", null: false
+    t.index ["board_id"], name: "index_teams_on_board_id"
+    t.index ["user_id"], name: "index_teams_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
