@@ -11,13 +11,14 @@ constructor(props){
     
 super(props);
 this.handleBoards = this.handleBoards.bind(this);
+this.makeNewBoard = this.makeNewBoard.bind(this);
 
 }
 
 handleBoards(){
 
     
-    const boards = this.props.currentUser.boards;
+    const {boards} = this.props;
     const { deleteBoard } = this.props;
 
     if(boards) {
@@ -41,6 +42,12 @@ handleBoards(){
 }
 }
 
+  makeNewBoard(){
+
+    return
+
+  }
+
     
 
     render() {
@@ -53,20 +60,19 @@ handleBoards(){
 
         
 
-
-         <div>
+            
+         <div className="board-tile">
            {this.handleBoards()}
 
          </div>
         
-                {/*  */}
            
-     <div className="card-container">
-            <div className="card">
-         {/* <Link to="/boards/new"><h4><b>Create new board </b></h4></Link> */}
-                        <BoardFormContainer />
-  </div>
-</div>
+         <div className="board-tile"  >
+        <span className="board-tile-title" >
+                        <BoardFormContainer/>   
+                        
+        </span>
+        </div>
 </div>
         
         );

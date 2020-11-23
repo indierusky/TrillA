@@ -48,8 +48,13 @@ const Nav = ({ currentUser, logout, openModal }) => {
     );
     const personalGreeting = () => (
         <nav className="topnav">
-            <h2 className="topnav">Hi, {currentUser.username}!</h2>
-            <button className="topnav" onClick={logout}>Log Out</button>
+            <div className="topnav-logo">
+                <a href='https://trilla.herokuapp.com/#/signup'>
+                    <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" />
+                </a>
+            </div>
+            <h2 className= "topnav">     Hi, {currentUser.username}!</h2>
+            <button className="nav-button-logout" onClick={logout}>Log Out</button>
         </nav>
     );
 

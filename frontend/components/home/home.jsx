@@ -2,7 +2,7 @@ import React from 'react';
 // import { HotModuleReplacementPlugin } from 'webpack';
 
  const Home = () => (
-
+<div>
 <section className="home-top">
     <nav className="home-top">
     <div className="logo" >
@@ -33,27 +33,45 @@ import React from 'react';
          
     
 
-        
+             <a href='https://trilla.herokuapp.com/#/signup'>
     <form className="home-signup">
                 <input className="sign-email" placeholder="Email" />
                 <button className="sign-email" type="submit">Sign Up- Its Free! </button>
         </form> 
+        </a>
 
 </section> 
 
-    // <div>
+     <div>
 
         
-
-    //     <div className="home">
-    //         <img src="https://i.ibb.co/CMSBgRG/trhomepage.png" alt="trillamain"/>  
-            
+           
+        <div className="home">
+                 <a href='https://trilla.herokuapp.com/#/signup'>
+                 <img src="https://i.ibb.co/BTYLp6K/trillamidnew.png" alt="trillamid"/>  
+                 </a>
    
-    // </div>  
+    </div>  
 
         
-    // </div>
-)
+     </div>
+
+
+         <div>
+
+
+
+             <div className="home">
+                 <img src="https://i.ibb.co/8DQpLnf/trillahomepagebottom.png" alt="trillabot" />
+
+
+             </div>
+
+
+         </div>
+     </div>
+
+ )
 
 
 

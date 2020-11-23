@@ -12,6 +12,7 @@ const mapStateToProps = ({session}) => {
 return {
 
       currentUser: session.currentUser,
+      boards: session.currentUser.boards
       // board: state.boards[ownProps.match.params.boardId],
       // id: ownProps.match.params.boardId
       //dont think i need board and id inside board index will leave just in case

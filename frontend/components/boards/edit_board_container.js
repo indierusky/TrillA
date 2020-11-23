@@ -1,21 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createBoard } from '../../actions/board_actions';
+import { updateBoard, createBoard } from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import BoardForm from './board_form';
+import EditBoardForm from './board_form';
 
 
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
 
     return {
 
-        board: {
+        board: state.entities.boards[ownProps.match.params.boardId],
+        id: ownProps.match.params.boardId,
+        newBoard: {
 
             title: '',
-           
-        }
-        
+            description: ''
+        },
+
 
     }
 
@@ -25,8 +27,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
 
     return {
-
         createBoard: board => dispatch(createBoard(board)),
+        updateBoard: board => dispatch(updateBoard(board)),
         closeModal: () => dispatch(closeModal()),
         makeBoard: (
             <button onClick={() => dispatch(openModal('board'))}>
@@ -49,4 +51,4 @@ const mapDispatchToProps = dispatch => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoardForm);
+export default connect(mapStateToProps, mapDispatchToProps)(EditBoardForm);

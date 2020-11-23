@@ -21,11 +21,11 @@ class BoardForm extends React.Component {
 
     handleSubmit(e){
 
-        // const url = `/benches/${this.props.match.params.benchId}`
+        // const url = `/boards/${this.props.match.params.boardId}`
         // this.props.history.push(url);
 
         e.preventDefault();
-        this.props.createBoard(this.state).then(this.props.closeModal);
+        this.props.createBoard(this.state).then(this.props.closeModal()).then(() => this.props.history.push('/boards'));
     }
 
 
@@ -37,15 +37,16 @@ class BoardForm extends React.Component {
     render() {
 
         return (
-
+        <div>
+            <Modal/>
             <div className="card-form-container">
 
-                <Modal />   
+               
 
-                <form onSubmit={this.handleSubmit} className="card-container">
+                <form onSubmit={this.handleSubmit} className="card-container-box">
 
-                    <br />
-                                  {this.makeBoard}
+                  <br />  
+                                  {this.props.makeBoard}
 
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     <br/>
@@ -54,7 +55,7 @@ class BoardForm extends React.Component {
 
                         <input type="text" placeholder="Add board title" value={this.state.title} onChange={this.update('title')} />
                         <br />
-                        <button type="submit">Create Board</button>
+                        <button className="card-form" type="submit">Create Board</button>
 
                     </div>
                 </form>
@@ -66,15 +67,11 @@ class BoardForm extends React.Component {
        
        
              
-            <div className="card">
             
-                     Create new Board
-            
-             </div>    
          
     </div>       
 
-
+ </div>
         )
 
 
