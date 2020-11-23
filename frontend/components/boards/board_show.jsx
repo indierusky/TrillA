@@ -24,8 +24,9 @@ render (){
             <div className="single-board">
                 <Link to="/boards">Back Board Index</Link>
                 
+                           Your New Board 
             
-                    {this.props.board.title}
+                       {this.props.board.title}
             </div>
         </div>
     );

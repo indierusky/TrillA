@@ -1,5 +1,7 @@
 import React from 'react';
 import {NavLink, Link } from 'react-router-dom';
+import Modal from './../modal/modal';
+
 
 // export default ({ currentUser, logout }) => {
 //     const display = currentUser ? (
@@ -47,7 +49,8 @@ const Nav = ({ currentUser, logout, openModal }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <nav className="topnav">
+    <div>
+       <nav className="topnav">
             <div className="topnav-logo">
                 <a href='https://trilla.herokuapp.com/#/signup'>
                     <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" />
@@ -55,7 +58,10 @@ const Nav = ({ currentUser, logout, openModal }) => {
             </div>
             <h2 className= "topnav">     Hi, {currentUser.username}!</h2>
             <button className="nav-button-logout" onClick={logout}>Log Out</button>
+             
         </nav>
+           
+    </div>
     );
 
     return (

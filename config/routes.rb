@@ -13,7 +13,7 @@ namespace :api, defaults: { format: :json } do
   resources :lists, :cards, :comments
   resources :boards
   resource :session, only: [:create, :destroy]
-
+  resources :teams, only: [:create, :update, :destroy]
 end 
 root to: 'root#root'
 end

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { createBoard } from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BoardForm from './board_form';
@@ -49,4 +50,4 @@ const mapDispatchToProps = dispatch => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoardForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BoardForm));

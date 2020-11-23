@@ -5,13 +5,14 @@ import BoardFormContainer from './board_form_container';
 
 
 
+
 class BoardIndex extends React.Component {
 
 constructor(props){
     
 super(props);
 this.handleBoards = this.handleBoards.bind(this);
-this.makeNewBoard = this.makeNewBoard.bind(this);
+
 
 }
 
@@ -26,6 +27,7 @@ handleBoards(){
 
        
             <ul>
+                <li> These are your current boards! </li>
                 {
                     boards.map(board => (
                         <BoardIndexItem
@@ -42,17 +44,13 @@ handleBoards(){
 }
 }
 
-  makeNewBoard(){
-
-    return
-
-  }
+  
 
     
 
     render() {
        
-       
+       const board = '';
         return (
          
 
@@ -65,12 +63,13 @@ handleBoards(){
            {this.handleBoards()}
 
          </div>
-        
+                
            
          <div className="board-tile"  >
         <span className="board-tile-title" >
-                        <BoardFormContainer/>   
-                        
+                        Create new board    
+                 {this.props.makeBoard}    
+                   {/* <BoardFormContainer board={board} />      */}
         </span>
         </div>
 </div>
@@ -80,4 +79,4 @@ handleBoards(){
 }
 
 
-export default BoardIndex;
+export default withRouter(BoardIndex);

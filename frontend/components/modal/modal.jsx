@@ -6,6 +6,7 @@ import BoardFormContainer from './../boards/board_form_container';
 
 
 function Modal({ modal, closeModal }) {
+    debugger
     if (!modal) {
         return null;
     }

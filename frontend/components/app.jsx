@@ -24,8 +24,8 @@ export default () => (
  
 
     <div>
-        <Modal />
-
+        
+        <Modal /> 
         <header className="home">
             
             <NavContainer />
