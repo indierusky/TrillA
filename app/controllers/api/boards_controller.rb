@@ -50,7 +50,7 @@ def destroy
 
     if(@board)
             if @board.user_id != current_user.id
-                render json: ['Only the Creator can Destroy '], status: 422
+                render json: ['Only the Creator can Destroy '], status: 401
         
             else 
                   @board.destroy

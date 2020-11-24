@@ -21,4 +21,4 @@ const BoardIndexItem = ({board, deleteBoard}) => (
 );
 
 
-export default BoardIndexItem;
+export default withRouter(BoardIndexItem);

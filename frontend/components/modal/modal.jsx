@@ -2,7 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import BoardFormContainer from './../boards/board_form_container';
-
+import EditBoardContainer from './../boards/edit_board_container';
 
 
 function Modal({ modal, closeModal }) {
@@ -15,7 +15,9 @@ function Modal({ modal, closeModal }) {
         case 'board':
             component = <BoardFormContainer />;
             break;
-        
+        case 'edit':
+            component = <EditBoardContainer />; 
+            break;
         default:
             return null;
     }

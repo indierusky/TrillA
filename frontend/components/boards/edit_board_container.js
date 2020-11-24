@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateBoard, createBoard } from '../../actions/board_actions';
+import { fetchBoard,updateBoard, createBoard } from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import EditBoardForm from './board_form';
+import EditBoardForm from './edit_board_form';
+import {withRouter} from 'react-router-dom';
 
 
 
@@ -12,11 +13,11 @@ const mapStateToProps = (state, ownProps) => {
 
         board: state.entities.boards[ownProps.match.params.boardId],
         id: ownProps.match.params.boardId,
-        newBoard: {
+        // newBoard: {
 
-            title: '',
-            description: ''
-        },
+        //     title: '',
+        //     description: ''
+        // },
 
 
     }
@@ -27,11 +28,12 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
 
     return {
-        createBoard: board => dispatch(createBoard(board)),
+        // createBoard: board => dispatch(createBoard(board)),
+        fetchBoard: id => dispatch(fetchBoard(id)),
         updateBoard: board => dispatch(updateBoard(board)),
         closeModal: () => dispatch(closeModal()),
-        makeBoard: (
-            <button onClick={() => dispatch(openModal('board'))}>
+        editBoard: (
+            <button onClick={() => dispatch(openModal('edit'))}>
                 Edit Board
             </button>
         ),
@@ -51,4 +53,4 @@ const mapDispatchToProps = dispatch => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditBoardForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditBoardForm));

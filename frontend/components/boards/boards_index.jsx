@@ -71,16 +71,16 @@ handleBoards(){
             
          <div className="board-tile">
          
-         </div>
+                    </div>
                 
            
-         <div className="board-tile"  >
-        <span className="board-tile-title" >
+                <center> <div className="board-tile"  >
+       <span className="board-tile-title" >
                          
                  {this.props.makeBoard}    
                  
-        </span>
-        </div>
+                    </span> 
+                </div></center>
 </div>
         
         );

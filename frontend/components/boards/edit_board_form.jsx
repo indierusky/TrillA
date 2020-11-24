@@ -7,7 +7,9 @@ class EditBoardForm extends React.Component {
     constructor(props) {
         super(props)
 
+        
         this.state = this.props.board;
+        this.state.description = "";
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -37,7 +39,7 @@ class EditBoardForm extends React.Component {
         // this.props.history.push(url);
 
         e.preventDefault();
-        this.props.updateBoard(this.state).then(this.props.history.push(url));
+        this.props.updateBoard(this.state).then(this.props.closeModal()).then(this.props.history.push(url));
     }
 
 
@@ -50,7 +52,7 @@ class EditBoardForm extends React.Component {
 
         const {board} = this.props;
 
-        if (!board) return null;
+       
         return (
 
             <div className="card-form-container">
@@ -60,7 +62,7 @@ class EditBoardForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="card-container-box">
 
                     <br />
-                                {this.makeBoard}
+                                {this.editBoard}
 
                     {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     <br/>

@@ -64,8 +64,16 @@ class BoardForm extends React.Component {
 
                     </div>
                 </form>
+                <br/>
 
-            
+            <ul className="back-btns" >
+                <button className="back-sel1"> </button>
+                <button className="back-sel2"> </button>
+                <button className="back-sel3"> </button>
+                <button className="back-sel4"> </button>
+                <button className="back-sel5"> </button>
+
+            </ul>
 
         
 
