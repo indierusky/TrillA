@@ -1,5 +1,7 @@
 import React from 'react';
 import Modal from './../modal/modal';
+import {withRouter } from 'react-router-dom';
+
 
 
 
@@ -11,6 +13,8 @@ class BoardForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+
+
     update(field) {
 
 
@@ -18,15 +22,16 @@ class BoardForm extends React.Component {
     }
 
 
+    
 
     handleSubmit(e){
 
-        const url = `/boards/${this.props.match.params.boardId}`
-        this.props.history.push(url);
-
+       
+       
         e.preventDefault();
-        this.props.createBoard(this.state).then(this.props.closeModal()).then(() => this.props.history.push(url));
+        this.props.createBoard(this.state).then(this.props.closeModal()).then(this.props.fetchBoards());
     }
+
 
 
     
@@ -44,7 +49,7 @@ class BoardForm extends React.Component {
                
 
                 <form onSubmit={this.handleSubmit} className="card-container-box">
-                    Welcome to Trilla!
+                      New Board Form 
                   <br />  
                                   {/* {this.props.makeBoard} */}
 

@@ -329,15 +329,15 @@ background-image:url(trillabackground.jpg);
    bottom: 0;
    right: 0;
    left: 0;
-   width: 100%;
-   height: 100vh;
+   /* width: 100%;
+   height: 100vh; */
    background: rgba(0, 0, 0, 0.7);
    z-index: 10;
-   display: flex;
+   /* display: flex;
    justify-content: center;
-   visibility: hidden;
-   opacity: 0;
-   transition: visibilty 0, opacity 0.5s;
+    */
+   
+   /* transition: visibilty 0, opacity 0.5s; */
  }
 
  .modals{
@@ -345,10 +345,10 @@ background-image:url(trillabackground.jpg);
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: white;
+   /* background-color: white;
    display: flex;
    justify-content: space-around;
-   flex-direction: column;
+   flex-direction: column; */
  }
 .bg-active{
 visibility:  visible;
@@ -363,8 +363,11 @@ opacity: 1;
   height: 88px;
   background-color: #091e4214;
   padding:  8px;
-  display: inline-block;
-  justify-content: center;
+  float: left;
+  text-align: right;
+  /* display: flex;
+  flex-direction: row;  */
+  /* justify-content: center; */
 
 }
 
@@ -377,11 +380,35 @@ height: 17px;
 
 }
 
+img.tile{
+
+  height: 40px;
+  width: 40px;
+}
+
 
  .login-form-container {
    display: flex;
    justify-content: center;
     flex-direction: column;
+ }
+
+ ul.board-list{
+  justify-self: center;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-weight: 200;
+
+
+
+ }
+
+ h1.boardindex-title{
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+ position: relative;
+ align-self: center;
+ /* text-align: center; */
+color: #172b4d;
+
  }
 
 
@@ -403,6 +430,16 @@ height: 17px;
  }
 
 
+ h2.show-header{
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+ /* position: relative;
+ align-self: center; */
+ /* text-align: center; */
+ font-size: 18px;
+color: #172b4d;
+
+ }
+
  .header-name {
    margin: 7px 0 0 0;
 
@@ -422,6 +459,40 @@ color:  #000000;
 background-color: #CCCCCC;
 text-align: center;
 position: relative;
+
+}
+
+button.trill-logo-image{
+
+  width: 40px;
+  height: 32px;
+  padding: 0px 0px 0px 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+span.logo-img{
+
+  width: 16px;
+  height: 16px;
+}
+
+div.single-board-show{
+width: 100%;
+height: 100%;
+margin: 0px 0px 8px;
+padding: 0px 0px 8px;
+
+
+
+}
+
+div.board-show-header{
+  width: 100%; 
+  background-color: #0000003d;
+  padding: 8px 4px 4px 8px;
 
 }
 
@@ -547,7 +618,7 @@ transition: 0.3s;
 }
 
 .topnav {
-  overflow: hidden;
+  overflow: sticky;
   background-color: #0079bf;
 } 
 
@@ -682,9 +753,13 @@ width: 75px;
 height: 16px;
 position: absolute;
 background-color:  #0079bf;
-left: 0;
-top: -8;
-overflow: visible;
+display: block;
+margin: 0;
+padding: 0;
+top: -10;
+left: -10;
+/* align-items: baseline;
+overflow: hidden; */
 
 }
 div.board{

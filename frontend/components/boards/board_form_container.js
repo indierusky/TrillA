@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { createBoard } from '../../actions/board_actions';
+import { fetchBoards, createBoard } from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BoardForm from './board_form';
 
@@ -29,6 +29,7 @@ const mapDispatchToProps = dispatch => {
 
         createBoard: board => dispatch(createBoard(board)),
         closeModal: () => dispatch(closeModal()),
+        fetchBoards: ()=> dispatch(fetchBoards()),
         makeBoard: (
             <button onClick={() => dispatch(openModal('board'))}>
                 Create new board

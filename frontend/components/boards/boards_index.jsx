@@ -16,18 +16,26 @@ this.handleBoards = this.handleBoards.bind(this);
 
 }
 
+componentDidMount(){
+
+this.props.fetchBoards();
+
+}
+
 handleBoards(){
 
-    
     const {boards} = this.props;
     const { deleteBoard } = this.props;
+    
 
-    if(boards) {
+    
+
     return (
 
-       
-            <ul>
-                <li> These are your current boards! </li>
+      <div>
+         <center> <h1 className="boardindex-title"> Your Trilla Boards! </h1></center>
+            <div className="board-tile">
+                <span className="board-tile-title">  
                 {
                     boards.map(board => (
                         <BoardIndexItem
@@ -37,11 +45,12 @@ handleBoards(){
                         />
                     ))
                 }
-            </ul>
-       
+                </span>
+            </div>
+        </div>
     
 );
-}
+
 }
 
   
@@ -49,27 +58,27 @@ handleBoards(){
     
 
     render() {
-       
-       const board = '';
+      
+   
         return (
          
 
      <div>
 
-        
+                {this.handleBoards()}
+
 
             
          <div className="board-tile">
-           {this.handleBoards()}
-
+         
          </div>
                 
            
          <div className="board-tile"  >
         <span className="board-tile-title" >
-                        Create new board    
+                         
                  {this.props.makeBoard}    
-                   {/* <BoardFormContainer board={board} />      */}
+                 
         </span>
         </div>
 </div>

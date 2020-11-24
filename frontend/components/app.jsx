@@ -45,7 +45,7 @@ export default () => (
             <AuthRoute path="/signup" component={SignupContainer} />
             <AuthRoute path="/login" component={SigninContainer} />
             <ProtectedRoute exact path="/boards/:boardId" component={BoardsShowContainer} /> 
-            <ProtectedRoute path="/boards/:boardId/edit" component={EditBoardFormContainer} />
+            <ProtectedRoute exact path="/boards/:boardId/edit" component={EditBoardFormContainer} />
             <ProtectedRoute exact path="/boards" component={BoardsIndexContainer}/> 
             <ProtectedRoute exact path="/boards/new" component={BoardFormContainer} /> 
 

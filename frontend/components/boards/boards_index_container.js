@@ -1,19 +1,20 @@
 import React from 'react';
 import BoardIndex from './boards_index';
-import { deleteBoard} from '../../actions/board_actions';
+import { fetchBoards, deleteBoard} from '../../actions/board_actions';
 import { connect } from 'react-redux';
 import { openModal, closeModal } from '../../actions/modal_actions';
+import {userBoards } from '../../reducers/selector';
 
 
 
 
 
-const mapStateToProps = ({session}) => {
-  debugger 
+const mapStateToProps = (state) => {
+
 return {
 
-      currentUser: session.currentUser,
-      boards: session.currentUser.boards
+      currentUser: state.session.currentUser,
+       boards: userBoards(state.entities, state.session.currentUser.id)
       // board: state.boards[ownProps.match.params.boardId],
       // id: ownProps.match.params.boardId
       //dont think i need board and id inside board index will leave just in case
@@ -37,6 +38,7 @@ return {
             </button>
       ),
  deleteBoard: () => dispatch(deleteBoard()), 
+ fetchBoards: () => dispatch(fetchBoards())
    
 
 

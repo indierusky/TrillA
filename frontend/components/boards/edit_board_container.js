@@ -32,7 +32,7 @@ const mapDispatchToProps = dispatch => {
         closeModal: () => dispatch(closeModal()),
         makeBoard: (
             <button onClick={() => dispatch(openModal('board'))}>
-                Create new board
+                Edit Board
             </button>
         ),
     }

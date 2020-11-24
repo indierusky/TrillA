@@ -60,7 +60,7 @@ class EditBoardForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className="card-container-box">
 
                     <br />
-                             {/* Edit or  {this.makeBoard} */}
+                                {this.makeBoard}
 
                     {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     <br/>
@@ -69,6 +69,8 @@ class EditBoardForm extends React.Component {
 
                         <input type="text" placeholder="Edit board title" value={this.state.title} onChange={this.update('title')} />
                         <br />
+                        <input type="text" placeholder="Add a description" value={this.state.description} onChange={this.update('description')} />
+                        <br/>
                         <button className="card-form" type="submit">Edit Board</button>
 
                     </div>

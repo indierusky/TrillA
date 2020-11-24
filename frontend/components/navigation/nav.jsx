@@ -56,7 +56,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
                     <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" />
                 </a>
             </div>
-            <h2 className= "topnav">     Hi, {currentUser.username}!</h2>
+                <center><h2 className="topnav">     Hi, {currentUser.username}!</h2></center>
             <button className="nav-button-logout" onClick={logout}>Log Out</button>
              
         </nav>

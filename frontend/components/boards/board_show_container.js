@@ -5,8 +5,10 @@ import { fetchBoard} from '../../actions/board_actions';
 import BoardShow from './board_show';
 
 const mapStateToProps = (state, { match }) => {
-    const id = parseInt(match.params.boardId);
-    const board = state.entities[match.params.boardId] || {};
+    const id = match.params.boardId;
+    const board = state.entities.boards[match.params.boardId] || {};
+
+    
     return {
         id,
         board

@@ -1,12 +1,12 @@
 class Board < ApplicationRecord
 
-validates :title, presence:true 
+validates :title, :user_id, presence:true 
 
 
-# belongs_to :user,
-# primary_key: :id,
-# foreign_key: :user_id,
-# class_name: 'User'
+belongs_to :user,
+primary_key: :id,
+foreign_key: :user_id,
+class_name: 'User'
 
 has_many :lists,
 primary_key: :id,
