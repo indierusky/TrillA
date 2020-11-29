@@ -27,8 +27,8 @@ this.props.fetchCards(this.props.listId)
 
 handleCards() {
         if (this.props.cards.length === 0) return null;
-        const deleteCard = this.props;
-        const updateCard = this.props;
+        const {deleteCard} = this.props;
+        // const updateCard = this.props;
 
 
         const cardz = this.props.cards.map((card, index) => {

@@ -2,7 +2,7 @@ import { fetchCards } from "../utils/card_util";
 import { fetchLists } from "../utils/list_util";
 
 export const selectBoard = ({ boards}, id) => {
-debugger 
+
     if (boards[id]) {
         const board = boards[id];
         return board;
@@ -50,7 +50,7 @@ export const userLists = ({ lists }, id) => {
 
 
 export const selectCard = ({ cards }, id) => {
-debugger
+
     if (cards[id]) {
         const card = cards[id];
         return card;

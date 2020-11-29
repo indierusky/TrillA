@@ -29,7 +29,6 @@ componentDidMount(){
 
         const { lists } = this.props;
         const { deleteList } = this.props;
-debugger 
 
 
         return (

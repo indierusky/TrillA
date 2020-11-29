@@ -5,7 +5,7 @@ import { createCard, fetchCards} from "../../actions/card_actions";
 import CardForm from "./card_form";
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    
     return {
         listId: ownProps.listId,
         card:  {  task:  "",

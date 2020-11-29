@@ -36,7 +36,7 @@ class EditBoardForm extends React.Component {
 
 
     handleSubmit(e){
-        debugger 
+        
         // const url = `/boards/${this.props.id}`
         // this.props.history.push(url);
 
@@ -61,7 +61,7 @@ class EditBoardForm extends React.Component {
             <div className="card-form-container">
                
                 
-                <center>  Edit title or add description
+               
                 <form onSubmit={this.handleSubmit} className="card-container-box">
                                     
                     <br />
@@ -80,7 +80,7 @@ class EditBoardForm extends React.Component {
                         <button className="card-form" type="submit"></button>
 
                     </div>
-                    </form></center>
+                    </form>
 
             
 

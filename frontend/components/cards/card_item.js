@@ -6,7 +6,7 @@ import {openModal, closeModal} from '../modal/modal';
 import { fetchCard, deleteCard } from '../../actions/card_actions';
 
 const mapStateToProps = (state, ownProps) => {
-debugger
+
 
 return {
 
@@ -24,8 +24,8 @@ return {
 
     fetchCard: cardId => dispatch(fetchCard(cardId)),
     deleteCard: cardId => dispatch(deleteCard()),
-    openModal: () => dispatch(openModal('card')),
-    closeModal: () => dispatch(closeModal())
+    // openModal: () => dispatch(openModal('card')),
+    // closeModal: () => dispatch(closeModal())
 
 }
 
@@ -37,6 +37,7 @@ class CardItem extends React.Component {
 constructor(props){
 super(props)
 
+this.state = this.props.card;
 
 }
 
@@ -52,15 +53,15 @@ this.props.fetchCard(this.props.id)
 
 render() {   
 
-   const {card} = this.props;
+//    const {card} = this.props;
     
 return  (
 
 <div className="cardz-container">
     <div className="cardz-item">
         <span className="cardz-title"></span>
-                {card.task}
-        <button onClick={() => deleteCard(card.id)}>X</button>
+                {this.state.task}
+        <button onClick={() => this.props.deleteCard(this.state.id)}>X</button>
 
     </div>
 

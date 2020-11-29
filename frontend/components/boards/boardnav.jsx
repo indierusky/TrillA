@@ -95,7 +95,7 @@ return (
 
     </div>
 
-    <div className="boarnav-mid">
+    <div className="boardnav-mid">
 
             <input className="search-bar"/>  
             <button className="nav-button-logout" onClick={this.props.logout}>Log Out</button>

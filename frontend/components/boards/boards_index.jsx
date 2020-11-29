@@ -28,7 +28,7 @@ handleBoards(){
     const { deleteBoard } = this.props;
     const {editBoard } = this.props;
     
-    debugger
+    
     
 
     return (

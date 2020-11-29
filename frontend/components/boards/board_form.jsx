@@ -29,7 +29,8 @@ class BoardForm extends React.Component {
        
        
         e.preventDefault();
-        this.props.createBoard(this.state).then(this.props.closeModal()).then(this.props.fetchBoards());
+        this.props.createBoard(this.state).then(this.props.closeModal()).then(this.props.fetchBoards()).then(window.location.reload());
+       
     }
 
 
