@@ -11,6 +11,7 @@ import {userBoards } from '../../reducers/selector';
 
 const mapStateToProps = (state) => {
 
+
 return {
 
       currentUser: state.session.currentUser,
@@ -35,6 +36,11 @@ return {
       makeBoard: (
             <button onClick={() => dispatch(openModal('board'))}>
                   Create new board
+            </button>
+      ),
+      editBoard: (
+            <button onClick={() => dispatch(openModal('edit'))}>
+                  Edit Board
             </button>
       ),
  deleteBoard: () => dispatch(deleteBoard()), 

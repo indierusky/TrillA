@@ -1,7 +1,11 @@
+import { fetchCards } from "../utils/card_util";
+import { fetchLists } from "../utils/list_util";
+
 export const selectBoard = ({ boards}, id) => {
+debugger 
     if (boards[id]) {
         const board = boards[id];
-        return bench;
+        return board;
     }
     return {};
 };
@@ -24,3 +28,51 @@ export const userBoards = ({boards}, id) => {
     })
     return currentBoards;
 }
+
+
+export const userLists = ({ lists }, id) => {
+
+    // fetchLists(id)
+    let currentLists = [];
+
+
+    Object.values(lists).map(list => {
+        if (list.board_id === id) {
+            currentLists.push(list);
+
+
+        }
+
+    })
+
+    return currentLists;
+}
+
+
+export const selectCard = ({ cards }, id) => {
+debugger
+    if (cards[id]) {
+        const card = cards[id];
+        return card;
+    }
+    return {};
+};
+
+
+export const listedCards = ({ cards }, id) => {
+    // fetchCards(id)
+    let currentCards = [];
+
+    Object.values(cards).map(card => {
+        if (card.list_id === id) {
+            currentCards.push(card);
+
+
+        }
+
+    })
+    return currentCards;
+}
+
+
+

@@ -9,7 +9,7 @@ const _nullSession = {
 
 
 
-const sessionReducer = (state ={}, action) => {
+const sessionReducer = (state = _nullSession, action) => {
 
 Object.freeze(state);
 

@@ -4,16 +4,19 @@ import { fetchBoard} from '../../actions/board_actions';
 
 import BoardShow from './board_show';
 
+import {selectBoard} from '../../reducers/selector';
+
 const mapStateToProps = (state, { match }) => {
-    const id = match.params.boardId;
-    const board = state.entities.boards[match.params.boardId] || {};
+    
+return{
+        id: parseInt(match.params.boardId),
+        board: selectBoard(state.entities, parseInt(match.params.boardId)),
 
     
-    return {
-        id,
-        board
-    };
+   
+  }
 };
+
 
 const mapDispatchToProps = dispatch => ({
     fetchBoard: id => dispatch(fetchBoard(id))

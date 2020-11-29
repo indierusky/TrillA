@@ -49,7 +49,7 @@ class BoardForm extends React.Component {
                
 
                 <form onSubmit={this.handleSubmit} className="card-container-box">
-                      New Board Form 
+                       
                   <br />  
                                   {/* {this.props.makeBoard} */}
 
@@ -60,20 +60,20 @@ class BoardForm extends React.Component {
 
                         <input type="text" placeholder="Add board title" value={this.state.title} onChange={this.update('title')} />
                         <br />
-                        <button className="card-form" type="submit">Create Board</button>
+                        <input className="button-form" type="submit" disabled={!this.state.title}/>
 
                     </div>
                 </form>
                 <br/>
 
-            <ul className="back-btns" >
+            {/* <ul className="back-btns" >
                 <button className="back-sel1"> </button>
                 <button className="back-sel2"> </button>
                 <button className="back-sel3"> </button>
                 <button className="back-sel4"> </button>
                 <button className="back-sel5"> </button>
 
-            </ul>
+            </ul> */}
 
         
 

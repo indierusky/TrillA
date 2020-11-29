@@ -32,7 +32,18 @@ span, article, footer, time, small {
   background: transparent;
 }
 
+div.cardz-item{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+font-size: 18px;
+color: #172b4d;
+width: 240px;
+height: 20px;
+max-height: 20px;
+padding: 4px 8px;
+margin: 0px 0px 4px;
 
+
+}
 
 
 
@@ -229,6 +240,239 @@ background-image:url(trillabackground.jpg);
      text-align: center;
     
    }
+
+
+   nav.board-nav{
+    width: 100%;
+    height: 32;
+    background-color: #026AA7;
+    padding: 4px;
+    display: flex;
+    overflow: hidden;
+    top: 0;
+    max-height: 36px;
+   }
+
+   nav.board-nav > * {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+  box-sizing: content-box;
+  margin: auto 0;
+  z-index: 100;
+  position: sticky;
+   }
+
+   
+
+  button.notifications{
+  border-radius: 3px;
+  font-size: 24px;
+  text-align: center;
+  margin: auto 2px; 
+  padding: 0px 8px 0px 2px;
+  color: #ffffff;
+  width: 58px;
+  height: 32px;
+  border-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  cursor: pointer;
+
+   }
+
+   div.boardnav-mid{
+  height: inherit;
+  text-align: center;
+  /* width: 100%; */
+
+
+   }
+   div.boardnav-left{
+
+  
+  /* background-color: hsla(0,0%,100%,.3); */
+  border-radius: 4px;
+  font-size: 28px;
+  /* text-align: center; */
+  margin: auto; 
+  padding: 5px;
+  color: white;
+  /* justify-content: space-evenly; */
+  align-self: left;
+  float: left;
+  margin-left: -8px;
+  max-height: 24px;
+
+
+  /* top: 0;
+  left: 0; */
+
+   
+
+   }
+
+   button.home-lk{
+
+   /* background-color: hsla(0,0%,100%,.3); */
+    max-width: 32px;
+   max-height: 32px;
+   margin-left: 5px;
+    
+
+   }
+
+   .home-lk {
+  /* background-color: hsla(0,0%,100%,.3); */
+  border-radius: 4px;
+  font-size: 28px;
+  text-align: center;
+  margin: -10px; 
+  padding: 7px;
+  color: white;
+  /* height: 10px; */
+  display: inline-block;
+  max-height: 20px;
+  max-width: 20px;
+  margin-top: -10px;
+  overflow: visible;
+  margin-left: -10px;
+  height: auto;
+  background-color: inherit;
+  vertical-align: 25%;
+}
+
+   div.boardnav-right{
+  border-radius: 3px;
+  font-size: 24px;
+  text-align: center;
+  margin: auto 2px; 
+  padding: 4px;
+  color: white;
+  width: 58px;
+  border-style: none;
+  
+
+   }
+
+
+   .list-index-container {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 100%;
+  margin: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* 
+.list-index-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} */
+
+  .list-item-container {
+  width: 100%;
+  margin: 4px 4px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  position: relative;
+  margin: 10px;
+
+}
+
+.list-index-container:first-child {
+  margin-left: 30px;
+}
+
+.list-index-container:last-child {
+  margin-right: 30px;
+}
+
+.list-item-contents {
+  width: 240px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  position: relative;
+  white-space: normal;
+  overflow: visible;
+}
+
+.list-item-header {
+  flex: 0 0 auto;
+  padding: 10px 8px;
+  position: relative;
+  min-height: 20px;
+}
+
+.list-index-view {
+  display: flex;
+  padding-top: 10px;
+  background: linear-gradient(90deg,#2585d3,#0a4364);
+  height: 90vh;
+  position: relative;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+
+span.list-title{
+
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size:  16px;
+    color: #0079bf;
+   }
+
+
+
+
+   button.board-button {
+  background-color: hsla(0,0%,100%,.3);
+  border: none;
+  color: white;
+  margin-left: 20px; 
+  border-radius: 4px; 
+  font-size: 18px;
+  width: 90%;
+  max-height: 36px;
+  /* max-width: 52px; */
+  padding: 8px;
+
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: auto;
+  
+}
+
+
+   button.add-team-board{
+
+    margin: 0px 4px 0px  0px;
+    background-color: #ffffff4d;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+   }
+  
+   span.board-button{
+
+    padding: 0px 8px 0px 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size:  16px;
+    color: #ffffff
+   }
+
+
    .nav-buttons{
      line-height: 18px;
      width: 18px;
@@ -239,7 +483,7 @@ background-image:url(trillabackground.jpg);
      position:absolute;
      /* float: right; */
      top:0;
-     right:70px;
+     right:150px;
      display:  flex;
      flex-direction: row;
      
@@ -254,6 +498,7 @@ background-image:url(trillabackground.jpg);
     padding: 4px 8px;
     width: 60px;
     height: 25px;
+    justify-content: space-between;
     
 
    }
@@ -261,6 +506,15 @@ background-image:url(trillabackground.jpg);
    .nav-buttons-child-login{
     top: 30px;
     right: 70px;
+    background-color:#0079bf;
+    color: white ;
+    position: relative;
+    
+   }
+
+   .nav-buttons-child-demo{
+    top: 20px;
+    right: 55px;
     background-color:#0079bf;
     color: white ;
     position: relative;
@@ -278,7 +532,43 @@ background-image:url(trillabackground.jpg);
     color: green;
    }
 
-   
+   div.cardz-form-container {
+  width: 100%;
+  margin: 0px 8px 0px 4px;
+  padding: 0px 4px;
+  height: fit-content;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+div.cardz-form {
+  width: 240px;
+  min-width: 240px;
+  max-height: 40px;
+  padding: 4px 0px;
+  background-color: #ebecf0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+ div.cardz-form > * {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 8px;
+  /* box-sizing: content-box; */
+  margin: 10px;
+  
+  
+   }
+
+
 
    
 
@@ -307,7 +597,12 @@ background-image:url(trillabackground.jpg);
     margin: 0px 0px 4px;
    }
 
+ span.list-title{
 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  font-size: 14px;
+    
+ }
 
 
 
@@ -352,7 +647,7 @@ background-image:url(trillabackground.jpg);
 /* } */ 
 
 
-button.card-form{
+input.button-form{
 
 width: 109px;
 height: 32px;
@@ -363,7 +658,7 @@ color: #a5abda;
 
 }
 
-button.card-form:invalid{
+button:invalid{
 
   color: #f4f5f7;
 
@@ -393,6 +688,24 @@ button.card-form:invalid{
     white-space: nowrap;
 }
 
+input.search-bar{
+
+width: 240px;
+height: 16px;
+background-color: #ffffff;
+padding: 8px 30px 8px 8px;
+background-color: #ffffff4d;
+
+/* -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; */
+
+}
+/* input[type=text]:focus {
+  width: 100%;
+} */
+
+
+
    .modal-container {
    position: fixed;
    top: 0;
@@ -420,6 +733,13 @@ button.card-form:invalid{
    justify-content: space-around;
    flex-direction: column; */
  }
+
+ img.logo-bd{
+width: 20px;
+height: 20px;
+
+ }
+
 .bg-active{
 visibility:  visible;
 opacity: 1;
@@ -440,6 +760,54 @@ opacity: 1;
   /* justify-content: center; */
 
 }
+
+.board-tile-container{
+
+
+  width: 100%;
+  /* height: 88px; */
+  background-color: #091e4214;
+  padding:  8px;
+  float: left;
+  text-align: right;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  margin-top: 10px;
+  /* justify-content: center; */
+  margin: 10px;
+
+}
+
+.boards-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: auto;
+  float: right;
+    margin-top: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  /* overflow: visible; */
+}
+
+div.board-list-item {
+  width: 200px;
+  height: 90px;
+  padding: 8px;
+  justify-content: space-between;
+  background-color: #091e4214;
+  box-sizing: content-box;
+  outline: #0000FF;
+  
+  margin: 0 8px 8px 0;
+  box-sizing: border-box;
+  /* position: relative; */
+  cursor: pointer;
+}
+
+
 
 
 span.board-tile-title{
@@ -480,6 +848,61 @@ img.tile{
 color: #172b4d;
 
  }
+
+
+ 
+
+ div.list-form-container {
+  width: 240px;
+  margin: 0px 8px 0px 4px;
+  padding: 4px;
+  height: 100%;
+  /* box-sizing: border-box; */
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  justify-content: space-between;
+
+  
+}
+
+form.list-form {
+  width: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  padding: 4px 8px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 32px;
+  justify-content: space-between;
+  
+}
+
+button.list-input {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  line-height: 20px;
+  padding: 8px 12px;
+  background-color: #5aac44;
+  border: none;
+  border-radius: 2px;
+  margin: 0px 4px 0px 4px;
+  color: #ffffff;
+}
+
+div.btn-lst-wrap{
+
+  height:20px;
+  width: 240px;
+}
+
+.list-input-title:focus {
+  box-shadow: inset 0 0 0 2px #0079bf;
+}
+
+
 
 
  .close-x {
@@ -682,7 +1105,11 @@ width: 193px
   outline: 1px solid black;
    padding: 20px;
    background: white;
-   position: relative;
+   display: flex;
+   flex-direction: column-reverse;
+   justify-content: center;
+   align-self: center;
+   /* position: relative; */
 
 
 } 
@@ -820,6 +1247,7 @@ background-color: #0079bf;
 
 }
 
+
 div.logo{
 
 width: 50px;
@@ -887,6 +1315,37 @@ align-self: right;
 position: absolute;
 left: 0px;
 bottom:0px;
+}
+
+
+.board-index-view {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+}
+
+.index-container {
+  margin: 64px 20% 0 20%;
+  width: auto;
+  max-width: 832px;
+
+}
+
+form.cardz-form{ 
+
+  padding: 4px 0px 8px 0px;
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 32px;
+
 }
 
 

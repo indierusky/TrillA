@@ -1,4 +1,4 @@
-import {postUser, deleteSession, postSession} from '../utils/session';
+import {postUser, deleteSession, postSession, demoLogin} from '../utils/session';
 
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
@@ -25,6 +25,10 @@ const logoutCurrentUser = () => {
     }
 };
 
+
+
+
+
 export const receiveErrors = errors => ({
     type: RECEIVE_ERRORS,
     errors
@@ -41,18 +45,24 @@ export const createNewUser = formUser => dispatch => (
 export const login = formUser => dispatch => (
 
     postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), error => 
-        dispatch(receiveErrors(error.responseJSON)) )
+        dispatch(receiveErrors(error.responseJSON)))
 
 );
 
 export const logout = () => dispatch => (
 
-    deleteSession().then(() => dispatch(logoutCurrentUser()))
+    deleteSession().then(() => dispatch(logoutCurrentUser()), 
+                          error =>dispatch(receiveErrors(error.responseJSON)) )
 
 );
 
+export const loginDemo = () => dispatch => (
+    demoLogin().then(demoUser => dispatch(receiveCurrentUser(demoUser)),
+        errors => dispatch(receiveErrors(errors.responseJSON)) )
+    
 
 
+);
 
 
 

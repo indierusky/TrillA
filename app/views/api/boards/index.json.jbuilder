@@ -1,6 +1,6 @@
 @boards.each do |board|
   json.set! board.id do 
-json.extract! board, :id, :user_id, :title, :description 
+json.partial! "api/boards/board", board: board
 end
 
 end 

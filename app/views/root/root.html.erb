@@ -1,3 +1,14 @@
+
+<% if logged_in? %>
+    <script>
+      window.currentUser = <%= render(
+        "api/users/user.json.jbuilder", 
+        user: current_user).html_safe 
+      %>
+    </script>
+  <% end %>
+
+
 <div id="root">
   <h1>REACT IS BROKEN! GET TO WORK! CHECK FOR ERRORS! </h1>
 </div>

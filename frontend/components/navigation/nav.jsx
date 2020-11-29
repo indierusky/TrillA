@@ -39,23 +39,25 @@ import Modal from './../modal/modal';
 
 
 
-const Nav = ({ currentUser, logout, openModal }) => {
+const Nav = ({ currentUser, logout, openModal,loginDemo }) => {
 
     const sessionLinks = () => (
         <nav className="nav-buttons">
             <NavLink to={"/login"}><button className="nav-buttons-child-login">Login</button></NavLink>
       &nbsp; &nbsp;
             <NavLink to={"/signup"}><button className="nav-buttons-child">Signup</button></NavLink>
+            <button onClick={loginDemo}className="nav-buttons-child-demo">Demo</button>
+
         </nav>
     );
     const personalGreeting = () => (
     <div>
        <nav className="topnav">
-            <div className="topnav-logo">
+            {/* <div className="topnav-logo"> */}
                 <a href='https://trilla.herokuapp.com/#/signup'>
                     <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" />
                 </a>
-            </div>
+            {/* </div> */}
                 <center><h2 className="topnav">     Hi, {currentUser.username}!</h2></center>
             <button className="nav-button-logout" onClick={logout}>Log Out</button>
              

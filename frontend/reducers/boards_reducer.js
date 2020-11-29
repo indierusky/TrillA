@@ -1,7 +1,9 @@
 import { RECEIVE_ALL_BOARDS, RECEIVE_BOARD, REMOVE_BOARD } from "../actions/board_actions";
 
 
+
 const boardsReducer = (state = {}, action) => {
+
 Object.freeze(state);
 let nextState = Object.assign({}, state);
 

@@ -1,14 +1,14 @@
  
-export const fetchLists = () => (
+export const fetchLists = boardId => (
 
-    $.ajax({method: 'get', url: '/api/lists'})
+    $.ajax({method: 'get', url: `/api/boards/${boardId}/lists`})
 )
 
+// don't think I need this at all, pretty sure i dont but save just in case
+// export const fetchList = listId => (
 
-export const fetchList = listId => (
-
-    $.ajax({ method: 'get', url: `/api/lists/${listId}` })
-)
+//     $.ajax({ method: 'get', url: `/api/lists/${listId}` })
+// )
 
 export const deleteList = listId => (
 
@@ -21,25 +21,17 @@ export const updateList = list => (
     $.ajax({ method: 'patch', url: `/api/lists/${list.id}`, data: {list} })
 )
 
-export const createList = list => (
+export const createList = (boardId, list) => (
 
-    $.ajax({ method: 'post', url: `/api/lists`, data: {list} })
+    $.ajax({ method: 'post', url: `/api/boards/${boardId}/lists`, data: {list} })
 )
 
 
-
+        //   api_board_lists GET    /api/boards/:board_id/lists(.:format)                                                    api/lists#index {:format=>:json}
+        //                   POST   /api/boards/:board_id/lists(.:format)                                            api/lists#create {:format=>:json}
 
 
 
             
             
             
-            
-            //     api_lists GET    /api/lists(.:format)                                                                     api/lists#index {:format=>:json}
-            //               POST   /api/lists(.:format)                                                                     api/lists#create {:format=>:json}
-            //  new_api_list GET    /api/lists/new(.:format)                                                                 api/lists#new {:format=>:json}
-            // edit_api_list GET    /api/lists/:id/edit(.:format)                                                            api/lists#edit {:format=>:json}
-            //      api_list GET    /api/lists/:id(.:format)                                                                 api/lists#show {:format=>:json}
-            //               PATCH  /api/lists/:id(.:format)                                                                 api/lists#update {:format=>:json}
-            //               PUT    /api/lists/:id(.:format)                                                                 api/lists#update {:format=>:json}
-            //               DELETE /api/lists/:id(.:format)                                                                 api/lists#destroy {:format=>:json}

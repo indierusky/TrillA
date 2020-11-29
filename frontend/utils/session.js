@@ -21,3 +21,14 @@ export const deleteSession = () => (
 )
 
 
+
+export const demoUser = {
+   
+    email: "andrewrobinson",
+    password: "football"
+};
+
+export const demoLogin = () => (
+    postSession(demoUser)
+
+);

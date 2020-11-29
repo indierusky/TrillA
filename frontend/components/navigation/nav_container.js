@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Nav from './nav';
-import { logout } from '../../actions/session';
+import { logout, loginDemo} from '../../actions/session';
 import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = state => ({
@@ -10,7 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
-    openModal: modal => dispatch(openModal(modal))
+    openModal: modal => dispatch(openModal(modal)),
+    loginDemo: () => dispatch(loginDemo())
 });
 
 

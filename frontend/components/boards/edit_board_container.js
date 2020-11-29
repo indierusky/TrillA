@@ -1,18 +1,23 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchBoard,updateBoard, createBoard } from '../../actions/board_actions';
+import { fetchBoard,fetchBoards, updateBoard} from '../../actions/board_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import EditBoardForm from './edit_board_form';
 import {withRouter} from 'react-router-dom';
+import {selectBoard} from '../../reducers/selector';
 
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state, {match}) => {
 
     return {
+        board: selectBoard(state.entities, parseInt(match.params.boardId)),
+        id: parseInt(match.params.boardId),
 
-        board: state.entities.boards[ownProps.match.params.boardId],
-        id: ownProps.match.params.boardId,
+    
+
+            
+        
         // newBoard: {
 
         //     title: '',
@@ -30,6 +35,7 @@ const mapDispatchToProps = dispatch => {
     return {
         // createBoard: board => dispatch(createBoard(board)),
         fetchBoard: id => dispatch(fetchBoard(id)),
+        fetchBoards: () => dispatch(fetchBoards()),
         updateBoard: board => dispatch(updateBoard(board)),
         closeModal: () => dispatch(closeModal()),
         editBoard: (

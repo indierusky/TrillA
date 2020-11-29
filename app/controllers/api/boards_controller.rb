@@ -28,7 +28,7 @@ end
         if @boards
             render "api/boards/index"
         else
-            render json: @board.errors.full_messages, status: 401
+            render json: @boards.errors.full_messages, status: 401
         end 
     end
 

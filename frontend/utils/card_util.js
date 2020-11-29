@@ -1,6 +1,6 @@
-export const fetchCards = () => (
+export const fetchCards = listId => (
 
-    $.ajax({ method: 'get', url: `/api/cards` })
+    $.ajax({ method: 'get', url: `/api/lists/${listId}/cards` })
 
 )
 
@@ -12,13 +12,13 @@ export const fetchCard = cardId => (
 
 export const updateCard = card => (
 
-    $.ajax({ method: 'patch', url: `/api/cards/${cardId}`, data: { card } })
+    $.ajax({ method: 'patch', url: `/api/lists/${cardId}`, data: { card } })
 
 )
 
-export const createCard = card => (
+export const createCard = (listId, card )=> (
 
-    $.ajax({ method: 'post', url: `/api/cards`, data: { card } })
+    $.ajax({ method: 'post', url: `/api/lists/${listId}/cards`, data: { card } })
 
 
 )
@@ -27,15 +27,13 @@ export const deleteCard = cardId => (
 
     $.ajax({ method: 'delete', url: `/api/cards/${cardId}` })
 
-)
+ )
 
-
-//                 api_cards GET    /api/cards(.:format)                                                                     api/cards#index {:format=>:json}
-//                           POST   /api/cards(.:format)                                                                     api/cards#create {:format=>:json}
-//              new_api_card GET    /api/cards/new(.:format)                                                                 api/cards#new {:format=>:json}
-//             edit_api_card GET    /api/cards/:id/edit(.:format)                                                            api/cards#edit {:format=>:json}
-//                  api_card GET    /api/cards/:id(.:format)                                                                 api/cards#show {:format=>:json}
-//                           PATCH  /api/cards/:id(.:format)                                                                 api/cards#update {:format=>:json}
-//                           PUT    /api/cards/:id(.:format)                                                                 api/cards#update {:format=>:json}
-//                           DELETE /api/cards/:id(.:format)                                                                 api/cards#destroy {:format=>:json}
-
+//            api_list_cards GET    /api/lists/:list_id/cards(.:format)                                                      api/cards#index {:format=>:json}
+//                           POST   /api/lists/:list_id/cards(.:format)                                                      api/cards#create {:format=>:json}
+//         new_api_list_card GET    /api/lists/:list_id/cards/new(.:format)                                                  api/cards#new {:format=>:json}
+//        edit_api_list_card GET    /api/lists/:list_id/cards/:id/edit(.:format)                                             api/cards#edit {:format=>:json}
+//             api_list_card GET    /api/lists/:list_id/cards/:id(.:format)                                                  api/cards#show {:format=>:json}
+//                           PATCH  /api/lists/:list_id/cards/:id(.:format)                                                  api/cards#update {:format=>:json}
+//                           PUT    /api/lists/:list_id/cards/:id(.:format)                                                  api/cards#update {:format=>:json}
+                        //   DELETE /api/lists/:list_id/cards/:id(.:format)                                                  api/cards#destroy {:format=>:json}

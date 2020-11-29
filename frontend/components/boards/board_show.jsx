@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ListIndexContainer from './../lists/list_index_container';
+import BoardNavContainer from './board_nav_container'; 
+
 
 import { ProtectedRoute } from '../../utils/route_utils';
 
@@ -37,30 +40,24 @@ render (){
 
     const {board} = this.props;
     const {description} = board;
-    if (description) this.handleDes
+    if (description) {this.handleDes}
     return (
+        <>
+        <BoardNavContainer />
 
-        
         <div className="single-board-show">
 
-        <center><h1><Link to="/boards">Back Board Index</Link></h1></center> 
+        
         <br/>
             <div className="board-show-header" >
                 <br/>
-                <h2 className="show-header">  Welcome to the {this.props.board.title}  Trilla Board!  <Link to={`/boards/${this.props.board.id}/edit`}> ---Click Here to --- Edit Title Or Add a description to this board</Link></h2>
+                <h2 className="show-header">  Welcome to the {board.title}  Trilla Board!  <Link to={`/boards/${this.props.board.id}/edit`}> ---Click Here to --- Edit Title Or Add a description to this board</Link></h2>
                 
-                        <button className="trill-logo-image">
-                            Board 
-                            <span className="logo-image">
-                                    
-                                    <img className="tile" src="https://i.ibb.co/wcCwMt4/trillalogoimage.png" />
-                            </span>
-                        
-                        </button>
-            
+                    <ListIndexContainer  />   
                        
             </div>
         </div>
+        </>
     );
 };
 

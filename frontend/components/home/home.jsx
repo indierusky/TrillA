@@ -1,8 +1,14 @@
 import React from 'react';
+import NavContainer from './../navigation/nav_container';
 // import { HotModuleReplacementPlugin } from 'webpack';
 
  const Home = () => (
-<div>
+<div className="home">
+ <header className="home">
+
+     <NavContainer />
+
+  </header>
 <section className="home-top">
     <nav className="home-top">
     <div className="logo" >

@@ -26,27 +26,23 @@ export default () => (
     <div>
         
         <Modal /> 
-        <header className="home">
-            
-            <NavContainer />
-            
-        </header>
-        <div className="home">
+        
+        {/* <div className="home">
 
-            <Route exact path="/" component={Home} />
-        </div>
+         <Route exact path="/" component={Home} />
+        </div> */}
 
         {/* <Route path="/" component={NavContainer} /> */}
         {/* <Route exact path="/" component={Home} /> */}
       
         <Switch>
-             {/* <Route path="/" component={Home} /> */}
-             <Route exact path="/home" component={Home} />
+             <Route exact path="/" component={Home} />
+            <ProtectedRoute exact path="/boards" component={BoardsIndexContainer} /> 
+            <Route exact path="/" component={BoardsIndexContainer}/>
             <AuthRoute path="/signup" component={SignupContainer} />
             <AuthRoute path="/login" component={SigninContainer} />
             <ProtectedRoute exact path="/boards/:boardId" component={BoardsShowContainer} /> 
             <ProtectedRoute exact path="/boards/:boardId/edit" component={EditBoardFormContainer} />
-            <ProtectedRoute exact path="/boards" component={BoardsIndexContainer}/> 
             <ProtectedRoute exact path="/boards/new" component={BoardFormContainer} /> 
 
         </Switch>

@@ -1,7 +1,7 @@
 import React from 'react';
 import BoardIndexItem from './board_index_item';
+import BoardNavContainer from "./board_nav_container";
 import { Link, withRouter } from 'react-router-dom';
-import BoardFormContainer from './board_form_container';
 
 
 
@@ -26,26 +26,35 @@ handleBoards(){
 
     const {boards} = this.props;
     const { deleteBoard } = this.props;
+    const {editBoard } = this.props;
     
-
+    debugger
     
 
     return (
-
+        
       <div>
-         <center> <h1 className="boardindex-title"> Your Trilla Boards! </h1></center>
-            <div className="board-tile">
-                <span className="board-tile-title">  
+        
+           
+            <div className="boards-list">
+
+                <span className="board-tile-title">
+
+                </span>
+                
                 {
                     boards.map(board => (
                         <BoardIndexItem
                             board={board}
                             deleteBoard={deleteBoard}
+                            editBoard={editBoard}
                             key={board.id}
                         />
                     ))
                 }
-                </span>
+                
+                
+               
             </div>
         </div>
     
@@ -61,28 +70,32 @@ handleBoards(){
       
    
         return (
+       <> 
+
+      <BoardNavContainer />
+     <div className="index-view">
+            <center> <h1 className="boardindex-title"> Your Trilla Boards! </h1></center>
+                    <center> <div className="board-tile"  >
+                        <span className="board-tile-title" >
+
+                            {this.props.makeBoard}
+
+                        </span>
+                    </div></center>
+
+              
+    <div className="index-container">
+            
+         {/* <div className="board-tile">
          
-
-     <div>
-
+                    </div> */}
                 {this.handleBoards()}
 
-
-            
-         <div className="board-tile">
-         
-                    </div>
-                
            
-                <center> <div className="board-tile"  >
-       <span className="board-tile-title" >
-                         
-                 {this.props.makeBoard}    
-                 
-                    </span> 
-                </div></center>
+              
 </div>
-        
+ </div>
+</>
         );
     }
 }
