@@ -21,7 +21,7 @@ before_action :current_user
       if @team.save
         render "api/teams/show"
       else
-        render json: @team.errors.full_messages , status 404
+        render json: @team.errors.full_messages, status: 404
       end
     else
       render json: ["This user does not exist."]
