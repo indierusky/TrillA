@@ -4,11 +4,11 @@ export const fetchLists = boardId => (
     $.ajax({method: 'get', url: `/api/boards/${boardId}/lists`})
 )
 
-// don't think I need this at all, pretty sure i dont but save just in case
-// export const fetchList = listId => (
 
-//     $.ajax({ method: 'get', url: `/api/lists/${listId}` })
-// )
+export const fetchList = listId => (
+
+    $.ajax({ method: 'get', url: `/api/lists/${listId}` })
+)
 
 export const deleteList = listId => (
 

@@ -5,6 +5,7 @@ import { logout } from '../../actions/session';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BoardNav from './boardnav';
 import {userBoards} from '../../reducers/selector';
+import {fetchBoards} from '../../actions/board_actions';
 
 const mapStateToProps = (state) => ({
     modal: state.ui.modal,
@@ -17,6 +18,7 @@ const mapDispatchToProps = (dispatch) => ({
     logout: () => dispatch(logout()),
     openModal: modal => dispatch(openModal(modal)),
     closeModal: () => dispatch(closeModal()),
+    fetchBoards: () => dispatch(fetchBoards()),
     makeBoard: (
         <button onClick={() => dispatch(openModal('board'))}>
             Create new board

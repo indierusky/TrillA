@@ -38,11 +38,11 @@ const mapDispatchToProps = dispatch => {
         fetchBoards: () => dispatch(fetchBoards()),
         updateBoard: board => dispatch(updateBoard(board)),
         closeModal: () => dispatch(closeModal()),
-        editBoard: (
-            <button onClick={() => dispatch(openModal('edit'))}>
-                Edit Board
-            </button>
-        ),
+        // editBoard: (
+        //     <button onClick={() => dispatch(openModal('edit'))}>
+        //         Edit Board
+        //     </button>
+        // ),
     }
 
 }

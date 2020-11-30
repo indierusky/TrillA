@@ -83,7 +83,7 @@ class Signin extends React.Component {
                         <input className="login-btn" type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
                        
                         <button className="login-btn" type='submit'> Log In </button> 
-                        <span>OR</span>
+                        
                         {/* <NavLink to='/boards' className="nav-buttons-child" onClick={this.props.loginDemo}>Demo User</NavLink> */}
                  
                     <NavLink to='/signup'> Can't log in? * Sign up for an account</NavLink>

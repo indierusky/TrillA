@@ -41,7 +41,7 @@ class EditBoardForm extends React.Component {
         // this.props.history.push(url);
 
         e.preventDefault();
-        this.props.updateBoard(this.state).then(this.props.closeModal()).then(this.props.fetchBoards());
+        this.props.updateBoard(this.state).then(this.props.closeModal()).then(this.props.history.push('/boards'));
     }
 
 
@@ -58,14 +58,14 @@ class EditBoardForm extends React.Component {
         return (
             
             
-            <div className="card-form-container">
+            <div className="edit-board-container">
                
                 
                
-                <form onSubmit={this.handleSubmit} className="card-container-box">
-                                    
+                <form onSubmit={this.handleSubmit} className="edit-board-form">
+                                    <h1 className="edit-heading"> Edit title and/or description </h1>
                     <br />
-                                {this.props.editBoard}
+                                {/* {this.props.editBoard} */}
 
                     {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     <br/>
