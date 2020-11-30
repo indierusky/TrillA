@@ -374,7 +374,7 @@ background-image:url(trillabackground.jpg);
 
   .list-item-container {
   width: 100%;
-  margin: 4px 4px;
+  padding: 15px 10px;
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
@@ -908,7 +908,7 @@ input.list-input{
 
   width: 100%;
   align-self: left;
-  margin-left: 5px;
+  margin-left: 5px 3px 2px;
 }
 .dropbtn {
   background-color: #3498DB;
