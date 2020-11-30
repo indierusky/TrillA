@@ -55,3 +55,6 @@ def team_params
 params.require(:team).permit(:title, :user_id, :board_id, :type)
 
 end 
+
+
+end 
