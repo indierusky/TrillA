@@ -16,7 +16,11 @@ class Signin extends React.Component {
 
 
     
+componentWillUnmount(){
 
+this.props.clearSessionErrors();
+
+}
 
   
 
@@ -35,7 +39,7 @@ class Signin extends React.Component {
 
     handleErrors() {
        
-       
+       debugger
          const {errors} = this.props;
   
        
@@ -59,24 +63,33 @@ class Signin extends React.Component {
         
       
         return (
+            <>
 
+             <center><img className="logo-form" src="https://i.ibb.co/GPchpq4/trillalogogy.png" alt="trillalogogray"/></center>
+
+                    
             <div className='login-form-container' >
+
+
                
-               <form onSubmit={this.handleSubmit} >
+               <form className="login-form-box" onSubmit={this.handleSubmit} >
 
 
-                    <h2 className='login-header' > Log in to Trilla </h2>
 
 
                  
                    {/* Dont have an account? {this.props.other}
                     <div onClick={this.props.closeModal} className="close-x">X</div> */}
 
-                    <ul>
-                        {this.handleErrors()}
-                    </ul>
+                    
                     <div className="login-form"> 
-                        
+
+                        <ul className="error-list">
+                        {this.handleErrors()}
+                        </ul>
+
+                                     <h2 className='login-header' > Log in to Trilla </h2>
+
                         <input className="login-btn" type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />
 
                         
@@ -86,11 +99,12 @@ class Signin extends React.Component {
                         
                         {/* <NavLink to='/boards' className="nav-buttons-child" onClick={this.props.loginDemo}>Demo User</NavLink> */}
                  
-                    <NavLink to='/signup'> Can't log in? * Sign up for an account</NavLink>
+                    <Link to='/signup'> * Sign up for an account * </Link>
             
-</div> 
+            </div> 
                 </form>
           
+           </div>
                 <div className="bottom-img">
 
                     <img src="https://i.ibb.co/2dhKd3b/trillalowerleft.png" />
@@ -98,9 +112,10 @@ class Signin extends React.Component {
 
                 </div>
 
-                <div className="bottom-img-left">
-
-                    <img src="https://i.ibb.co/gj52CcR/trilalowerright.png" />
+                <div >
+                    
+                    <img className="bottom-img-left" src="https://i.ibb.co/YpykNgk/newtrellobest.png" />
+                    {/* <img src="https://i.ibb.co/gj52CcR/trilalowerright.png" /> */}
 
 
                 </div>
@@ -108,7 +123,8 @@ class Signin extends React.Component {
 
                             
              
-            </div>
+           
+            </>
         );
     }
 

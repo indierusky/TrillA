@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { logout } from '../../actions/session';
+import { logout } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import BoardNav from './boardnav';
 import {userBoards} from '../../reducers/selector';

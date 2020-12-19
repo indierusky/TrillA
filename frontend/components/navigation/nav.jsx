@@ -3,59 +3,39 @@ import {NavLink, Link } from 'react-router-dom';
 import Modal from './../modal/modal';
 
 
-// export default ({ currentUser, logout }) => {
-//     const display = currentUser ? (
-
-//         <div>
-//             <p>
-//                 Hello, {currentUser.username}
-//             </p>
-//             <button className="btn-login" onClick={logout}> Log Out </button>
-//         </div>
-
-//     ) : (
-//             <div className="btns">
-
-                
-//                 <Link className="btn-signup" to="/signup">Sign Up</Link>
-                
-                
-               
-//                 <Link className="btn-login" to="/login">Log In</Link>
-                
-//             </div>
-//         );
-
-//     return (
-//         <header className="navigation">
-//             <h1 className="logo">Trilla</h1>
-//             <div>
-//                 {display}
-//             </div>
-//         </header>
-//     );
-// };
 
 
+const Nav = ({ currentUser, logout, openModal }) => {
 
-
-const Nav = ({ currentUser, logout, openModal,loginDemo }) => {
+    
 
     const sessionLinks = () => (
-        <nav className="nav-buttons">
-            <NavLink to={"/login"}><button className="nav-buttons-child-login">Login</button></NavLink>
-      &nbsp; &nbsp;
-            <NavLink to={"/signup"}><button className="nav-buttons-child">Signup</button></NavLink>
-            <button onClick={loginDemo}className="nav-buttons-child-demo">Demo</button>
+     <>
+      <nav className="home-nav">
+          <a href='https://trilla.herokuapp.com/#/signup'>
+         <img className="logo-new" src="https://i.ibb.co/5xZxCC1/trillanewl.png" alt="trillalogo" />
 
+        {/* <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo"/> */}
+                 </a>
+        <div className="nav-buttons">
+             
+            <NavLink to={"/login"}><button className="nav-buttons-child-login">Log In</button></NavLink>
+      &nbsp; &nbsp;
+            <NavLink to={"/signup"}><button className="nav-buttons-child">Sign Up</button></NavLink>
+            {/* <button onClick={loginDemo}className="nav-buttons-child-demo">Demo</button> */}
+        </div>
         </nav>
+     </>
     );
     const personalGreeting = () => (
     <div>
        <nav className="topnav">
             {/* <div className="topnav-logo"> */}
                 <a href='https://trilla.herokuapp.com/#/signup'>
-                    <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" />
+                    {/* <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo" /> */}
+                    <img src="https://gist.github.com/indierusky/d16e2526c95b58f9c159d60574ea9cf0#file-trillalogos-svg" alt="trillalogo" />
+
+                    
                 </a>
             {/* </div> */}
                 <center><h2 className="topnav">     Hi, {currentUser.username}!</h2></center>

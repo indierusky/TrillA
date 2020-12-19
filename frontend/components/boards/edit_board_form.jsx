@@ -1,6 +1,8 @@
 import React from 'react';
 import Modal from '../modal/modal';
 import { withRouter } from 'react-router-dom';
+import BoardNavContainer from './board_nav_container'; 
+
 
 
 
@@ -56,8 +58,9 @@ class EditBoardForm extends React.Component {
 
        
         return (
-            
-            
+            <>
+           <BoardNavContainer /> 
+
             <div className="edit-board-container">
                
                 
@@ -91,7 +94,7 @@ class EditBoardForm extends React.Component {
              
             
     </div>       
-
+</>
 
         )
 

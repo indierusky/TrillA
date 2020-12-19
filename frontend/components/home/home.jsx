@@ -3,30 +3,21 @@ import NavContainer from './../navigation/nav_container';
 // import { HotModuleReplacementPlugin } from 'webpack';
 
  const Home = () => (
-<div className="home">
- <header className="home">
+<>
+<NavContainer />
 
-     <NavContainer />
-
-  </header>
+{/* <div className="home"> */}
+ 
 <section className="home-top">
-    <nav className="home-top">
-    <div className="logo" >
-                 <a href='https://trilla.herokuapp.com/#/signup'>
-        <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo"/>
-                 </a>
-    </div>
-    <br/>
-    <br/>
-    </nav>
+    
 
     <h1 className="home-top">
-             <b><p>Trilla helps teams work </p> <p>more collaboratively and</p>  <p>get more done.</p></b> 
+             <b><p className = "home-topt">Trilla helps teams work </p> <p className = "home-topt">more collaboratively and</p>  <p className = "home-topt">get more done.</p></b> 
         
 
              <p className="home-topp">
                  Trilla’s boards, lists, and cards enable teams to organize and prioritize projects in a fun, flexible, and rewarding way.
-    </p>
+            </p>
 
        
              <div className="top-img" >
@@ -75,7 +66,8 @@ import NavContainer from './../navigation/nav_container';
 
 
          </div>
-     </div>
+     {/* </div> */}
+     </>
 
  )
 

@@ -137,24 +137,7 @@ input[type="submit"] {
    align-items: center;
  }
 
- .login-form {
-   display: flex;
-   background-color:whitesmoke;
-   flex-direction: column;
-   width: 100%;
-   height: 90vh;
-   justify-content: center;
-   align-items: center;
- }
-
- .login-form-box {
-   outline: 1px solid black;
-   padding: 20px;
-   background:whitesmoke;
-   position: relative;
-   height: 450px;
-   width: 450px;
- }
+ 
 
 
  .btn-signup {
@@ -178,10 +161,7 @@ input[type="submit"] {
   
 }
 
-  h2.login-header{
-
-    color: gray;
-  }
+  
 
   div.logo-img{
 position: absolute;
@@ -230,13 +210,17 @@ body{
 background-image:url(trillabackground.jpg);
 } */
 
-   button.login-btn {
+   
+
+
+   .demo-btn {
      display: block;
      background-color: green;
-     padding: 20px;
-     margin: 20px;
+     padding: 5px;
+     margin: 5px;
      color: white;
-     width: 90%;
+     height: 15px;
+     width: 40px;
      text-align: center;
     
    }
@@ -477,7 +461,7 @@ span.list-title{
 
    .nav-buttons{
      line-height: 18px;
-     width: 18px;
+     width: 100px;
      font-size: 16pt;
      font-family: tahoma;
      margin-top: 1px;
@@ -485,35 +469,77 @@ span.list-title{
      position:absolute;
      /* float: right; */
      top:0;
-     right:150px;
+     right: 0;
+     margin-right: 70px;
      display:  flex;
      flex-direction: row;
      
    }
 
    .nav-buttons-child{
-    top: 20px;
-    right: 60px;
+    /* top: 10px;
+    right: 10px; */
     background-color:white;
     color: #0079bf;
     position: relative;
     padding: 4px 8px;
-    width: 60px;
-    height: 25px;
+    width: 75px;
+    height: 28px;
+    border-radius: 8px;
     justify-content: space-between;
     
 
    }
 
+   .logo-new{
+    position: absolute;
+  margin-top: -20;
+  left: 0;
+   width: 140px;
+   height: 140px;
+   /* margin-bottom: 60px; */
+
+
+   }
+
    .nav-buttons-child-login{
-    top: 30px;
-    right: 70px;
+    /* top: 10px;
+    right: 20px; */
     background-color:#0079bf;
     color: white ;
     position: relative;
+    width: 67px;
+    height: 36px;
     
    }
 
+   .home-nav{
+    background-color:#0079bf;
+    margin-top: -40px;
+
+   }
+
+   .logo-form{
+
+    width: 140px;
+    height: 140px;
+    display: block;
+    /* float: middle; */
+    position: absolute;
+    top: -50px;
+    left: 45%;
+    /* align-items: center; */
+
+   }
+
+
+   .home{
+    
+    background-color:#0079bf;
+
+   
+
+   }
    .nav-buttons-child-demo{
     top: 20px;
     right: 55px;
@@ -615,13 +641,96 @@ div.cardz-form {
    .login-input {
    margin-left: 20px;
  }
+
+ .login-form {
+   display: flex;
+   background-color: #FFFFFF;
+   flex-direction: column;
+   /* width: 100%;
+   height: 90vh; */
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+
+   height: 320px;
+   width: 320px;
+   border-radius: 10px;
+ }
+
+ .login-form-box {
+   outline: 1px solid black;
+   padding: 20px;
+   top: 25%;
+   left: 40%;
+   background: #FFFFFF; 
+   position: absolute;
+   /* justify-content: center;
+   align-items: center; */
+   height: 400px;
+   width: 320px;
+    color: #4D4D4D;
+
+   box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
+
+
+ }
+
+ .login-header{
+
+ color: #4D4D4D;
+ margin-top: -300px;
+  position: absolute;
+  font-weight: 900;
+ }
+
+ .login-header-signup{
+
+ color: #4D4D4D;
+ margin-top: -400px;
+  position: absolute;
+  font-weight: 900;
+ }
+
+
+ .login-form-container {
+   display: flex;
+   justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 35%;
+    margin-left: 40px;
+  /* margin-top: 80px; */
+  width: 400px;
+  height: 586px;
+  padding: 25px 40px;
+  color: #4D4D4D;
+ }
+
    input.login-btn {
      display: block;
-     background-color: white;
-     padding: 20px;
-     margin: 20px;
+     background-color: #FAFBFC;
+     padding: 7px;
+     margin: 0px 0px 16.8;
      align-items: center;
-     width: 80%;
+     width: 300px;
+     height: 24px;
+     border: 1px solid lightgray;
+     border-radius: 4px;
+     margin-bottom: 15px;
+    
+   }
+
+   button.login-btn {
+     display: block;
+     background-color: green;
+     padding: 8.4px 18.2px;
+     margin: 20px;
+     color: white;
+     width: 280px;
+     height: 23px;
+     text-align: center;
+      border-radius: 12px;
+
     
    }
 
@@ -882,12 +991,7 @@ img.tile{
 }
 
 
- .login-form-container {
-   display: flex;
-   justify-content: center;
-    flex-direction: column;
- }
-
+ 
  ul.board-list{
   justify-self: center;
  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
@@ -1054,6 +1158,7 @@ input.list-input{
    display: flex;
    justify-content: center;
    flex-direction: column;
+   
  }
 
  .header{
@@ -1144,7 +1249,7 @@ margin:0.2em auto;
 } 
  
 
-.nav-button-logout {
+/* .nav-button-logout {
     position:   absolute;
     top:        5px;
     right:       5px;
@@ -1157,7 +1262,7 @@ margin:0.2em auto;
 .nav-button-logout-child {
     position: relative;
 }
-
+ */
 
 li.error-list {
 
@@ -1167,6 +1272,7 @@ li.error-list {
   text-align: center;
   font-family: arial, sans-serif;
   margin: 0;  
+  font-size: 15px;
 
 }
 
@@ -1198,7 +1304,7 @@ justify-content: right;
 
 form.home-signup{
 
-  height: 119px;
+  height: 50px;
   width:  600px;
   font-family: sans-serif;
   font-size: 20px;
@@ -1209,8 +1315,8 @@ form.home-signup{
   flex-direction: row;
   justify-content: center;
   position: relative;
-  left: 100px;
-  top: 30px;
+  left: 420px;
+  top: 170px;
   overflow: hidden;
 
 }
@@ -1218,8 +1324,10 @@ form.home-signup{
 input.sign-email{
   padding: 4px 4px 4px 16px;
   background-color: #ffffff;
-  height: 55px;
+  height: 43px;
   width: 376px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 button.sign-email{
@@ -1228,8 +1336,9 @@ background-color: #61bd4f;
 padding: 8px 24px;
 margin: 0px 0px 0px 8px;
 width: 264.33px;
-height: 55px;
+height: 39px;
 color: #ffffff;
+border-radius: 8px;
 
 }
 
@@ -1302,18 +1411,38 @@ transition: 0.3s;
   color: white;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito:ital@0;1&display=swap');
+
+
+@font-face{
+
+font-family: 'Noto Sans JP', sans-serif;
+src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+}
+
+@font-face{
+
+font-family: 'Nunito', sans-serif;
+src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito:ital@0;1&display=swap');
+
+}
+
 section.home-top{
 background-color: #0079bf;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+font-family: 'Nunito', sans-serif;
 width: 100%;
-height: 519px;
-
+height: 560px;
+display: flex;
+flex-direction: column;
+margin: 0;
 
 }
 
 nav.home-top{
 color: #172b4d;
-font-family: 20px "charlie text", sans-serif;
+font-family: 'Nunito', sans-serif;
 background: #0079bf00;
 padding: 16px;
 width: 1456;
@@ -1326,18 +1455,24 @@ h1.home-top{
 
 color: #FFFFFF;
 font: 80px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-
+font-family: 'Nunito', sans-serif;
 margin: 0px 0px 8px;
 position: relative;
-top: 25px;
-left: 100px;
+top: 100px;
+left: 0px;
 -webkit-text-size-adjust: none;
 text-align: left;
 display: flex;
 flex-direction: column;;
 
 
+
+}
+
+home-top > * {
+
+display: flex;
+flex-direction: column;
 
 }
 h1{
@@ -1348,20 +1483,21 @@ h3.home-head{
 width: 445px;
 height: 37px;
 font-size: 45px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+font-family: 'Nunito', sans-serif;
 
 margin: 0px 0px 8px;
 
 }
 
 p.home-topp {
-font: 25px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+font-size: 25px;
+font-family: 'Nunito', sans-serif;
 margin: 0px 0px 16px;
 width: 540px;
 height: 81px;
 position: relative;
 top: 10px;
-left: 100px;
+left: 400px;
 /* text-align: center; */
 color: #ffffff;
 
@@ -1369,16 +1505,24 @@ color: #ffffff;
 
 }
 
+.home-topt{
+
+margin-left: 400px;
+font-family: 'Nunito', sans-serif;
+font-size: 48px;
+
+}
+
 div.top-img{
 display: block;
 flex-direction: row;
-width: 409px;
-height: 440px;
+width: 540px;
+height: 409px;
 background-color: inherit;
 background-size: cover;
 align-self: right;
 position: absolute;
-right: 20%;
+right: 380px;
 top: -30px;
 background-color: #0079bf;
 
@@ -1387,14 +1531,14 @@ background-color: #0079bf;
 }
 
 
-div.logo{
+/* div.logo{
 
 width: 50px;
 height: 15px;
 position: absolute;
 left: 1%;
 
-}
+} */
 
 
 div.topnav-logo{
@@ -1430,7 +1574,7 @@ div.board{
 }
 
 
-div.bottom-img{
+.bottom-img{
 display: block;
 flex-direction: row;
 width: 409px;
@@ -1440,20 +1584,20 @@ background-size: cover;
 align-self: right;
 position: absolute;
 right: 0px;
-bottom:0px;
+bottom: -100px;
 }
 
-div.bottom-img-left{
+.bottom-img-left{
 display: block;
 flex-direction: row;
-width: 409px;
-height: 540px;
+width: 400px;
+height: 330px;
 background-color: inherit;
-background-size: cover;
+/* background-size: cover; */
 align-self: right;
 position: absolute;
-left: 0px;
-bottom:0px;
+left: 40px;
+top: 500px;
 }
 
 
