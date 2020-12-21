@@ -50,7 +50,7 @@ handleErrors() {
         
    
     const { errors } = this.props;
-    debugger
+
     
         return this.props.errors.map((error, idx) => (
             <li className="error-list"  key={`error-${idx}`}>
@@ -106,7 +106,7 @@ render(){
                    
                 <button onClick={this.demoSignUp} className="demo-btn" type='submit' >Demo User</button>
 
-                <NavLink to='/login'> Already have an account? Log In </NavLink>
+                <NavLink to='/login' className="lnk-signup" activeClassName="lnk-signup-active" > Already have an account? Log In </NavLink>
 
 
                 </div>

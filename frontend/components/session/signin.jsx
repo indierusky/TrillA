@@ -39,7 +39,7 @@ this.props.clearSessionErrors();
 
     handleErrors() {
        
-       debugger
+       
          const {errors} = this.props;
   
        
@@ -99,7 +99,7 @@ this.props.clearSessionErrors();
                         
                         {/* <NavLink to='/boards' className="nav-buttons-child" onClick={this.props.loginDemo}>Demo User</NavLink> */}
                  
-                    <Link to='/signup'> * Sign up for an account * </Link>
+                    <NavLink to='/signup' className="lnk-signup" activeClassName="lnk-signup-active" > * Sign up for an account * </NavLink>
             
             </div> 
                 </form>

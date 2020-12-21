@@ -10,7 +10,7 @@ class ListForm extends React.Component {
         this.state =  { list: this.props.list,  
                          showList: this.props.showList }
     
-        debugger
+        
         this.update = this.update.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -28,7 +28,7 @@ class ListForm extends React.Component {
 
     handleSubmit(e) {
 
-        debugger
+        
         e.preventDefault();
 
         let newlist = {  title: this.state.title, }
