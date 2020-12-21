@@ -69,10 +69,10 @@ componentDidMount(){
          
 
         this.setState({[field]: !this.state[field]})
-        document.getElementById("addlist").style.visibility = "hidden";
+        // document.getElementById("addlist").style.visibility = "hidden";
         // document.remove(addlist);
 
-        
+         document.getElementById("addlist").remove();        
 
     }
 
