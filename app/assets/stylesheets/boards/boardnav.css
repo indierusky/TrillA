@@ -1,0 +1,510 @@
+
+
+nav.board-nav{
+    width: 100%;
+    height: 32;
+    background-color: #026AA7;
+    padding: 4px;
+    display: flex;
+    overflow: hidden;
+    top: 0;
+    max-height: 36px;
+    /* position: fixed; */
+   }
+
+   nav.board-nav > * {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+  box-sizing: content-box;
+  margin: auto 0;
+  z-index: 100;
+  /* position: sticky; */
+   }
+
+   
+
+  button.notifications{
+  border-radius: 3px;
+  font-size: 24px;
+  text-align: center;
+  margin: auto 2px; 
+  padding: 0px 8px 0px 2px;
+  color: #ffffff;
+  width: 58px;
+  height: 32px;
+  border-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  cursor: pointer;
+
+   }
+
+   div.boardnav-mid{
+  height: inherit;
+  text-align: center;
+  /* margin-left: 20px; */
+  /* width: 100%; */
+  justify-content: space-evenly;
+
+   }
+   
+
+   .edit-heading{
+    /* margin-left: 25px;  */
+    font-size: 16px;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    color: #172b4d;
+
+
+   }
+
+   button.home-lk{
+
+  background-color: hsla(0,0%,100%,.3);
+  width: 24px;
+  height: 24px;
+   margin-left: 5px;
+   align-items: center;
+   text-align: center;
+   align-self: center;
+    
+
+   }
+
+   .home-lk {
+  /* background-color: hsla(0,0%,100%,.3); */
+  border-radius: 4px;
+  /* font-size: 28px; */
+  text-align: center;
+  /* margin: -10px;  */
+  padding: 7px;
+  color: white;
+  /* height: 10px; */
+  display: inline-block;
+  /* max-height: 20px;
+  max-width: 20px; */
+  /* margin-top: -10px; */
+  overflow: visible;
+  /* margin-left: -10px;
+  height: auto; */
+  background-color: inherit;
+  /* vertical-align: 25%; */
+}
+
+
+div.boardnav-left{
+
+  
+  /* background-color: hsla(0,0%,100%,.3); */
+  border-radius: 4px;
+  font-size: 24px;
+  margin: auto; 
+  padding: 5px;
+  color: white;
+  
+  margin-left: -7px;
+
+  max-height: 24px;
+  align-self: center;
+
+
+   }
+
+   div.boardnav-right{
+  border-radius: 3px;
+  font-size: 24px;
+  text-align: center;
+  /* margin: auto;  */
+  padding: 4px;
+  color: white;
+  /* width: 58px; */
+  border-style: none;
+  /* margin-left: 20px;
+  position: absolute; */
+  margin-top: 3px;
+
+   }
+
+ img.logo-bd{
+width: 15px;
+height: 15px;
+margin-left: -5px;
+
+ }
+
+ img.logo-bs{
+width: 10px;
+height: 10px;
+/* margin-left: -10px; */
+
+ }
+
+ img.logo-bx{
+width: 200px;
+height: 200px;
+overflow: visible;
+
+ }
+
+
+ .user-info-list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	top: 60px;
+	right: 20;
+  width: 240px;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+}
+
+
+.user-info-list > li {
+    background-color: #0079bf;
+    display: block;
+    color: #ffffff;
+    font-size:14px;
+    cursor: pointer;
+
+}
+
+.add-menu{
+/* background: #FFFFFF; */
+width: 304px;
+height: auto;
+background-color: rgb(255,255,255);
+border: 1px solid rgb(221,224,229);
+align-content: center;
+text-align: left;
+position: absolute;
+top: 45px;
+left: 5px;
+
+}
+
+.add-menu-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	/* top: 60px;
+	right: 20; */
+  width: 304px;
+  cursor: pointer;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+}
+
+
+ .create-menu{
+
+   color: #172b4d; 
+   padding: 12px; 
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+
+ .author-menu{
+
+   color: #172b4d; 
+   padding: 12px; 
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+
+ }
+ .menu-x{
+ cursor: pointer;
+ padding: 12px;
+ width: 12px;
+ height: 12px;
+ 
+
+ }
+
+
+.add-menu-list > * {
+   background-color: rgb(255,255,255);
+    /* border: 1px solid rgb(221,224,229); */
+    display: block;
+    color: #172b4d; 
+    font-size:14px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.add-menu-desc{
+ font-size: 12px;
+ color: #586c84;
+ margin: 4px;
+ /* padding-top: 5px; */
+ /* padding-bottom: 5px; */
+
+
+}
+
+.create-bd{
+
+display: flex;
+flex-direction: row;
+/* margin-left: 6px; */
+}
+.info-logout{
+
+padding-top: 5px;
+padding-bottom: 5px;
+margin-top: 40px;
+
+}
+
+
+
+
+
+
+
+.add-menu-items{
+/* background: #FFFFFF; */
+width: 304px;
+height: auto;
+background-color: rgb(255,255,255);
+border: 1px solid rgb(221,224,229);
+align-content: center;
+text-align: left;
+position: absolute;
+top: 45px;
+right: 40px;
+
+}
+
+.add-menu-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	/* top: 60px;
+	right: 20; */
+  width: 300px;
+  cursor: pointer;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+}
+
+
+ /* .create-menu{
+
+   color: #172b4d; 
+   padding: 12px; 
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+
+ }
+
+
+ .author-menu{
+
+   color: #172b4d; 
+   padding: 12px; 
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+
+ }
+ .menu-x{
+ cursor: pointer;
+ padding: 12px;
+ width: 12px;
+ height: 12px;
+ 
+
+ } */
+
+
+.add-menu-list > * {
+   background-color: rgb(255,255,255);
+    border: 1px solid rgb(221,224,229);
+    display: block;
+    color: #172b4d; 
+    font-size:14px;
+    cursor: pointer;
+
+}
+
+.add-menu-desc{
+ font-size: 12px;
+ color: #586c84;
+ margin: 4px;
+
+
+}
+
+/* .create-bd{
+
+display: flex;
+flex-direction: row;
+margin-left: 6px;
+} */
+
+
+
+
+
+ .board-menu-list{
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+  margin: 0 4px 4px 0;
+  min-width: 0;
+}
+
+.board-link {
+  display: flex;
+  font-weight: 700;
+  height: 36px;
+  padding: 0;
+  position: absolute;
+  text-decoration: none;
+  color: #172b4d;
+  /* background-color: transparent; */
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+.board-menu-list > li {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  opacity: 1;
+  border-radius: 15px 3px 3px 15px;
+  display: flex;
+  background-color: #e0eff7;
+
+}
+
+
+.notes-list{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+	text-align: left;
+	top: 60px;
+	right: 0;
+    width: 230px;
+    
+  box-shadow: 0 10px 15px -5px rgba(9,30,66,.25);
+}
+
+
+.notes-list > li {
+   
+    display: block;
+  
+    font-size:14px;
+    cursor: pointer;
+
+}
+
+.boards-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px;
+  padding: auto;
+  float: right;
+    margin-top: 10px;
+  margin-top: 10px;
+  justify-content: space-between;
+  /* overflow: visible; */
+}
+
+
+input.search-bar{
+
+width: 160px;
+height: 22px;
+background-color: #ffffff;
+padding: 8px 30px 8px 8px;
+background-color: #ffffff4d;
+border-radius: 4px;
+margin-top: -7px;
+margin-left: 10px;
+
+/* -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; */
+
+}
+
+
+.fstyle{
+
+font-size: 20px;
+margin-top: -40px;
+align-self: center;
+
+}
+
+ button.board-button {
+  background-color: hsla(0,0%,100%,.3);
+  border: none;
+  color: white;
+  margin-left: 6px; 
+  border-radius: 4px; 
+  font-size: 14px;
+  width: 81px;
+  height: 22px;
+  margin-top: -7px;
+  /* max-width: 52px; */
+  padding: 8px;
+
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
+}
+
+
+button.add-team-board{
+
+    margin: 0px 4px 0px  0px;
+    background-color: #ffffff4d;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+   }
+  
+   span.board-button{
+
+    padding: 0px 8px 0px 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-size:  14px;
+    color: #ffffff
+   }
+
+   .element::-webkit-input-placeholder {
+   
+    font-weight: 900;
+}
+
+.element::-moz-placeholder {
+  
+    font-weight: 900;
+}
+
+.element:-ms-input-placeholder {
+  
+    font-weight: 900;
+} 

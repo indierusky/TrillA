@@ -2,6 +2,9 @@ import React from 'react';
 import BoardIndexItem from './board_index_item';
 import BoardNavContainer from "./board_nav_container";
 import { Link, withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser} from '@fortawesome/free-solid-svg-icons';
+
 
 
 
@@ -74,14 +77,14 @@ handleBoards(){
 
       <BoardNavContainer />
      <div className="index-view">
-            <center> <h1 className="boardindex-title"> Your Trilla Boards! </h1></center>
-                    <center> <div className="board-tile"  >
+            <h3 className="board-head"> <FontAwesomeIcon icon={faUser} />     Personal Boards</h3>
+                     <div className="board-tile"  >
                         <span className="board-tile-title" >
 
                             {this.props.makeBoard}
 
                         </span>
-                    </div></center>
+                      </div>
 
               
     <div className="index-container">

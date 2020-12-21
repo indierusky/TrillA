@@ -14,74 +14,10 @@
  *= require_self
  */
 
- html, body, header, nav, h1, a,
-ul, li, strong, main, button, i,
-section, img, div, h2, p, form,
-fieldset, label, input, textarea,
-span, article, footer, time, small {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font: inherit;
-  color: inherit;
-  text-align: inherit;
-  text-decoration: inherit;
-  vertical-align: inherit;
-  box-sizing: inherit;
-  background: transparent;
-}
-
-div.cardz-item{
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-font-size: 18px;
-color: #172b4d;
-width: 240px;
-height: 20px;
-max-height: 20px;
-padding: 4px 8px;
-margin: 0px 0px 4px;
-
-
-}
+ 
 
 
 
-ul {
-  list-style: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-} 
-
-input[type="password"],
-input[type="email"],
-input[type="text"],
-input[type="submit"],
-textarea,
-button {
-  /*
-  Get rid of native styling. Read more here:
-  http://css-tricks.com/almanac/properties/a/appearance/
-  */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-button,
-input[type="submit"] {
-  cursor: pointer;
-}
-
-
- html, body, div {
-   padding: 0;
-   margin: 0;
-   font-family: sans-serif;
- }
 
 
 
@@ -127,34 +63,7 @@ input[type="submit"] {
  }
 
 
- .session-form {
-   display: flex;
-   background-color: whitesmoke;
-   flex-direction: column;
-   width: 100%;
-   height: 90vh;
-   justify-content: center;
-   align-items: center;
- }
-
  
-
-
- .btn-signup {
-     background-color: white;
-     padding: 20px;
-     box-shadow: 3px 3px 3px darkblue;
-     color:blue;
-     text-decoration: none;
-   }
-   .btn-login {
-     background-color: blue;
-     padding: 20px;
-     box-shadow: 3px 3px 3px darkblue;
-     color: white;
-     text-decoration: none;
-   }
-
    input {
   background-color: white;
   width: 100%;
@@ -226,237 +135,13 @@ background-image:url(trillabackground.jpg);
    }
 
 
-   nav.board-nav{
-    width: 100%;
-    height: 32;
-    background-color: #026AA7;
-    padding: 4px;
-    display: flex;
-    overflow: hidden;
-    top: 0;
-    max-height: 36px;
-   }
-
-   nav.board-nav > * {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2px;
-  box-sizing: content-box;
-  margin: auto 0;
-  z-index: 100;
-  /* position: sticky; */
-   }
+   
 
    
 
-  button.notifications{
-  border-radius: 3px;
-  font-size: 24px;
-  text-align: center;
-  margin: auto 2px; 
-  padding: 0px 8px 0px 2px;
-  color: #ffffff;
-  width: 58px;
-  height: 32px;
-  border-style: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  cursor: pointer;
 
-   }
-
-   div.boardnav-mid{
-  height: inherit;
-  text-align: center;
-  /* width: 100%; */
-
-
-   }
-   div.boardnav-left{
-
-  
-  /* background-color: hsla(0,0%,100%,.3); */
-  border-radius: 4px;
-  font-size: 28px;
-  /* text-align: center; */
-  margin: auto; 
-  padding: 5px;
-  color: white;
-  /* justify-content: space-evenly; */
-  align-self: left;
-  float: left;
-  margin-left: -8px;
-  max-height: 24px;
-
-
-  /* top: 0;
-  left: 0; */
 
    
-
-   }
-
-   button.home-lk{
-
-   background-color: hsla(0,0%,100%,.3);
-    max-width: 32px;
-   max-height: 32px;
-   margin-left: 5px;
-    
-
-   }
-
-   .home-lk {
-  /* background-color: hsla(0,0%,100%,.3); */
-  border-radius: 4px;
-  font-size: 28px;
-  text-align: center;
-  margin: -10px; 
-  padding: 7px;
-  color: white;
-  /* height: 10px; */
-  display: inline-block;
-  max-height: 20px;
-  max-width: 20px;
-  margin-top: -10px;
-  overflow: visible;
-  margin-left: -10px;
-  height: auto;
-  background-color: inherit;
-  vertical-align: 25%;
-}
-
-   div.boardnav-right{
-  border-radius: 3px;
-  font-size: 24px;
-  text-align: center;
-  margin: auto 2px; 
-  padding: 4px;
-  color: white;
-  width: 58px;
-  border-style: none;
-  
-
-   }
-
-
-   .list-index-container {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 100%;
-  margin: 10px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-/* 
-.list-index-container::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-} */
-
-  .list-item-container {
-  width: 100%;
-  padding: 15px 10px;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  position: relative;
-  margin: 10px;
-
-}
-
-.list-index-container:first-child {
-  margin-left: 30px;
-}
-
-.list-index-container:last-child {
-  margin-right: 30px;
-}
-
-.list-item-contents {
-  width: 240px;
-  background-color: #ebecf0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  position: relative;
-  white-space: normal;
-  overflow: hidden;
-  margin: 8px;
-  /* max-width: fit-content; */
-}
-
-.list-item-header {
-  flex: 0 0 auto;
-  padding: 10px 8px;
-  position: relative;
-  min-height: 20px;
-}
-
-.list-index-view {
-  display: flex;
-  padding-top: 10px;
-  background: linear-gradient(90deg,#2585d3,#0a4364);
-  height: 90vh;
-  position: relative;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-
-span.list-title{
-
-    
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    font-size:  16px;
-    color: #0079bf;
-   }
-
-
-
-
-   button.board-button {
-  background-color: hsla(0,0%,100%,.3);
-  border: none;
-  color: white;
-  margin-left: 20px; 
-  border-radius: 4px; 
-  font-size: 18px;
-  width: 90%;
-  max-height: 36px;
-  /* max-width: 52px; */
-  padding: 8px;
-
-  font-weight: bolder;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  height: auto;
-  
-}
-
-
-   button.add-team-board{
-
-    margin: 0px 4px 0px  0px;
-    background-color: #ffffff4d;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-   }
-  
-   span.board-button{
-
-    padding: 0px 8px 0px 2px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    font-size:  16px;
-    color: #ffffff
-   }
 
 
    .nav-buttons{
@@ -519,18 +204,7 @@ span.list-title{
 
    }
 
-   .logo-form{
-
-    width: 140px;
-    height: 140px;
-    display: block;
-    /* float: middle; */
-    position: absolute;
-    top: -50px;
-    left: 45%;
-    /* align-items: center; */
-
-   }
+   
 
 
    .home{
@@ -549,190 +223,12 @@ span.list-title{
     
    }
 
-   button.card-form{
-
-    height: 32;
-    width: 109;
-   }
-
-   button.card-form:active{
-
-    color: green;
-   }
-
-   div.cardz-form-container {
-  width: 100%;
-  margin: 0px 8px 0px 4px;
-  padding: 0px 4px;
-  height: fit-content;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-}
-
-div.cardz-form {
-  width: 240px;
-  min-width: 240px;
-  max-height: 40px;
-  padding: 4px 0px;
-  background-color: #ebecf0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   
-}
-
- div.cardz-form > * {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 8px;
-  /* box-sizing: content-box; */
-  margin: 10px;
-  
-  
-   }
+ 
 
 
 
-   
-
-   input.card-form{
-
-    height: 32px;
-    width: 109px;
-    padding: 2px 8px;
-    margin: 0px 0px 4px;
-   }
-
-
-   input.card{
-
-    height: 32px;
-    width: 109px;
-    padding: 2px 8px;
-    margin: 0px 0px 4px;
-   }
-
-   input.card-container{
-
-    height: 32px;
-    width: 109px;
-    padding: 2px 8px;
-    margin: 0px 0px 4px;
-   }
-
- span.list-title{
-
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  font-size: 14px;
-    
- }
-
-
-
- .session-submit {
-   text-transform: capitalize;
- }
-
-   .login-input {
-   margin-left: 20px;
- }
-
- .login-form {
-   display: flex;
-   background-color: #FFFFFF;
-   flex-direction: column;
-   /* width: 100%;
-   height: 90vh; */
-   justify-content: center;
-   align-items: center;
-   position: absolute;
-
-   height: 320px;
-   width: 320px;
-   border-radius: 10px;
- }
-
- .login-form-box {
-   outline: 1px solid black;
-   padding: 20px;
-   top: 25%;
-   left: 40%;
-   background: #FFFFFF; 
-   position: absolute;
-   /* justify-content: center;
-   align-items: center; */
-   height: 400px;
-   width: 320px;
-    color: #4D4D4D;
-
-   box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
-
-
- }
-
- .login-header{
-
- color: #4D4D4D;
- margin-top: -300px;
-  position: absolute;
-  font-weight: 900;
- }
-
- .login-header-signup{
-
- color: #4D4D4D;
- margin-top: -400px;
-  position: absolute;
-  font-weight: 900;
- }
-
-
- .login-form-container {
-   display: flex;
-   justify-content: center;
-    flex-direction: column;
-    top: 50%;
-    left: 35%;
-    margin-left: 40px;
-  /* margin-top: 80px; */
-  width: 400px;
-  height: 586px;
-  padding: 25px 40px;
-  color: #4D4D4D;
- }
-
-   input.login-btn {
-     display: block;
-     background-color: #FAFBFC;
-     padding: 7px;
-     margin: 0px 0px 16.8;
-     align-items: center;
-     width: 300px;
-     height: 24px;
-     border: 1px solid lightgray;
-     border-radius: 4px;
-     margin-bottom: 15px;
-    
-   }
-
-   button.login-btn {
-     display: block;
-     background-color: green;
-     padding: 8.4px 18.2px;
-     margin: 20px;
-     color: white;
-     width: 280px;
-     height: 23px;
-     text-align: center;
-      border-radius: 12px;
-
-    
-   }
+ 
 
    .back-img{
     -webkit-background-size: cover;
@@ -761,11 +257,12 @@ div.cardz-form {
 input.button-form{
 
 width: 109px;
-height: 32px;
+height: 22px;
 padding: 6px 12px;
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 background-color:  #5aac44;
-color: #a5abda;
+color: #FFFFFF;
+border-radius: 4px;
 
 }
 
@@ -787,30 +284,9 @@ button:invalid{
 } */
 
 
-.board-index-header {
-   display: inline-block;
-    line-height: 24px;
-    margin: 4px 0 0;
-    font-size: 16px;
-    font-weight: 700;
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
 
-input.search-bar{
 
-width: 180px;
-height: 16px;
-background-color: #ffffff;
-padding: 8px 30px 8px 8px;
-background-color: #ffffff4d;
 
-/* -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out; */
-
-}
 /* input[type=text]:focus {
   width: 100%;
 } */
@@ -845,66 +321,7 @@ background-color: #ffffff4d;
    flex-direction: column; */
  }
 
- img.logo-bd{
-width: 20px;
-height: 20px;
 
- }
-
- img.logo-bx{
-width: 200px;
-height: 200px;
-overflow: visible;
-
- }
-
-
- .user-info-list{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-	text-align: left;
-	top: 60px;
-	right: 20;
-  width: 240px;
-    
-  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
-}
-
-
-.user-info-list > li {
-    background-color:#0079bf;;
-    display: block;
-    color: #ffffff;
-    font-size:14px;
-    cursor: pointer;
-
-}
-
-
-.notes-list{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-	text-align: left;
-	top: 60px;
-	right: 0;
-    width: 230px;
-    
-  box-shadow: 0 10px 15px -5px rgba(9,30,66,.25);
-}
-
-
-.notes-list > li {
-   
-    display: block;
-  
-    font-size:14px;
-    cursor: pointer;
-
-}
 
 .bg-active{
 visibility:  visible;
@@ -912,253 +329,19 @@ opacity: 1;
 
 }
 
-.board-tile{
 
 
-  width: 174px;
-  height: 88px;
-  background-color: #091e4214;
-  padding:  8px;
-  float: left;
-  text-align: right;
-  /* display: flex;
-  flex-direction: row;  */
-  /* justify-content: center; */
-
-}
-
-.board-tile-container{
-
-
-  width: 100%;
-  /* height: 88px; */
-  background-color: #091e4214;
-  padding:  8px;
-  float: left;
-  text-align: right;
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-between;
-  margin-top: 10px;
-  /* justify-content: center; */
-  margin: 10px;
-
-}
-
-.boards-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 8px;
-  padding: auto;
-  float: right;
-    margin-top: 10px;
-  margin-top: 10px;
-  justify-content: space-between;
-  /* overflow: visible; */
-}
-
-div.board-list-item {
-  width: 200px;
-  height: 90px;
-  padding: 8px;
-  justify-content: space-between;
-  background-color: #091e4214;
-  box-sizing: content-box;
-  outline: #0000FF;
-  
-  margin: 0 8px 8px 0;
-  box-sizing: border-box;
-  /* position: relative; */
-  cursor: pointer;
-}
-
-
-
-
-span.board-tile-title{
-
-color: #172b4d;
-width: 115px;
-height: 17px;
-
-}
-
-img.tile{
-
-  height: 40px;
-  width: 40px;
-}
-
-
- 
- ul.board-list{
-  justify-self: center;
- font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  font-weight: 200;
-
-
-
- }
-
- h1.boardindex-title{
- font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
- position: relative;
- align-self: center;
- /* text-align: center; */
-color: #172b4d;
-
- }
 
 
  
 
- div.list-form-container {
-  width: 240px;
-  margin: 0px 8px 0px 4px;
-  padding: 4px;
-  height: 100%;
-  /* box-sizing: border-box; */
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  justify-content: space-between;
-
-  
-}
-
-
-div.edit-board-container {
-  width: 240px;
-  margin: 0px 8px 0px 4px;
-  padding: 4px;
-  height: 100%;
-  /* box-sizing: border-box; */
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  justify-content: space-between;
-
-  
-}
-
-h1.edit-board-form{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  font-size:  14px;
-
-}
-
-
-form.edit-board-form {
-  width: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  padding: 4px 8px;
-  background-color: #ebecf0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  max-height: 32px;
-  justify-content: space-between;
-  
-}
-form.list-form {
-  width: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  padding: 4px 8px;
-  background-color: #ebecf0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  max-height: 32px;
-  justify-content: space-between;
-  
-}
-
-button.list-input {
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  line-height: 20px;
-  padding: 8px 12px;
-  background-color: #5aac44;
-  border: none;
-  border-radius: 2px;
-  margin: 0px 4px 0px 4px;
-  color: #ffffff;
-}
-
-div.btn-lst-wrap{
-
-  height:20px;
-  width: 240px;
-}
-
-.list-input-title:focus {
-  box-shadow: inset 0 0 0 2px #0079bf;
-}
-
-input.list-input{
-
-  width: 100%;
-  align-self: left;
-  margin-left: 5px 3px 2px;
-}
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+ 
 
  .close-x {
    position: absolute;
    top: 5px;
    right: 5px;
    cursor: pointer;
- }
-.login-form {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   
  }
 
  .header{
@@ -1210,28 +393,8 @@ button.trill-logo-image{
 
 }
 
-span.logo-img{
-
-  width: 16px;
-  height: 16px;
-}
-
-div.single-board-show{
-width: 100%;
-height: 100%;
-margin: 0px 0px 8px;
-padding: 0px 0px 8px;
 
 
-
-}
-
-div.board-show-header{
-  width: 100%; 
-  background-color: #0000003d;
-  padding: 8px 4px 4px 8px;
-
-}
 
 
 buttonform :hover{
@@ -1264,17 +427,7 @@ margin:0.2em auto;
 }
  */
 
-li.error-list {
 
-  /* background:  red; */
-  background-color: red;
-  color: #2E2F30;
-  text-align: center;
-  font-family: arial, sans-serif;
-  margin: 0;  
-  font-size: 15px;
-
-}
 
 ul.back-btns{
 align-self: right;
@@ -1282,25 +435,6 @@ justify-content: right;
 
 }
 
-.card-form {
-  
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  /* display: block;
-  align-self: center; */
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.card-form-container {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: center; */
-  /*  */
-  padding: 2px 16px;
-}
 
 form.home-signup{
 
@@ -1342,38 +476,7 @@ border-radius: 8px;
 
 }
 
-.card-container{
-color: #172B4D;
-background-color: #091E420A;
-height: 96px;
-width: 193px
-}
 
-.card-container-box{
-  outline: 1px solid black;
-   padding: 20px;
-   background: white;
-   display: flex;
-   flex-direction: column-reverse;
-   justify-content: center;
-   align-self: center;
-   /* position: relative; */
-
-
-} 
-
-.card{
-width: 114.69;
-height: 17px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-font-size: 14px;
-display: flex;
-justify-content: center;
-flex-direction: column;
-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
-
-}
 
 .topnav {
   overflow: sticky;
@@ -1450,6 +553,8 @@ height: 35px;
 
 
 }
+
+
 
 h1.home-top{
 
@@ -1530,6 +635,26 @@ background-color: #0079bf;
 
 }
 
+.nav-img{
+  /* position: absolute; */
+  /* margin-top: -20;
+  left: 0; */
+  position: absolute;
+   width: 120px;
+   height: 120px;
+   left: 45%;
+   
+   /* margin-bottom: 60px; */
+   /* position: absolute; */
+  align-self: center;
+  /* margin-left: -500px; */
+
+  /* float: middle; */
+
+}
+
+
+
 
 /* div.logo{
 
@@ -1557,12 +682,7 @@ overflow: hidden; */
 
 }
 
-form.card-container-box{
 
-  width: 300px;
-  height: 100px;
-
-}
 div.board{
 
   width: 635px;
@@ -1574,62 +694,11 @@ div.board{
 }
 
 
-.bottom-img{
-display: block;
-flex-direction: row;
-width: 409px;
-height: 540px;
-background-color: inherit;
-background-size: cover;
-align-self: right;
-position: absolute;
-right: 0px;
-bottom: -100px;
-}
-
-.bottom-img-left{
-display: block;
-flex-direction: row;
-width: 400px;
-height: 330px;
-background-color: inherit;
-/* background-size: cover; */
-align-self: right;
-position: absolute;
-left: 40px;
-top: 500px;
-}
 
 
-.board-index-view {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  
-}
 
-.index-container {
-  margin: 64px 20% 0 20%;
-  width: auto;
-  max-width: 832px;
 
-}
 
-form.cardz-form{ 
-
-  padding: 4px 0px 8px 0px;
-  background-color: #ebecf0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 32px;
-
-}
 
 
 /* .topnav a{

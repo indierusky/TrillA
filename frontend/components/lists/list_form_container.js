@@ -6,12 +6,12 @@ import ListForm from "./list_form";
 
 
 
-const mapStateToProps = (state, {match}) => {
+const mapStateToProps = (state, ownProps) => {
+     
     return {
-        boardId: parseInt(match.params.boardId),
-        list: { title: "",
-
-    }
+        boardId: parseInt(ownProps.match.params.boardId),
+        list: { title: "", },
+        showList: ownProps.showList,
     };
 };
 

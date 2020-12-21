@@ -56,12 +56,12 @@ class BoardForm extends React.Component {
 
                     <div onClick={this.props.closeModal} className="close-x">X</div>
                     <br/>
-                    <div className="card">
+                    <div>
                         <br />
 
-                        <input type="text" placeholder="Add board title" value={this.state.title} onChange={this.update('title')} />
+                        <input className="card" type="text" placeholder="Add board title" value={this.state.title} onChange={this.update('title')} />
                         <br />
-                        <input className="button-form" type="submit" disabled={!this.state.title}/>
+                        <input className="button-form" type="submit" value="Create Board"/>
 
                     </div>
                 </form>

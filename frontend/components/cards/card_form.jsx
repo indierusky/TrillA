@@ -35,7 +35,7 @@ class CardForm extends React.Component {
                         value={this.state.task}
                         onChange={this.update("task")}
                         className="list-input" placeholder="Enter a title for this card..." />
-                    <button type="submit" className="list-input" >Add Card</button>
+                    <button type="submit" className="card-input" >Add Card</button>
                 </form>
             </div>
         );

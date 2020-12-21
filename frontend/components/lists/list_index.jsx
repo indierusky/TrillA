@@ -2,13 +2,22 @@ import React from "react";
 import ListFormContainer from './list_form_container';
 import ListItemContainer from './list_item_container';
 import { withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus} from '@fortawesome/free-solid-svg-icons';
 
 
 class ListIndex extends React.Component{
 constructor(props){
-super(props)
+super(props);
+
+this.state = {
+
+     showList: false
+}
 
 this.handleLists = this.handleLists.bind(this);
+this.handleButtonClick = this.handleButtonClick.bind(this);
+this.showListForm = this.showListForm.bind(this);
 
 }
 
@@ -56,6 +65,25 @@ componentDidMount(){
     }
 
 
+    handleButtonClick(field) {
+         
+
+        this.setState({[field]: !this.state[field]})
+        document.getElementById("addlist").style.visibility = "hidden";
+        // document.remove(addlist);
+
+        
+
+    }
+
+
+  showListForm(){
+     
+
+  return <ListFormContainer showList={this.state.showList} />
+
+
+  }
 
 
 
@@ -69,18 +97,12 @@ componentDidMount(){
                 <div className="list-index-view">
                     
 
-
-                    
-
-
                       
                         {this.handleLists()}
 
+                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstyle'/> Add another list </button>
 
-
-                   
-
-                    <ListFormContainer />
+                   {this.state.showList ?  this.showListForm() : null}
                     
                 </div>
             </>

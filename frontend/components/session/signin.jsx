@@ -90,10 +90,10 @@ this.props.clearSessionErrors();
 
                                      <h2 className='login-header' > Log in to Trilla </h2>
 
-                        <input className="login-btn" type='text' placeholder='enter email' value={this.state.email} onChange={this.handleInput('email')} />
+                        <input className="login-btn" type='text' placeholder='Enter email' value={this.state.email} onChange={this.handleInput('email')} />
 
                         
-                        <input className="login-btn" type='password' placeholder='enter password' value={this.state.password} onChange={this.handleInput('password')} />
+                        <input className="login-btn" type='password' placeholder='Enter password' value={this.state.password} onChange={this.handleInput('password')} />
                        
                         <button className="login-btn" type='submit'> Log In </button> 
                         

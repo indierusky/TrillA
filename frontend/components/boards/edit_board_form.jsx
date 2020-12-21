@@ -61,26 +61,26 @@ class EditBoardForm extends React.Component {
             <>
            <BoardNavContainer /> 
 
-            <div className="edit-board-container">
+            <div className="login-form-container">
                
                 
                
-                <form onSubmit={this.handleSubmit} className="edit-board-form">
-                                    <h1 className="edit-heading"> Edit title and/or description </h1>
+                <form onSubmit={this.handleSubmit} className="login-form">
+                                    
                     <br />
                                 {/* {this.props.editBoard} */}
 
                     {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
                     <br/>
-                    <div className="card">
-                        <br />
-                        <label> 
-                        <input type="text" placeholder="Edit board title" value={this.state.title} onChange={this.update('title')} />
-                        </label>
-                        <br />
-                        <input type="text" placeholder="Add a description" value={this.state.description} onChange={this.update('description')} />
-                        <br/>
-                        <button className="card-form" type="submit"></button>
+                    <div className= "login-form-box">
+                         <h3 className="edit-heading">Edit title and/or description </h3>
+                         
+                        <input className="login-btn" type="text" placeholder="Edit board title" value={this.state.title} onChange={this.update('title')} />
+                        
+                        
+                        <input className="login-btn" type="text" placeholder="Add a description" value={this.state.description} onChange={this.update('description')} />
+                        
+                        <input className="card-form-submit" type="submit"/>
 
                     </div>
                     </form>
