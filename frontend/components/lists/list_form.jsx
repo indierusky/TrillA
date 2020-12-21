@@ -60,7 +60,7 @@ class ListForm extends React.Component {
                         onChange={this.update("title")}
                         className="list-input" placeholder="Enter list title..." />
                     <div className="btn-lst-wrap">
-                        <button type="submit" className="list-input" >Add List </button> <FontAwesomeIcon  onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList" icon={faTimes} className='fstylet'/>
+                        <button type="submit" className="list-input" >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
                     </div>
                 </form>
 
@@ -103,10 +103,10 @@ class ListForm extends React.Component {
         
         return(
             <>
-            <div className="list-index-view">
+            {/* <div className="list-index-view"> */}
                     {this.state.showList ? this.showForm() : null}
 
-            </div>
+            {/* </div> */}
 
             </>
 
