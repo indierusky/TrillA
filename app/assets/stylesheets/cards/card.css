@@ -140,42 +140,13 @@ button.card-input {
 
 
 
-/* div.cardz-form {
-  width: 240px;
-  min-width: 240px;
-  max-height: 40px;
-  padding: 4px 0px;
-  background-color: #ebecf0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  border-radius: 3px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: visible;
-  
-} */
-
- /* div.cardz-form > * {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 8px;
-  /* box-sizing: content-box; */
-  margin: 10px;
-  
-  
-   } */
-
 
 .cardz-input{
 
-  /* width: 100%;
-  align-self: left;
-  margin-left: 0px 0px 4px; */
+  
   width: 240px;
   height: 54px;
   border-radius: 2px;
-  /* margin: -15px; */
 }
 
    
