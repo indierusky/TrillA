@@ -39,6 +39,21 @@ nav.board-nav{
 
    }
 
+   .nav-buttons-child:hover{
+     background-image: none;
+     filter: brightness(85%);
+    }
+
+    .nav-buttons-child-login:hover{
+     background-image: none;
+     filter: brightness(85%);
+    }
+
+    .notifications:hover{
+     background-image: none;
+     filter: brightness(85%);
+    }
+
    div.boardnav-mid{
   height: inherit;
   text-align: center;
