@@ -1,13 +1,13 @@
 .bottom-img{
 display: block;
 flex-direction: row;
-width: 409px;
-height: 540px;
+width: 400px;
+height: 340px;
 background-color: inherit;
 background-size: cover;
 align-self: right;
 position: absolute;
-right: 0px;
+right: 40px;
 bottom: -100px;
 }
 
@@ -15,13 +15,13 @@ bottom: -100px;
 display: block;
 flex-direction: row;
 width: 400px;
-height: 302px;
+height: 340px;
 background-color: inherit;
 /* background-size: cover; */
 align-self: right;
 position: absolute;
 left: 40px;
-top: 630px;
+bottom: -100px;
 }
 
 

@@ -105,16 +105,19 @@ this.props.clearSessionErrors();
                 </form>
           
            </div>
-                <div className="bottom-img">
+                <div className="bottom-img-left" >
 
-                    <img src="https://i.ibb.co/2dhKd3b/trillalowerleft.png" />
+                    {/* <img src="https://i.ibb.co/2dhKd3b/trillalowerleft.png" /> */}
+
+                    <img className="bottom-img-left" src="https://i.ibb.co/0mNfPS9/trelloteamboard.png" />
+
 
 
                 </div>
 
-                <div >
+                <div className="bottom-img" >
                     
-                    <img className="bottom-img-left" src="https://i.ibb.co/YpykNgk/newtrellobest.png" />
+                    <img className="bottom-img" src="https://i.ibb.co/YpykNgk/newtrellobest.png" />
                     {/* <img src="https://i.ibb.co/gj52CcR/trilalowerright.png" /> */}
 
 
