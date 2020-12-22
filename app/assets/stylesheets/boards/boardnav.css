@@ -109,7 +109,21 @@ div.boardnav-left{
    align-items: center;
    text-align: center;
    align-self: center;
-  margin-top: -20px;
+  margin-top: -15px;
+  
+
+   }
+
+
+   .home-lkkk{
+  background-color: hsla(0,0%,100%,.3);
+  width: 40px;
+  height: 40px;
+   margin-left: 5px;
+   align-items: center;
+   text-align: center;
+   align-self: center;
+  margin-top: 5px;
   
 
    }

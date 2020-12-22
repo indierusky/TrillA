@@ -100,7 +100,7 @@ componentDidMount(){
                       
                         {this.handleLists()}
 
-                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstyle'/> Add another list </button>
+                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add another list </button>
 
                    {this.state.showList ?  this.showListForm() : null}
                     

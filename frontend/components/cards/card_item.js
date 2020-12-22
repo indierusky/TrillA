@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => {
 return {
 
     fetchCard: cardId => dispatch(fetchCard(cardId)),
-    deleteCard: cardId => dispatch(deleteCard()),
+    deleteCard: cardId => dispatch(deleteCard(cardId)),
     // openModal: () => dispatch(openModal('card')),
     // closeModal: () => dispatch(closeModal())
 
