@@ -13,7 +13,10 @@ const Nav = ({ currentUser, logout, openModal }) => {
      <>
       <nav className="home-nav">
           <a href='https://trilla.herokuapp.com/#/signup'>
-         <img className="logo-new" src="https://i.ibb.co/5xZxCC1/trillanewl.png" alt="trillalogo" />
+          
+         {/* <img className="logo-new" src="https://i.ibb.co/5xZxCC1/trillanewl.png" alt="trillalogo" /> */}
+                  <img className="logo-new" src="https://i.ibb.co/SsVyK4N/trillalogowhite.png" alt="trillalogo" />
+
 
         {/* <img src="https://i.ibb.co/vBsFYTy/trillalogoreal.png" alt="trillalogo"/> */}
                  </a>

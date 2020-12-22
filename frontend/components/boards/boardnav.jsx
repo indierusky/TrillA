@@ -251,7 +251,10 @@ return (
     
 
          <div className="nav-img" >
-        <img className="logo-nav" src="https://i.ibb.co/5xZxCC1/trillanewl.png" alt="trillalogo" />
+        {/* <img className="logo-nav" src="https://i.ibb.co/5xZxCC1/trillanewl.png" alt="trillalogo" /> */}
+                <img className="logo-nav" src=" https://i.ibb.co/SsVyK4N/trillalogowhite.png" alt="trillalogo" />
+
+       
 
        </div>
 
