@@ -438,7 +438,7 @@ justify-content: right;
 
 form.home-signup{
 
-  height: 50px;
+  height: 30px;
   width:  600px;
   font-family: sans-serif;
   font-size: 20px;
@@ -449,8 +449,8 @@ form.home-signup{
   flex-direction: row;
   justify-content: center;
   position: relative;
-  left: 420px;
-  top: 170px;
+  left: 375px;
+  top: 145px;
   overflow: hidden;
 
 }
