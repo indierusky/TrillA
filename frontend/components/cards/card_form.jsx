@@ -18,6 +18,8 @@ class CardForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
         this.showForm = this.showForm.bind(this);
+        this.addButtonRef = React.createRef();
+        this.addButtonRef2 = React.createRef();
     }
 
     update(field) {
@@ -31,18 +33,28 @@ class CardForm extends React.Component {
 
         let newCard = { task: this.state.task} 
 
-        this.props.createCard(this.props.listId, newCard).then(this.setState({card: {task:""}, showCard: "false" })).then(this.props.fetchCards(this.props.listId));
-        window.location.reload();
+        this.props.createCard(this.props.listId, newCard).then(this.setState({card: {task:""}, showCard: "false" })).then(window.location.reload());
     }
 
 
-    handleButtonClick(field) {
+    handleButtonClick(e) {
          
-
+        e.preventDefault();
+        let field = e.target.value;
         this.setState({[field]: !this.state[field]});
-        document.getElementById("addcard").remove();        
+        // document.getElementById("addcard").remove();  
+         
+      if (this.addButtonRef.current.classList !== "hidden"){
 
+            this.addButtonRef.current.classList.add("hidden")
 
+      }else {
+
+          this.addButtonRef.current.classList.add("button#addcard.card-start");
+          this.addButtonRef2.current.classList.add("hidden");
+
+      }
+        // window.location.reload();
         
 
     }
@@ -50,13 +62,13 @@ class CardForm extends React.Component {
     showForm() {
         return (
             <div className="list-item-contents">
-                <form onSubmit={this.handleSubmit} className="cardz-form">
+                <form  ref={this.addButtonRef2} onSubmit={this.handleSubmit} className="cardz-form">
                     <input
                         type="text"
                         value={this.state.task}
                         onChange={this.update("task")}
                         className="cardz-input" placeholder="Enter a title for this card..." />
-                    <button type="submit" className="card-input" >Add Card</button> <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
+                    <button type="submit" className="card-input" >Add Card</button> <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
                 </form>
             </div>
         );
@@ -70,7 +82,7 @@ class CardForm extends React.Component {
 
             <>
 
-                    <button id="addcard" className="card-start" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showCard"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add a card</button>
+                    <button id="addcard" ref={this.addButtonRef} className="card-start" onClick={(e) => this.handleButtonClick(e)} value = "showCard"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add a card</button>
 
                    {this.state.showCard ?  this.showForm() : null}
                     

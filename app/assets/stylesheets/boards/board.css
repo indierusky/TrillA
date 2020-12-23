@@ -24,6 +24,86 @@
   
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito:ital@0;1&display=swap');
+
+
+@font-face{
+
+font-family: 'Nunito', sans-serif;
+src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito:ital@0;1&display=swap');
+
+}
+
+.hm-img-mid{
+
+width: 665px;
+height: 471px;
+
+
+}
+
+.mid-left{
+
+display: flex;
+flex-direction: column;
+
+}
+.mid-heading{
+
+color: #172b4d;
+font-size: 35px;
+font-family: 'Nunito', sans-serif;
+
+}
+
+.mid-p{
+
+color: #172b4d;
+font-size: 20px;
+font-family: 'Nunito', sans-serif;
+
+}
+
+
+
+.home-mid{
+
+margin-left: 400px;
+margin-right: 400px;
+margin-top: 60px;
+justify-content: space-between;
+font-family: 'Nunito', sans-serif;
+
+}
+
+
+
+.edit-menu-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	/* top: 100px;
+	left: 40; */
+  width: 304px;
+  cursor: pointer;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+}
+
+
+edit-menu-list > * {
+   background-color: rgb(255,255,255);
+    /* border: 1px solid rgb(221,224,229); */
+    display: block;
+    color: #172b4d; 
+    font-size:14px;
+    cursor: pointer;
+    border: none;
+
+}
+
 .board-tile-container{
 
 
@@ -143,9 +223,53 @@ div.board-show-header{
   width: 100%; 
   background-color: #0000003d;
   padding: 8px 4px 4px 8px;
+  display: flex;
+  flex-direction: row;
+   /* justify-content: space-evenly; */
 
 }
 
+.home-mid{
+
+display: flex;
+flex-direction: row;
+
+}
+
+.home-arrow{
+
+width: 165px;
+height: 44px;
+background-color: #6D8EA2;
+color: #FFFFFF;
+font-size: 20px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+align-items: center;
+margin-top: 20px;
+justify-content: space-evenly;
+border-radius: 8px;
+text-align: center;
+
+
+}
+
+.fstylea{
+color: #FFFFFF;
+font-size: 12px;
+
+
+}
+
+.edit-lnk{
+
+margin-left: 10px;
+font-size: 18px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+font-weight: 900;
+color: #FFFFFF;
+
+
+}
 .board-head{
 
 top: 15%;

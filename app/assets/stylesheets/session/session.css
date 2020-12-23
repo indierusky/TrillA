@@ -8,7 +8,7 @@ background-size: cover;
 align-self: right;
 position: absolute;
 right: 40px;
-bottom: -100px;
+bottom: 300px;
 }
 
 .bottom-img-left{
@@ -21,7 +21,7 @@ background-color: inherit;
 align-self: right;
 position: absolute;
 left: 40px;
-bottom: -100px;
+bottom: 300px;
 }
 
 

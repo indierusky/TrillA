@@ -1,5 +1,9 @@
 import React from 'react';
 import NavContainer from './../navigation/nav_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {NavLink} from 'react-router-dom';
+
 // import { HotModuleReplacementPlugin } from 'webpack';
 
  const Home = () => (
@@ -39,7 +43,7 @@ import NavContainer from './../navigation/nav_container';
 
 </section> 
 
-     <div>
+     <div className="home-mid">
 
         
            
@@ -50,6 +54,17 @@ import NavContainer from './../navigation/nav_container';
    
     </div>   */}
 
+      <div className="mid-left">
+         <h3 className="mid-heading"> Work with any team </h3>
+         <p className="mid-p"> Whether its for work, a side  project or even </p> <p className="mid-p"> the next family vacation.  Trilla helps your</p> <p className="mid-p"> team stay organized. </p>
+
+         <NavLink to='/signup'> <button className="home-arrow">    Start Doing <FontAwesomeIcon  icon={faArrowRight} className='fstylea'/> </button></NavLink>
+    </div>
+
+    <div className="mid-right">
+              <img className="hm-img-mid" src="https://i.ibb.co/khwKJ2T/trellodown.png" alt="trillabot" />
+          
+    </div>
         
      </div>
 

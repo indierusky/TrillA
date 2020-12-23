@@ -44,11 +44,11 @@ this.state = this.props.card;
 
 
 
-componentDidMount(){
+// componentDidMount(){
 
-this.props.fetchCard(this.props.id)
+// this.props.fetchCard(this.props.id)
 
-}
+// }
 
 
 render() {   

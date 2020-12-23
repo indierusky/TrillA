@@ -15,6 +15,8 @@ class ListForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
         this.showForm = this.showForm.bind(this);
+        this.addButtonRef = React.createRef();
+
         // this.renderAddForm = this.renderAddForm.bind(this);
     }
 
@@ -33,15 +35,19 @@ class ListForm extends React.Component {
 
         let newList = {  title: this.state.title, }
          
-      this.props.createList(this.props.boardId, newList).then(() => this.setState({ list: { title: "" }, showList: "false" }));
-      window.location.reload(); 
+      this.props.createList(this.props.boardId, newList).then(() => this.setState({ list: { title: "" }, showList: "false" })).then(window.location.reload()); 
     }
 
 
-    handleButtonClick(field) {
+    handleButtonClick(e) {
          
+        e.preventDefault();
+         let field = e.target.value;
 
         this.setState({[field]: !this.state[field]})
+        // this.addButtonRef.current.classList.toggle("hidden");     
+
+        window.location.reload();
 
         
 
@@ -60,7 +66,7 @@ class ListForm extends React.Component {
                         onChange={this.update("title")}
                         className="list-input" placeholder="Enter list title..." />
                     <div className="btn-lst-wrap">
-                        <button type="submit" className="list-input" >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
+                        <button  type="submit" className="list-input" >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
                     </div>
                 </form>
 

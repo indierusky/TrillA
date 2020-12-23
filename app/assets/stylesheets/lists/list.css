@@ -99,12 +99,12 @@ span.list-title{
      filter: brightness(85%);
     }
 
-    .home-lk:hover{
+    button.home-lk:hover{
      background-image: none;
      filter: brightness(85%);
     }
 
-    .home-lkk:hover{
+    button.home-lkk:hover{
      background-image: none;
      filter: brightness(85%);
     }
@@ -160,7 +160,7 @@ span.list-title{
      filter: brightness(85%);
     }
 
-    
+
 
 
     .add-menu-item:hover{

@@ -18,6 +18,8 @@ this.state = {
 this.handleLists = this.handleLists.bind(this);
 this.handleButtonClick = this.handleButtonClick.bind(this);
 this.showListForm = this.showListForm.bind(this);
+// this.addButtonRef = React.createRef();
+
 
 }
 
@@ -36,18 +38,14 @@ componentDidMount(){
 
     handleLists() {
 
-        const { lists } = this.props;
+        if (this.props.lists.length === 0) return null;
+
         const { deleteList } = this.props;
 
+        const lists = this.props.lists.map(list => {
 
-        return (
 
-            
-
-               
-            <div className="list-index-container">
-                        {
-                            lists.map(list => (
+                     return (
                                 <ListItemContainer
                                     list={list}
                                     deleteList={deleteList}
@@ -55,8 +53,17 @@ componentDidMount(){
                                     boardId={this.props.boardId}
                                     key={list.id}
                                 />
-                            ))
-                        }
+                            )
+
+
+        });
+        return (
+
+            
+
+               
+            <div className="list-index-container">
+                        {lists}
                    
              </div>
 
@@ -65,14 +72,18 @@ componentDidMount(){
     }
 
 
-    handleButtonClick(field) {
-         
+    handleButtonClick(e) {
+         e.preventDefault();
+
+         let field = e.target.value;
 
         this.setState({[field]: !this.state[field]})
         // document.getElementById("addlist").style.visibility = "hidden";
         // document.remove(addlist);
 
-         document.getElementById("addlist").remove();        
+         document.getElementById("addlist").remove(); 
+        //  this.addButtonRef.current.classList.toggle("hidden");     
+       
 
     }
 
@@ -100,7 +111,7 @@ componentDidMount(){
                       
                         {this.handleLists()}
 
-                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e.target.value)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add another list </button>
+                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add another list </button>
 
                    {this.state.showList ?  this.showListForm() : null}
                     

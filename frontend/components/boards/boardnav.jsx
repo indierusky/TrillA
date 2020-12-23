@@ -137,20 +137,24 @@ boardMenu(){
 const boardlist = this.props.boards.map((board, index) => {
      
        
-       
-         <ul className="board-menu-list"> 
+      return (
+        <section className="board-menu-items">
+        <h2 className="author-menu">  Personal Boards <span className="menu-x" onClick={this.showDropdown("boards")}>  X </span> </h2>
+
+         <ul className="add-menu-list"> 
          <li className="menu-item" key={index}></li>
-          <li> <Link to={`/boards/${board.id}`}> {board.title} </Link></li>
+          <Link to={`/boards/${board.id}`}> {board.title} </Link>
         
         </ul>
+        </section>
        
-        
+      )
       
     });
 
 
      return (
-               <ul className= "board-menu-list">
+               <ul className= "board-menu-items">
                 {boardlist}
                </ul>
          );
@@ -230,7 +234,6 @@ return (
             
 
            <button className="board-button" onClick={this.showDropdown("boards")}>
-             {this.state.boards ? this.boardMenu() : null}
                 <span className="board-button"> Boards </span>
                 
 
@@ -238,7 +241,8 @@ return (
                 
                 </button>
 
-               
+                    {this.state.boards ? this.boardMenu() : null}
+
                
 
                  <input className="search-bar"/>  

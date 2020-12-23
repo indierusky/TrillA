@@ -43,7 +43,16 @@ handleCards() {
             );
         });
 
-        return cardz;
+        return (
+        
+             <div className="cardz-container">
+
+                            {cardz}
+                          
+            </div>
+
+
+        )     
     }
 
 
