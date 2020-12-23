@@ -2,14 +2,46 @@ import React from 'react';
 import { withRouter } from "react-router-dom";
 import CardItem from '../cards/card_item';
 import CardFormContainer from '../cards/card_form_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faTimes} from '@fortawesome/free-solid-svg-icons';
+// npm install --save-dev @iconify/react @iconify-icons/fa-solid
+import { Icon, InlineIcon } from '@iconify/react';
+import ellipsisH from '@iconify-icons/fa-solid/ellipsis-h';
+
 
 class ListItem extends React.Component{
 constructor(props){
 super(props);
 
-this.handleCards = this.handleCards.bind(this)
+this.state = {
+
+listed: false,
 
 }
+
+this.handleCards = this.handleCards.bind(this);
+this.listMenu = this.listMenu.bind(this);
+this.showDropdown = this.showDropdown.bind(this);
+this.renderCardForm = this.renderCardForm.bind(this);
+
+}
+
+
+showDropdown(field) {
+        return e => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.setState({[field]: !this.state[field]}, () => {
+            if (this.state[field] === true) { 
+                document.addEventListener('click', this.showDropdown);
+             } else {
+                document.removeEventListener("click", this.showDropdown) 
+
+            }
+            });
+        }
+    }
+
 
 componentDidMount(){
 
@@ -56,6 +88,71 @@ handleCards() {
     }
 
 
+    renderCardForm(){
+
+    const {list} = this.props;
+
+    return (  <CardFormContainer
+                listId={list.id}
+                     />
+
+    )
+    }
+
+
+    listMenu(){
+
+         const {deleteList} = this.props;
+         const {deleteCard} = this.props;
+         const {list} = this.props;
+
+         const cardz = this.props.cards.map(  (card, index) => {
+
+             return (
+
+                    <div className="cardz-container" >
+
+                        <span key={index}> {card.task} </span> <button onClick={() => deleteCard(card.id)}> Delete card </button>
+
+                    </div>
+
+
+             )
+
+
+
+         })
+
+    return(
+    <section className="add-menu">
+
+        <div className="listed-menu">
+         <h2 className="author-menu">  List Actions <span className="menu-x" onClick={this.showDropdown("listed")}>X</span></h2>
+
+            
+           
+            <span onClick={() => this.renderCardForm()}> Add a Card </span>
+
+
+            <span> Current Cards </span> 
+
+                {cardz}
+
+            <span className="archive-list" onClick={ () => deleteList(list.id)}> Archive this list </span>
+
+        </div>
+
+    </section>
+
+
+
+    )
+
+
+
+    }
+
+
 
 
 render(){
@@ -74,13 +171,12 @@ return (
         <>
 
         <div className="list-item-contents">
-            <span className="list-item-header">
-             <button className="title-delete" onClick={() => deleteList(list.id)}>X</button>
+            <span className="list-item-header">   {list.title}
+             <button onClick={this.showDropdown("listed")} className="title-delete"> <Icon icon={ellipsisH} />  </button>
 
             </span>
-
-                       {list.title}
-                    
+                 {this.state.listed ? this.listMenu() : null}
+   
                     <div className="cardz-container">
 
                             {this.handleCards()}

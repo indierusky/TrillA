@@ -138,15 +138,14 @@ const boardlist = this.props.boards.map((board, index) => {
      
        
       return (
-        <section className="board-menu-items">
-        <h2 className="author-menu">  Personal Boards <span className="menu-x" onClick={this.showDropdown("boards")}>  X </span> </h2>
+            
+            
+    <ul className="add-menu-list"> 
 
-         <ul className="add-menu-list"> 
-         <li className="menu-item" key={index}></li>
+         <li className="menu-item" key={index}>
           <Link to={`/boards/${board.id}`}> {board.title} </Link>
-        
-        </ul>
-        </section>
+        </li>
+     </ul>
        
       )
       
@@ -154,9 +153,17 @@ const boardlist = this.props.boards.map((board, index) => {
 
 
      return (
+
+          <section className="board-menu-items">
+        <h2 className="author-menu">  Personal Boards <span className="menu-x" onClick={this.showDropdown("boards")}>  X </span> </h2>
+
+         <ul className="add-menu-list"> 
                <ul className= "board-menu-items">
                 {boardlist}
                </ul>
+
+        </ul>
+        </section>
          );
 }
 

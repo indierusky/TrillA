@@ -34,15 +34,15 @@
     "npm": "6.4.1"
   },
   "devDependencies": {
+    "@iconify-icons/fa-solid": "^1.1.0",
+    "@iconify/react": "^1.1.3",
     "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -w --mode=development",
     "postinstall": "webpack"
-
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/indierusky/triller.git"
