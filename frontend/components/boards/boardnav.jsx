@@ -157,12 +157,12 @@ const boardlist = this.props.boards.map((board, index) => {
           <section className="board-menu-items">
         <h2 className="author-menu">  Personal Boards <span className="menu-x" onClick={this.showDropdown("boards")}>  X </span> </h2>
 
-         <ul className="add-menu-list"> 
-               <ul className= "board-menu-items">
+         {/* <ul className="add-menu-list"> 
+               <ul className= "board-menu-items"> */}
                 {boardlist}
-               </ul>
+               {/* </ul>
 
-        </ul>
+        </ul> */}
         </section>
          );
 }

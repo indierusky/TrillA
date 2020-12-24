@@ -112,7 +112,7 @@ handleCards() {
 
                     <div className="cardz-container" >
 
-                        <span key={index}> {card.task} </span> <button onClick={() => deleteCard(card.id)}> Delete card </button>
+                        <span key={index}> {card.task} </span> <button className="del-card-btn" onClick={() => deleteCard(card.id)}>Delete</button>
 
                     </div>
 
@@ -124,19 +124,24 @@ handleCards() {
          })
 
     return(
-    <section className="add-menu">
+    <section className="list-menu">
 
-        <div className="listed-menu">
-         <h2 className="author-menu">  List Actions <span className="menu-x" onClick={this.showDropdown("listed")}>X</span></h2>
+        <h2 className="list-menu-head">  List Actions <span className="menu-x" onClick={this.showDropdown("listed")}>X</span></h2>
+        
+        <hr className="linebreak"/> 
+        <div className="list-menu-list">
 
             
            
             <span onClick={() => this.renderCardForm()}> Add a Card </span>
 
+             <hr className="linebreak"/> 
 
             <span> Current Cards </span> 
 
                 {cardz}
+            
+             {/* <hr className="linebreak"/>  */}
 
             <span className="archive-list" onClick={ () => deleteList(list.id)}> Archive this list </span>
 
@@ -171,7 +176,7 @@ return (
         <>
 
         <div className="list-item-contents">
-            <span className="list-item-header">   {list.title}
+            <span className="list-item-header" key={list.id}>   {list.title}
              <button onClick={this.showDropdown("listed")} className="title-delete"> <Icon icon={ellipsisH} />  </button>
 
             </span>

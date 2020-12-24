@@ -8,7 +8,7 @@ const BoardIndexItem = ({board}) => (
 
     <div className="board-list-item">
        <span className="board-tile-title"> <Link to={`/boards/${board.id}`}>{board.title}</Link></span>
-        <Link to={`/boards/${board.id}/edit`}>Edit</Link>
+        {/* <Link to={`/boards/${board.id}/edit`}>Edit</Link> */}
         <img className="tile" src="https://i.ibb.co/wcCwMt4/trillalogoimage.png" />
 
        

@@ -244,6 +244,60 @@ left: 5px;
 }
 
 
+.list-menu{
+/* background: #FFFFFF; */
+width: 304px;
+height: 300px;
+background-color: rgb(255,255,255);
+border: 1px solid rgb(221,224,229);
+align-content: center;
+text-align: left;
+position: fixed;
+/* top: 45px; */
+left: 200px;
+top: 400px;
+overflow: visible;
+}
+
+.list-menu-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	/* top: 60px;
+	right: 20; */
+  width: 304px;
+  cursor: pointer;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+  overflow: visible;
+}
+
+
+.list-menu-list > * {
+   background-color: rgb(255,255,255);
+    border: 1px solid rgb(221,224,229);
+    display: block;
+    color: #172b4d; 
+    font-size:14px;
+    cursor: pointer;
+    border: none;
+    overflow: visible;
+
+}
+.archive-list{
+
+border: 1px solid rgb(221,224,229);
+
+margin-top: 7px;
+margin-bottom: 7px;
+
+overflow: visible;
+
+
+}
+
  .create-menu{
 
    color: #172b4d; 
@@ -254,7 +308,16 @@ left: 5px;
 
  }
 
+  .linebreak{
 
+  background-color: #091E4221;
+  width: fit-content;
+  height: 1px;
+
+  margin: 8px;
+
+
+  }
  .author-menu{
 
    color: #172b4d; 
@@ -265,12 +328,30 @@ left: 5px;
    font-size: 18px;
 
  }
+
+ .list-menu-head{
+
+   color: #5E6C84; 
+   padding: 7px; 
+   
+   font-size: 18px;
+   text-align: center;
+   border: 1px solid rgb(221,224,229);
+
+ }
  .menu-x{
  cursor: pointer;
  padding: 12px;
  width: 12px;
  height: 12px;
  
+
+ }
+
+ .del-card.btn{
+ position: absolute;
+ float: right;
+ margin: 10px;
 
  }
 

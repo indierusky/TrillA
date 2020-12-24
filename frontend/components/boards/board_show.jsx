@@ -25,6 +25,7 @@ class BoardShow extends React.Component{
         this.showDropdown = this.showDropdown.bind(this);
         this.boardMenu = this.boardMenu.bind(this);
         this.changeStar = this.changeStar.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
 
 
     }
@@ -59,18 +60,32 @@ class BoardShow extends React.Component{
         }
     }
 
+    handleDelete(){
+
+
+            return this.props.deleteBoard(this.props.id).then(this.props.history.push("/boards"));
+
+
+    }
+
     boardMenu(){
 
         return (
 
             <>
+               
+                       
+                 <section className="board-menu-items">      
+                <h2 className="author-menu">  Board Menu Options <span className="menu-x" onClick={this.showDropdown("board")}>  X </span> </h2>
+
                 <div className="edit-menu-list">
 
                    <li> Edit board title or description: <Link to={`/boards/${this.props.board.id}/edit`}>{this.props.board.title}</Link></li>
 
+                    <button onClick={ () => this.handleDelete() }> Archive this Board </button>
                 </div>
 
-
+                </section>
             </>
 
 

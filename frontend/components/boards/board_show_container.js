@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { fetchBoard} from '../../actions/board_actions';
+import { fetchBoard, deleteBoard} from '../../actions/board_actions';
 
 import BoardShow from './board_show';
 
@@ -19,7 +19,8 @@ return{
 
 
 const mapDispatchToProps = dispatch => ({
-    fetchBoard: id => dispatch(fetchBoard(id))
+    fetchBoard: id => dispatch(fetchBoard(id)),
+    deleteBoard: id => dispatch(deleteBoard(id))
 });
 
 export default connect(

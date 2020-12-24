@@ -79,7 +79,7 @@ handleBoards(){
      <div className="index-view">
             <h3 className="board-head"> <FontAwesomeIcon icon={faUser} />     Personal Boards</h3>
                      <div className="board-tile"  >
-                        <span className="board-tile-title" >
+                        <span className="board-tile-start" >
 
                             {this.props.makeBoard}
 
