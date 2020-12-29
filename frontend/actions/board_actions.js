@@ -20,14 +20,15 @@ return {
 
 }
 
-const receiveBoard = input => {
+const receiveBoard = board => {
 
     return {
 
         type: RECEIVE_BOARD,
-        board: input.board,
-        lists: input.lists,
-        cards: input.cards,
+        board
+        // board: input.board,
+        // lists: input.lists,
+        // cards: input.cards,
     }
 
 }
@@ -58,19 +59,19 @@ const receiveErrors = errors => {
 
 
 
-export const fetchBoards = () => dispatch => (
- 
-    APIUtil.fetchBoards().then(boards => dispatch(receiveAllBoards(boards)),
+export const fetchBoards = () => dispatch => {
+    
+  return  APIUtil.fetchBoards().then(boards => dispatch(receiveAllBoards(boards)),
                               errors => dispatch(receiveErrors(errors.responseJSON)))
-    )
+    }
 
 
 
-export const fetchBoard = boardId => dispatch => (
+export const fetchBoard = boardId => dispatch => {
 
-    APIUtil.fetchBoard(boardId).then(board => dispatch(receiveBoard(board)),
+    return APIUtil.fetchBoard(boardId).then(board => dispatch(receiveBoard(board)),
                                     errors => dispatch(receiveErrors(errors.responseJSON)))
-    )
+   }
 
 
 

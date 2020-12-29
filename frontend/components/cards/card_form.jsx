@@ -10,7 +10,7 @@ class CardForm extends React.Component {
     constructor(props) {
         super(props);
         
-        this.state =  { card: this.props.card,
+        this.state =  { task: "",
                         showCard: false }
 
 
@@ -33,7 +33,7 @@ class CardForm extends React.Component {
 
         let newCard = { task: this.state.task} 
 
-        this.props.createCard(this.props.listId, newCard).then(this.setState({card: {task:""}, showCard: "false" })).then(window.location.reload());
+        this.props.createCard(this.props.listId, newCard).then(() => this.setState({ task: ""}));
     }
 
 
@@ -59,6 +59,8 @@ class CardForm extends React.Component {
 
     }
 
+    
+
     showForm() {
         return (
             <div className="list-item-contents">
@@ -68,7 +70,7 @@ class CardForm extends React.Component {
                         value={this.state.task}
                         onChange={this.update("task")}
                         className="cardz-input" placeholder="Enter a title for this card..." />
-                    <button type="submit" className="card-input" >Add Card</button> <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
+                    <button type="submit" className="card-input-btn" disabled={!this.state.task} >Add Card</button> <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
                 </form>
             </div>
         );

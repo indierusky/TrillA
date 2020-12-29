@@ -29,7 +29,7 @@ class BoardForm extends React.Component {
        
        
         e.preventDefault();
-        this.props.createBoard(this.state).then(this.props.closeModal()).then(this.props.fetchBoards()).then(window.location.reload());
+        this.props.createBoard(this.state).then(this.props.closeModal());
        
     }
 
@@ -61,7 +61,7 @@ class BoardForm extends React.Component {
 
                         <input className="card" type="text" placeholder="Add board title" value={this.state.title} onChange={this.update('title')} />
                         <br />
-                        <input className="button-form" type="submit" value="Create Board"/>
+                        <input className="button-form" type="submit" disabled={!this.state.title} value="Create Board"/>
 
                     </div>
                 </form>

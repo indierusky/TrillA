@@ -3,7 +3,7 @@ import BoardIndex from './boards_index';
 import { fetchBoards, deleteBoard} from '../../actions/board_actions';
 import { connect } from 'react-redux';
 import { openModal, closeModal } from '../../actions/modal_actions';
-import {userBoards } from '../../reducers/selector';
+import {userBoards, userBoardIds } from '../../reducers/selector';
 
 
 
@@ -15,7 +15,8 @@ const mapStateToProps = (state) => {
 return {
 
       currentUser: state.session.currentUser,
-       boards: userBoards(state.entities, state.session.currentUser.id)
+       boards: userBoards(state.entities, state.session.currentUser.id),
+       boardIds: userBoardIds(state.entities, state.session.currentUser.id)
       // board: state.boards[ownProps.match.params.boardId],
       // id: ownProps.match.params.boardId
       //dont think i need board and id inside board index will leave just in case

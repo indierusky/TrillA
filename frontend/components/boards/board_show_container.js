@@ -7,6 +7,7 @@ import BoardShow from './board_show';
 import {selectBoard} from '../../reducers/selector';
 
 const mapStateToProps = (state, { match }) => {
+
     
 return{
         id: parseInt(match.params.boardId),

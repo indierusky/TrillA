@@ -7,10 +7,11 @@ import BoardNav from './boardnav';
 import {userBoards} from '../../reducers/selector';
 import {fetchBoards} from '../../actions/board_actions';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
     modal: state.ui.modal,
     currentUser: state.session.currentUser,
     boards: userBoards(state.entities, state.session.currentUser.id)
+    // boards: ownProps.boards
 
 })
 

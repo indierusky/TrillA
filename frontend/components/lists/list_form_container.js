@@ -7,7 +7,8 @@ import ListForm from "./list_form";
 
 
 const mapStateToProps = (state, ownProps) => {
-     
+
+    
     return {
         boardId: parseInt(ownProps.match.params.boardId),
         list: { title: "", },

@@ -15,6 +15,7 @@ constructor(props){
     
 super(props);
 this.handleBoards = this.handleBoards.bind(this);
+this.state = {boards: this.props.boards};
 
 
 }
@@ -25,18 +26,42 @@ this.props.fetchBoards();
 
 }
 
+
+componentDidUpdate(prevProps) {
+
+
+ console.log(this.props.boards)
+ console.log(prevProps.boards)
+    // this.props.fetchBoards()
+
+
+        if (this.props.boardIds[this.props.boardIds.length - 1] !== prevProps.boardIds[prevProps.boardIds.length - 1]) {
+            // this.props.fetchBoards()
+
+        
+
+            const newBoards = this.props.boards;
+            this.setState({ boards: newBoards })
+        }
+
+
+}
+
+
 handleBoards(){
 
-    const {boards} = this.props;
+    const {boards} = this.state;
     const { deleteBoard } = this.props;
     const {editBoard } = this.props;
     
     
     
-
+ 
     return (
         
-      <div>
+      <div>  
+
+      
         
            
             <div className="boards-list">

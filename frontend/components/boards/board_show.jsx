@@ -82,7 +82,7 @@ class BoardShow extends React.Component{
 
                    <li> Edit board title or description: <Link to={`/boards/${this.props.board.id}/edit`}>{this.props.board.title}</Link></li>
 
-                    <button onClick={ () => this.handleDelete() }> Archive this Board </button>
+                    <button onClick={ () => this.handleDelete() }> Delete this Board </button>
                 </div>
 
                 </section>

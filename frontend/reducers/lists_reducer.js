@@ -10,10 +10,10 @@ const listsReducer = (state = {}, action) => {
         case RECEIVE_ALL_LISTS:
             return action.lists;
         case RECEIVE_LIST:
-            nextState[action.list.id] = action.list;
+            nextState[action.list.list.id] = action.list.list;
             return nextState;
-        case RECEIVE_BOARD:
-            return action.lists;
+        // case RECEIVE_BOARD:
+        //     return action.lists;
         case REMOVE_LIST:
             delete nextState[action.listId];
             return nextState;

@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-import CardItem from '../cards/card_item';
+import CardItemContainer from '../cards/card_item_container';
 import CardFormContainer from '../cards/card_form_container';
+import CardIndexContainer from '../cards/cards_index_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTimes} from '@fortawesome/free-solid-svg-icons';
 // npm install --save-dev @iconify/react @iconify-icons/fa-solid
@@ -16,10 +17,10 @@ super(props);
 this.state = {
 
 listed: false,
+list: this.props.list, 
 
 }
 
-this.handleCards = this.handleCards.bind(this);
 this.listMenu = this.listMenu.bind(this);
 this.showDropdown = this.showDropdown.bind(this);
 this.renderCardForm = this.renderCardForm.bind(this);
@@ -43,49 +44,20 @@ showDropdown(field) {
     }
 
 
-componentDidMount(){
+  componentDidMount(){
 
-this.props.fetchCards(this.props.listId)
+   this.props.fetchCards(this.props.listId);
 
-}
-
+  }
 
 // componentDidUpdate(prevProps) {
-//     if (prevProps.cards !== this.props.cards) {
+//     if (prevProps.cards.length !== this.props.cards.length) {
 //         this.props.fetchCards(this.props.listId);
 //     }
 // }
 
 
-handleCards() {
-        if (this.props.cards.length === 0) return null;
-        const {deleteCard} = this.props;
-        // const updateCard = this.props;
 
-
-        const cardz = this.props.cards.map((card, index) => {
-            return (
-                <CardItem
-                    card= {card}
-                    id={card.id}
-                    deleteCard={deleteCard}
-                    key={index}
-                    
-                />
-            );
-        });
-
-        return (
-        
-             <div className="cardz-container">
-
-                            {cardz}
-                          
-            </div>
-
-
-        )     
-    }
 
 
     renderCardForm(){
@@ -112,7 +84,7 @@ handleCards() {
 
                     <div className="cardz-container" >
 
-                        <span key={index}> {card.task} </span> <button className="del-card-btn" onClick={() => deleteCard(card.id)}>Delete</button>
+                        <span key={`index-${index}`}> {card.task} </span> <button className="del-card-btn" onClick={() => deleteCard(card.id)}>Delete</button>
 
                     </div>
 
@@ -143,7 +115,7 @@ handleCards() {
             
              {/* <hr className="linebreak"/>  */}
 
-            <span className="archive-list" onClick={ () => deleteList(list.id)}> Archive this list </span>
+            <span className="archive-list" onClick={ () => deleteList(list.id)}> Remove this list </span>
 
         </div>
 
@@ -163,9 +135,11 @@ handleCards() {
 render(){
 
 
-      if (!this.props.lists) return null; 
+      if (!this.props.list) return null; 
         const {list} = this.props;
         const{deleteList} = this.props;
+        const {cards} = this.props;
+
 
 return (
 
@@ -182,15 +156,8 @@ return (
             </span>
                  {this.state.listed ? this.listMenu() : null}
    
-                    <div className="cardz-container">
-
-                            {this.handleCards()}
-                          
-                    </div>
-                         <CardFormContainer
-                            listId={list.id}
-                            />
-
+                    
+                        <CardIndexContainer listId= {list.id} list={list}  cards={cards}/>
                       
                 </div>
 

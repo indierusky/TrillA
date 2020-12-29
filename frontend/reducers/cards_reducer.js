@@ -1,6 +1,6 @@
 import { RECEIVE_BOARD } from "../actions/board_actions";
 import { RECEIVE_ALL_CARDS, RECEIVE_CARD, REMOVE_CARD } from "../actions/card_actions";
-
+import merge from 'lodash/merge';
 
 const cardsReducer = (state = {}, action) => {
     Object.freeze(state);
@@ -9,12 +9,12 @@ const cardsReducer = (state = {}, action) => {
     switch (action.type) {
 
         case RECEIVE_ALL_CARDS:
-            return action.cards;
+            return merge({}, nextState, action.cards);
         case RECEIVE_CARD:
-            nextState[action.card.id] = action.card;
+            nextState[action.card.card.id] = action.card.card;
             return nextState;
-        case RECEIVE_BOARD:
-             return action.cards;
+        // case RECEIVE_BOARD:
+        //      return action.cards;
         case REMOVE_CARD:
             delete nextState[action.cardId];
             return nextState;

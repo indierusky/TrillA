@@ -12,7 +12,8 @@ super(props);
 
 this.state = {
 
-     showList: false
+     showList: false,
+     lists: this.props.lists
 }
 
 this.handleLists = this.handleLists.bind(this);
@@ -35,6 +36,17 @@ componentDidMount(){
     // }
 
 
+componentDidUpdate(prevProps) {
+
+        // this.props.fetchLists(this.props.boardId);
+
+    
+        if (this.props.listIds[this.props.listIds.length - 1] !== prevProps.listIds[prevProps.listIds.length - 1]) {
+            const newLists = this.props.lists;
+            this.setState({ lists: newLists })
+        }
+
+}
 
     handleLists() {
 
@@ -42,7 +54,7 @@ componentDidMount(){
 
         const { deleteList } = this.props;
 
-        const lists = this.props.lists.map(list => {
+        const lists = this.state.lists.map(list => {
 
 
                      return (

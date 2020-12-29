@@ -30,6 +30,24 @@ export const userBoards = ({boards}, id) => {
 }
 
 
+
+export const userBoardIds = ({boards}, id) => {
+
+        let currentBoards = [];
+
+    Object.values(boards).map( board => {
+        if(board.user_id === id){
+            currentBoards.push(board.id);
+
+
+        }
+
+    })
+    return currentBoards;
+}
+
+
+
 export const userLists = ({ lists }, id) => {
 
     // fetchLists(id)
@@ -76,3 +94,40 @@ export const listedCards = ({ cards }, id) => {
 
 
 
+export const userListIds = ({ lists }, id) => {
+
+    // fetchLists(id)
+    let currentLists = [];
+
+
+    Object.values(lists).map(list => {
+        if (list.board_id === id) {
+            currentLists.push(list.id);
+
+
+        }
+
+    })
+
+    return currentLists;
+}
+
+
+
+
+
+
+export const listedCardIds = ({ cards }, id) => {
+    // fetchCards(id)
+    let currentCards = [];
+
+    Object.values(cards).map(card => {
+        if (card.list_id === id) {
+            currentCards.push(card.id);
+
+
+        }
+
+    })
+    return currentCards;
+}

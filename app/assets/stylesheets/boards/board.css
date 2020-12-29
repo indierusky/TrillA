@@ -168,6 +168,16 @@ img.tile{
 }
 
 
+.button-form:hover {
+  background-color: #61bd4f;
+}
+
+.button-form[disabled] {
+  cursor: not-allowed;
+  background-color: #f4f5f7;
+  color: #a5adba;
+}
+
  
  ul.board-list{
   justify-self: center;

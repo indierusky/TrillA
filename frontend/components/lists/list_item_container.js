@@ -15,7 +15,9 @@ const mapStateToProps = (state, ownProps) => {
   
     return {
      cards:  listedCards(state.entities, ownProps.listId),
-     lists:  userLists(state.entities, ownProps.boardId)
+     list:  ownProps.list,
+     listId: ownProps.listId,
+     boardId: ownProps.boardId,
     
         
     };

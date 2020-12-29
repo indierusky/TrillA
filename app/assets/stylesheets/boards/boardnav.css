@@ -48,11 +48,11 @@ nav.board-nav{
      background-image: none;
      filter: brightness(85%);
     }
-
+/* 
     .notifications:hover{
      background-image: none;
      filter: brightness(85%);
-    }
+    } */
 
    div.boardnav-mid{
   height: inherit;
@@ -124,7 +124,7 @@ div.boardnav-left{
    align-items: center;
    text-align: center;
    align-self: center;
-  margin-top: -15px;
+  margin-top: -25px;
   
 
    }
@@ -244,6 +244,20 @@ left: 5px;
 }
 
 
+.notes-list{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+	text-align: left;
+	/* top: 60px;
+	right: 20; */
+  width: 304px;
+  cursor: pointer;
+    
+  box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
+}
+
 .list-menu{
 /* background: #FFFFFF; */
 width: 304px;
@@ -298,6 +312,21 @@ overflow: visible;
 
 }
 
+.notes-menu-sec{
+/* background: #FFFFFF; */
+width: 304px;
+height: auto;
+background-color: rgb(255,255,255);
+border: 1px solid rgb(221,224,229);
+align-content: center;
+text-align: left;
+position: absolute;
+top: 45px;
+right: 5px;
+
+}
+
+
  .create-menu{
 
    color: #172b4d; 
@@ -344,16 +373,26 @@ overflow: visible;
  padding: 12px;
  width: 12px;
  height: 12px;
+ /* position: absolute; */
+ float: right;
+ margin-top: -10px;
  
 
  }
 
  .del-card.btn{
- position: absolute;
+ /* position: absolute; */
  float: right;
  margin: 10px;
 
  }
+
+ .card-del{
+
+   float: right;
+ }
+
+
 
 
 .add-menu-list > * {
@@ -441,6 +480,19 @@ left: 40px;
     
   box-shadow: 2px 6px 8px -4px rgba(9,30,66,.25);
 }
+
+.notes-menu{
+
+   color: #172b4d; 
+   padding: 12px; 
+   align-self: center;
+   align-items: center;
+   justify-content: center;
+   font-size: 18px;
+
+  /* margin-bottom: 40px; */
+
+ }
 
 
  /* .create-menu{

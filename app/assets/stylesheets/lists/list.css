@@ -168,18 +168,18 @@ span.list-title{
      filter: brightness(85%);
     }
 
-    .add-team-board:hover{
+    /* .add-team-board:hover{
      background-image: none;
      filter: brightness(85%);
-    }
+    } */
 
 
 
 
-    .add-menu-item:hover{
+    /* .add-menu-item:hover{
      background-image: none;
      filter: brightness(85%);
-    }
+    } */
 
     .card-start:hover{
      background-image: none;
@@ -224,7 +224,19 @@ form.list-form {
   
 }
 
-button.list-input {
+
+.list-input-btn:hover {
+  background-color: #61bd4f;
+}
+
+.list-input-btn[disabled] {
+  cursor: not-allowed;
+  background-color: #f4f5f7;
+  color: #a5adba;
+}
+
+
+.list-input-btn {
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
   line-height: 20px;
@@ -236,7 +248,8 @@ button.list-input {
   color: #ffffff;
   width: 77px;
   height: 32px;
-  margin-top: -10px;
+  margin-top: 5px;
+  margin-right: 150px;
 }
 
 div.btn-lst-wrap{

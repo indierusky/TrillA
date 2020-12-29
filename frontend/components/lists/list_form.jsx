@@ -7,7 +7,7 @@ import { faPlus, faTimes} from '@fortawesome/free-solid-svg-icons';
 class ListForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state =  { list: this.props.list,  
+        this.state =  { title: "",  
                          showList: this.props.showList }
     
         
@@ -33,9 +33,9 @@ class ListForm extends React.Component {
         
         e.preventDefault();
 
-        let newList = {  title: this.state.title, }
+        let newList = {  title: this.state.title }
          
-      this.props.createList(this.props.boardId, newList).then(() => this.setState({ list: { title: "" }, showList: "false" })).then(window.location.reload()); 
+      this.props.createList(this.props.boardId, newList).then(() => this.setState({showList: false})).then(() => this.setState({ title: "" })); 
     }
 
 
@@ -59,15 +59,15 @@ class ListForm extends React.Component {
      return (
             < div className="list-form-container">
 
-                <form onSubmit={this.handleSubmit} className="list-form">
+                <form ref={this.addButtonRef} onSubmit={this.handleSubmit} className="list-form">
                     <input
                         type="text"
                         value={this.state.title}
                         onChange={this.update("title")}
                         className="list-input" placeholder="Enter list title..." />
-                    <div className="btn-lst-wrap">
-                        <button  type="submit" className="list-input" >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
-                    </div>
+                    {/* <div className="btn-lst-wrap"> */}
+                        <button type="submit" className="list-input-btn" disabled={!this.state.title} >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
+                    {/* </div> */}
                 </form>
 
               

@@ -207,12 +207,17 @@ showNotesMenu(){
 
 return (
 
-    <ul className="notes-list">
-        <li> Taco says sorry no notifications at this time! </li>
+  <section className="add-menu-items" >
+    <h2 className="notes-menu">  Notifications  <span className="menu-x" onClick={this.showDropdown("notes")}>  X </span> </h2>
+
+    <ul>
+        <li className="menu-item"> Taco says sorry no notifications at this time! </li>
         <img className="logo-bx" src="https://i.ibb.co/7XFgBYj/pixeltaco.png" alt="pixel taco"/>
         {/* <Link to={`/boards/${board.id}/edit`}>Edit Board</Link> */}
 
     </ul>
+
+    </section>
 )
 
 }
