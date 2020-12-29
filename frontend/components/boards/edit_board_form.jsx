@@ -67,11 +67,11 @@ class EditBoardForm extends React.Component {
                
                 <form onSubmit={this.handleSubmit} className="login-form">
                                     
-                    <br />
+                    
                                 {/* {this.props.editBoard} */}
 
                     {/* <div onClick={this.props.closeModal} className="close-x">X</div> */}
-                    <br/>
+                    
                     <div className= "login-form-box">
                          <h3 className="edit-heading">Edit title and/or description </h3>
                          

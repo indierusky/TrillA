@@ -39,9 +39,7 @@ this.props.fetchCards(this.props.listId)
 
 componentDidUpdate(prevProps) {
 
-
-        if (this.props.cards[this.props.cards.length - 1] !== prevProps.cards[prevProps.cards.length - 1]) {
-        //    this.props.fetchCards(this.props.listId)
+        if (this.props.cards.length !== prevProps.cards.length) {
 
             let cards = this.props.cards;
             this.setState({ cards })
@@ -66,9 +64,8 @@ showDropdown(field) {
 
 
 handleCards() {
-        if (this.props.cards.length === 0) return null;
+        if (this.state.cards.length === 0) return null;
         const {deleteCard} = this.props;
-        // const updateCard = this.props;
 
 
         const cardz = this.state.cards.map((card, index) => {
@@ -155,8 +152,7 @@ const mapStateToProps = (state, ownProps) => {
      list: ownProps.list,   
      cards:  listedCards(state.entities, ownProps.listId),
      cardIds: listedCardIds(state.entities, ownProps.listId),
-    //  cards: ownProps.cards
-    // cardIds: Object.keys(state.entities.cards),
+    
         
     };
 

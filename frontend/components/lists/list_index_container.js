@@ -14,6 +14,7 @@ const mapStateToProps = (state, {match}) => {
     lists: userLists(state.entities, parseInt(match.params.boardId)),
      boardId: parseInt(match.params.boardId),
      listIds: userListIds(state.entities, parseInt(match.params.boardId)),
+     showList: false,
    }
   
 };

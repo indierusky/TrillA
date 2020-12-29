@@ -129,9 +129,9 @@ render (){
         <div className="single-board-show">
 
         
-        <br/>
+        
             <div className="board-show-header" >
-                <br/>
+            
                         
                 
 

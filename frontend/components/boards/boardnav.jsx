@@ -142,7 +142,7 @@ const boardlist = this.props.boards.map((board, index) => {
             
     <ul className="add-menu-list"> 
 
-         <li className="menu-item" key={index}>
+         <li className="menu-item" key={`board-index-${index}`}>
           <Link to={`/boards/${board.id}`}> {board.title} </Link>
         </li>
      </ul>

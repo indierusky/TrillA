@@ -70,7 +70,8 @@ class CardForm extends React.Component {
                         value={this.state.task}
                         onChange={this.update("task")}
                         className="cardz-input" placeholder="Enter a title for this card..." />
-                    <button type="submit" className="card-input-btn" disabled={!this.state.task} >Add Card</button> <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
+                    <button type="submit" className="card-input-btn" disabled={!this.state.task} >Add Card</button> 
+                    <button className="home-lkkk" onClick={(e) => this.handleButtonClick(e)} value = "showCard" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/></button>
                 </form>
             </div>
         );

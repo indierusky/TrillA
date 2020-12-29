@@ -30,7 +30,6 @@ class ListForm extends React.Component {
 
     handleSubmit(e) {
 
-        
         e.preventDefault();
 
         let newList = {  title: this.state.title }
@@ -40,7 +39,6 @@ class ListForm extends React.Component {
 
 
     handleButtonClick(e) {
-         
         e.preventDefault();
          let field = e.target.value;
 
@@ -55,8 +53,8 @@ class ListForm extends React.Component {
 
     showForm(){
 
-        
      return (
+         <>
             < div className="list-form-container">
 
                 <form ref={this.addButtonRef} onSubmit={this.handleSubmit} className="list-form">
@@ -66,7 +64,8 @@ class ListForm extends React.Component {
                         onChange={this.update("title")}
                         className="list-input" placeholder="Enter list title..." />
                     {/* <div className="btn-lst-wrap"> */}
-                        <button type="submit" className="list-input-btn" disabled={!this.state.title} >Add List </button> <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
+                        <button type="submit" className="list-input-btn" disabled={!this.state.title} >Add List </button> 
+                        <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
                     {/* </div> */}
                 </form>
 
@@ -74,6 +73,7 @@ class ListForm extends React.Component {
                 
 
             </div> 
+            </>
         );
 
 
@@ -110,8 +110,10 @@ class ListForm extends React.Component {
         return(
             <>
             {/* <div className="list-index-view"> */}
+            <div >
                     {this.state.showList ? this.showForm() : null}
 
+            </div>
             {/* </div> */}
 
             </>

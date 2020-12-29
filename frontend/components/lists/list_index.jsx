@@ -19,7 +19,6 @@ this.state = {
 this.handleLists = this.handleLists.bind(this);
 this.handleButtonClick = this.handleButtonClick.bind(this);
 this.showListForm = this.showListForm.bind(this);
-// this.addButtonRef = React.createRef();
 
 
 }
@@ -27,34 +26,32 @@ this.showListForm = this.showListForm.bind(this);
 componentDidMount(){
 
     this.props.fetchLists(this.props.boardId);
+    this.setState({ showList: false})
 }
 
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.lists !== this.props.lists) {
-    //         this.props.fetchLists(this.props.boardId);
-    //     }
-    // }
+   
 
 
 componentDidUpdate(prevProps) {
 
         // this.props.fetchLists(this.props.boardId);
-
-    
-        if (this.props.listIds[this.props.listIds.length - 1] !== prevProps.listIds[prevProps.listIds.length - 1]) {
+  //(this.props.listIds[this.props.listIds.length - 1] !== prevProps.listIds[prevProps.listIds.length - 1])
+     
+        if (prevProps.listIds.length !== this.props.listIds.length) {
             const newLists = this.props.lists;
-            this.setState({ lists: newLists })
+            this.setState({ lists: newLists})
         }
 
 }
 
     handleLists() {
 
-        if (this.props.lists.length === 0) return null;
+
+        if (this.state.lists.length === 0) return null;
 
         const { deleteList } = this.props;
 
-        const lists = this.state.lists.map(list => {
+        const lists = this.state.lists.map( (list, index) => {
 
 
                      return (
@@ -63,12 +60,14 @@ componentDidUpdate(prevProps) {
                                     deleteList={deleteList}
                                     listId={list.id}
                                     boardId={this.props.boardId}
-                                    key={list.id}
+                                    key={`list-index-${index}`}
                                 />
                             )
 
 
         });
+
+
         return (
 
             
@@ -90,11 +89,9 @@ componentDidUpdate(prevProps) {
          let field = e.target.value;
 
         this.setState({[field]: !this.state[field]})
-        // document.getElementById("addlist").style.visibility = "hidden";
-        // document.remove(addlist);
+       
 
          document.getElementById("addlist").remove(); 
-        //  this.addButtonRef.current.classList.toggle("hidden");     
        
 
     }
@@ -112,7 +109,9 @@ componentDidUpdate(prevProps) {
 
     render() {
 
-        
+        const lists = this.handleLists();
+
+
         return (
             <>
 
@@ -120,10 +119,13 @@ componentDidUpdate(prevProps) {
                 <div className="list-index-view">
                     
 
-                      
-                        {this.handleLists()}
+                    <div className = "list-index-container" >
+                                {lists}
 
-                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e)} value = "showList"> <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add another list </button>
+                    </div>
+
+                    <button id="addlist" className="list-start" onClick={(e) => this.handleButtonClick(e)} value = "showList"> 
+                    <FontAwesomeIcon  icon={faPlus} className='fstylep'/> Add another list </button>
 
                    {this.state.showList ?  this.showListForm() : null}
                     
