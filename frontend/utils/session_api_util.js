@@ -22,9 +22,10 @@ export const deleteSession = () => (
 
 
 
-export const demoUser = {
+const demoUser = {
    
-    email: "andrewrobinson",
+    username: "Demo Guy",
+    email: "demouser@trilla.com",
     password: "football"
 };
 

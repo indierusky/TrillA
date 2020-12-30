@@ -5,7 +5,7 @@ import Modal from './../modal/modal';
 
 
 
-const Nav = ({ currentUser, logout, openModal }) => {
+const Nav = ({ currentUser, logout, openModal}) => {
 
     
 
@@ -25,7 +25,7 @@ const Nav = ({ currentUser, logout, openModal }) => {
             <NavLink to={"/login"}><button className="nav-buttons-child-login">Log In</button></NavLink>
       &nbsp; &nbsp;
             <NavLink to={"/signup"}><button className="nav-buttons-child">Sign Up</button></NavLink>
-            {/* <button onClick={loginDemo}className="nav-buttons-child-demo">Demo</button> */}
+            {/* <button onClick={() => loginDemo()}className="nav-buttons-child-demo">Demo</button> */}
         </div>
         </nav>
      </>

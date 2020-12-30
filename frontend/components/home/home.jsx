@@ -101,11 +101,46 @@ import {NavLink} from 'react-router-dom';
                 </div> 
                 <img className="hm-img-low" src=" https://i.ibb.co/Z8WVVym/front-Screen-Trilla.png" alt="trillabot" /> 
 
-                <div className="how-work">
+                <div className="how-work1">
                 <h3 className="mid-heading"> Trilla your way </h3>
                <p className="mid-p"> Use Trilla the way your team works best. We’ve got the <br/> flexibility & features to fit any team’s style. </p>
                 </div>
        </div> 
+        <div className="hm-lower">
+
+            <div className="how-work3">
+
+                <img className="low-hm-img" src="https://i.ibb.co/kc7dFhS/trillalowerleft.png" alt="trillabot" /> 
+
+                <h3 className="mid-heading"> The Team Playbook </h3>
+               <p className="mid-p"> It’s easy to get your team up and running with <br />
+                 Trilla. We’ve collected all of the boards and <br /> 
+                 tools your team needs to succeed in one <br />
+                  handy resource.</p>
+
+                <NavLink to='/signup'> <button className="home-arrow2"> Make A Game Plan </button></NavLink>
+
+            </div>
+
+            <div className="how-work2">
+
+                <img className="low-hm-img" src="https://i.ibb.co/CpczVzt/trilalowerright.png" alt="trillabot" /> 
+
+                <h3 className="mid-heading"> Always In Sync </h3>
+               <p className="mid-p"> No matter where you are, Trilla stays in sync <br />
+               across all of your devices. Collaborate with <br />
+                your team anywhere, from sitting on the bus <br />
+                to sitting on the beach.</p>
+
+
+            </div>
+
+
+
+                    
+        </div>
+
+
      {/* </div> */}
      </>
 

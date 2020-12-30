@@ -36,9 +36,9 @@ export default () => (
         {/* <Route exact path="/" component={Home} /> */}
       
         <Switch>
-             <Route exact path="/" component={Home} />
+             <AuthRoute exact path="/" component={Home} />
             <ProtectedRoute exact path="/boards" component={BoardsIndexContainer} /> 
-            <Route exact path="/" component={BoardsIndexContainer}/>
+            {/* <Route exact path="/" component={BoardsIndexContainer}/> */}
             <AuthRoute path="/signup" component={SignupContainer} />
             <AuthRoute path="/login" component={SigninContainer} />
             <ProtectedRoute exact path="/boards/:boardId" component={BoardsShowContainer} /> 

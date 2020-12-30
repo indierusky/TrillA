@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import React from 'react';
-import {createNewUser, clearSessionErrors} from '../../actions/session_actions';
+import {createNewUser, clearSessionErrors, loginDemo} from '../../actions/session_actions';
 import Signup from './signup';
 import { openModal, closeModal } from '../../actions/modal_actions'
 
@@ -29,6 +29,7 @@ other: (
     ),
     closeModal: () => dispatch(closeModal()),
     clearSessionErrors: () => dispatch(clearSessionErrors()),
+    loginDemo: () => dispatch(loginDemo()),
 
 
 }

@@ -29,15 +29,17 @@ this.props.clearSessionErrors();
 
 demoSignUp(e) {
     e.preventDefault();
-    let password = faker.internet.password();
-    let user = {
-      email: faker.internet.email(),
-      username: faker.internet.userName(),
-      password: password,
-    }
+    // let password = faker.internet.password();
+    // let user = {
+    //   email: faker.internet.email(),
+    //   username: faker.internet.userName(),
+    //   password: password,
+    // }
 
 
-    this.props.createNewUser(user).then(() => this.props.history.push('/boards'));
+    // this.props.createNewUser(user).then(() => this.props.history.push('/boards'));
+
+    this.props.loginDemo().then(() => this.props.history.push('/boards'));
   }
 
 handleSubmit(e){
