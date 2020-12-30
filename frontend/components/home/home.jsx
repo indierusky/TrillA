@@ -62,15 +62,26 @@ import {NavLink} from 'react-router-dom';
     </div>
 
     <div className="mid-right">
-              <img className="hm-img-mid" src="https://i.ibb.co/khwKJ2T/trellodown.png" alt="trillabot" />
+
+              <img className="hm-img-mid" src="https://i.ibb.co/qdfq41P/trellobigboards.png" alt="trillabot" /> 
           
     </div>
         
      </div>
 
 
-         <div>
+         <div className="mid-lower">
 
+
+              
+        <div className="mid-lower-left">
+                <h3 className="mid-heading"> Information at a glance </h3>
+               <p className="mid-p"> Dive into the details by adding comments,  <br/> attachments, due dates, 
+                and more directly to <br/> Trilla cards.  Collaborate on projects from <br />
+              beginning to end. </p>
+        </div>
+
+         <img className="hm-img-mid" src="https://i.ibb.co/khwKJ2T/trellodown.png" alt="trillabot" />   
 
 
              {/* <div className="home">
@@ -81,6 +92,20 @@ import {NavLink} from 'react-router-dom';
 
 
          </div>
+
+        <div className="home-lower-mid">
+
+                <div className="how-work">
+                 <h3 className="mid-heading"> See how it works </h3>
+               <p className="mid-p"> Go from idea to action in seconds with Trilla’s intuitively <br/> simple boards, lists, and cards. </p>
+                </div> 
+                <img className="hm-img-low" src=" https://i.ibb.co/Z8WVVym/front-Screen-Trilla.png" alt="trillabot" /> 
+
+                <div className="how-work">
+                <h3 className="mid-heading"> Trilla your way </h3>
+               <p className="mid-p"> Use Trilla the way your team works best. We’ve got the <br/> flexibility & features to fit any team’s style. </p>
+                </div>
+       </div> 
      {/* </div> */}
      </>
 
