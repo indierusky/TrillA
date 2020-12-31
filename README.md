@@ -11,6 +11,16 @@ tools to plan, record or inspire themselves and each other to get things done.
 
 
 
+Technologies
+
+Trilla is implemented using Ruby on Rails on the backend with the rails router for routing and PostgresSql for the database.  The frontend utilizes javascript with DOM manipulation and also React and Redux libraries.  Images are hosted on the web.  Styling is done using mostly css and scss for some features.  
+
+
+User Authentication
+
+
+
+
 Installation and Usage
 
 For code relating to the project simple clone this repository:  
