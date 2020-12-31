@@ -76,6 +76,29 @@ Once a board is created it will show on the boards index page.  A tile similar t
 
 
 
+Creating A to-do List
+
+Once a board is created.  A user can click on that boards tile or select the boards title from the boards drop down menu under the boards button in the navbar.  
+
+![image](https://user-images.githubusercontent.com/67871528/103422616-60f4ac00-4b70-11eb-8bc0-13fcd7681c05.png)
+
+
+
+On the boards show page there is a button to click to add a list.  
+
+![image](https://user-images.githubusercontent.com/67871528/103422451-86cd8100-4b6f-11eb-9992-cc7d09397959.png)
+
+
+After clicking the add a list button a list form will appear and a user must then enter a title for the list to create it.
+
+![image](https://user-images.githubusercontent.com/67871528/103422467-9e0c6e80-4b6f-11eb-899e-47ad57d0bedb.png)
+
+
+
+![image](https://user-images.githubusercontent.com/67871528/103422476-b5e3f280-4b6f-11eb-9c66-d98e73bccf84.png)
+
+
+
 
 Installation and Usage
 
