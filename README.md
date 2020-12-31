@@ -78,7 +78,8 @@ Once a board is created it will show on the boards index page.  A tile similar t
 
 Creating A to-do List
 
-Once a board is created.  A user can click on that boards tile or select the boards title from the boards drop down menu under the boards button in the navbar.  
+Once a board is created.  A user can click on that boards tile title or select the boards title from the boards drop down menu under the boards button in the navbar, in order to visit that board's show page.  
+
 
 ![image](https://user-images.githubusercontent.com/67871528/103422616-60f4ac00-4b70-11eb-8bc0-13fcd7681c05.png)
 
