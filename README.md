@@ -99,6 +99,9 @@ After clicking the add a list button a list form will appear and a user must the
 
 
 
+![image](https://user-images.githubusercontent.com/67871528/103422491-c4caa500-4b6f-11eb-923f-404304373ebb.png)
+
+
 
 Installation and Usage
 
