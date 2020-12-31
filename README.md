@@ -18,6 +18,30 @@ Trilla is implemented using Ruby on Rails on the backend with the rails router f
 
 User Authentication
 
+Users are reqired to create an account to fully access all of Trilla's great functionality.  There is a demo button on the sign-up page which allows a potential user to login quickly and see what a board with to-do lists and cards on trilla look like upclose.  However, if you want to fully access the site you will have to sign up.  A user must create a password of at least 6 characters and passwords are not stored in the database.  Using Bcrypt hashing algorithm trilla securely stores only a password hash. By doing this trilla safely authenticates a new user without allowing their password, which may be used on a number of other accounts to ever be exposed.  The password digest is what will be used to verify the authenticity of a user during subsequent login sessions.  
+
+![image](https://user-images.githubusercontent.com/67871528/103421270-67335a00-4b69-11eb-93cb-669661c39b22.png)
+
+
+
+![image](https://user-images.githubusercontent.com/67871528/103421280-787c6680-4b69-11eb-84a4-b4b13f6c0725.png)
+
+
+
+Creating Boards
+
+A user can create a board in two different ways.  Once a user logs in they will be taken to the boards index page.  To the left there is a empty tile with header text that reads "Create new board".   If a user clicks on that tile it will open the modal containing the form to create a board.   A user can then give the new board a name and create it.  A user can also creat a board by clicking the the add menu, which is a drop down menu in the navbar that is displayed in a button using the fontawesome faPlus icon.  
+
+![image](https://user-images.githubusercontent.com/67871528/103421720-cf833b00-4b6b-11eb-9a6a-b31a0fc3ac98.png)
+
+![image](https://user-images.githubusercontent.com/67871528/103421735-e7f35580-4b6b-11eb-991b-a9d10ff9c467.png)
+
+
+
+Once a list is created it will show on the boards index page.  A tile similar to the tile to create a board will show with a blue gradient and the trilla symbol right next to the title of the board that was just created.  
+
+![image](https://user-images.githubusercontent.com/67871528/103421800-47516580-4b6c-11eb-9375-a83d08ce0f2f.png)
+
 
 
 
