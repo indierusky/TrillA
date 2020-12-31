@@ -103,6 +103,30 @@ After clicking the add a list button a list form will appear and a user must the
 
 
 
+Creating a card on a list
+
+Once a list is created a user can click a button at the end of the list item and add a card to the list. 
+
+![image](https://user-images.githubusercontent.com/67871528/103422966-1f650080-4b72-11eb-9b34-c5762168674b.png)
+
+Once the add a card button is clicked the card form appears. 
+
+![image](https://user-images.githubusercontent.com/67871528/103422976-2d1a8600-4b72-11eb-8a69-302b14808057.png)
+
+ A user must enter a task title for the card in order to submit the form.
+
+![image](https://user-images.githubusercontent.com/67871528/103422984-386db180-4b72-11eb-9fc0-5c04f2bba7d4.png)
+
+Once form is submitted card is placed as a to-do item on the list.  An updated list will display.
+
+![image](https://user-images.githubusercontent.com/67871528/103422993-44f20a00-4b72-11eb-92ed-9e4803ca8c13.png)
+
+![image](https://user-images.githubusercontent.com/67871528/103423015-589d7080-4b72-11eb-9b1c-f0ecdd1ed81e.png)
+
+
+
+
+
 Installation and Usage
 
 For code relating to the project simple clone this repository:  
