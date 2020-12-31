@@ -51,7 +51,14 @@ A user can create a board in two different ways.  Once a user logs in they will 
 
 
 
-  A user can also creat a board by clicking the the add menu, which is a drop down menu in the navbar that is displayed in a button using the fontawesome faPlus icon.  
+ Inside the modal a user must create a title for the board in order to submit the form.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/67871528/103422255-84b6f280-4b6e-11eb-9ac2-001f9086ee39.png)
+ 
+ 
+
+  A user can also create a board by clicking the the add menu, which is a drop down menu in the navbar that is displayed in a button using the fontawesome faPlus icon.  
 
 
 
