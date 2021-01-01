@@ -18,7 +18,7 @@ Trilla is implemented using Ruby on Rails on the backend with the rails router f
 
 User Authentication
 
-Users are reqired to create an account to fully access all of Trilla's great functionality.  There is a demo button on the sign-up page which allows a potential user to login quickly and see what a board with to-do lists and cards on trilla look like upclose.  However, if you want to fully access the site you will have to sign up.  A user must create a password of at least 6 characters and passwords are not stored in the database.  
+Users are reqired to create an account to fully access all of Trilla's great functionality.  There is a demo button on the sign-up page which allows a potential user to login quickly and see what a board with to-do lists and cards on trilla look like upclose.  However, if you want to fully access the site you will have to sign up.  To complete sign up a user must create a username and enter their email address and create a password.  A user must create a password of at least 6 characters and passwords are not stored in the database.  
 
 
 
@@ -29,7 +29,7 @@ Users are reqired to create an account to fully access all of Trilla's great fun
 
 
 
-Using Bcrypt hashing algorithm trilla securely stores only a password hash. By doing this trilla safely authenticates a new user without allowing their password, which may be used on a number of other accounts to ever be exposed.  The password digest is what will be used to verify the authenticity of a user during subsequent login sessions.  
+Using Bcrypt hashing algorithm trilla securely stores only a password digest. By doing this trilla safely authenticates a new user without allowing their password, which may be used on a number of other accounts to ever be exposed.  The password digest is what will be used to verify the authenticity of a user during subsequent login sessions.  
 
 
 
