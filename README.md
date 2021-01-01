@@ -46,7 +46,20 @@ Creating Boards
 A user can create a board in two different ways.  Once a user logs in they will be taken to the boards index page.  To the left there is a empty tile with header text that reads "Create new board".   If a user clicks on that tile it will open the modal containing the form to create a board.   A user can then give the new board a name and create it.
 
 
+
+
 ![image](https://user-images.githubusercontent.com/67871528/103422092-ae234e80-4b6d-11eb-9c69-f0b9d7e6b187.png)
+
+
+
+
+A user can also create a board by clicking the the add menu, which is a drop down menu in the navbar that is displayed in a button using the fontawesome faPlus icon.  
+
+
+
+
+![image](https://user-images.githubusercontent.com/67871528/103421735-e7f35580-4b6b-11eb-991b-a9d10ff9c467.png)
+
 
 
 
@@ -58,11 +71,7 @@ A user can create a board in two different ways.  Once a user logs in they will 
  
  
 
-  A user can also create a board by clicking the the add menu, which is a drop down menu in the navbar that is displayed in a button using the fontawesome faPlus icon.  
-
-
-
-![image](https://user-images.githubusercontent.com/67871528/103421735-e7f35580-4b6b-11eb-991b-a9d10ff9c467.png)
+  
 
 
 
