@@ -196,9 +196,12 @@ background-image:url(trillabackground.jpg);
     background-color:#0079bf;
     color: white ;
     position: relative;
-    width: 67px;
-    height: 36px;
+    width: 75px;
+    height: 28px;
     z-index: 100;
+    padding: 4px 8px;
+
+    border-radius: 8px;
    }
 
    nav.home-nav{
@@ -656,7 +659,7 @@ background-color: inherit;
 background-size: cover;
 align-self: right;
 position: absolute;
-right: 20%;
+right: 17%;
 top: -1.5%;
 background-color: #0079bf;
 
