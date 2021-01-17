@@ -11,6 +11,7 @@ const Nav = ({ currentUser, logout, openModal}) => {
 
     const sessionLinks = () => (
      <>
+     <div className="nav-contain">
       <nav className="home-nav">
           <a href='https://trilla.herokuapp.com/#/signup'>
           
@@ -28,6 +29,7 @@ const Nav = ({ currentUser, logout, openModal}) => {
             {/* <button onClick={() => loginDemo()}className="nav-buttons-child-demo">Demo</button> */}
         </div>
         </nav>
+    </div>
      </>
     );
     const personalGreeting = () => (

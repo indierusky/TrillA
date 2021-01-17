@@ -146,18 +146,20 @@ background-image:url(trillabackground.jpg);
 
    .nav-buttons{
      line-height: 18px;
-     width: 100px;
+     width: 200px;
      font-size: 16pt;
      font-family: tahoma;
+     /* background-color:#0079bf; */
      margin-top: 1px;
      /* margin-right: 2px; */
-     position:absolute;
+     position: fixed;
      /* float: right; */
-     top:0;
+     top: 0;
      right: 0;
-     margin-right: 70px;
+     /* margin-right: 15px; */
      display:  flex;
      flex-direction: row;
+     z-index: 100;
      
    }
 
@@ -172,16 +174,17 @@ background-image:url(trillabackground.jpg);
     height: 28px;
     border-radius: 8px;
     justify-content: space-between;
-    
+    z-index: 100;  
 
    }
 
    .logo-new{
     position: absolute;
-  margin-top: -20;
+  margin-top: -1%;
   left: 0;
    width: 140px;
    height: 140px;
+   background-color: #0079bf;
    /* margin-bottom: 60px; */
 
 
@@ -195,16 +198,40 @@ background-image:url(trillabackground.jpg);
     position: relative;
     width: 67px;
     height: 36px;
-    
+    z-index: 100;
    }
 
-   .home-nav{
+   nav.home-nav{
     background-color:#0079bf;
-    margin-top: -40px;
+    margin-top: -2%;
+    position: fixed;
+    /* transform: translateX(-25%); */
+    z-index: 1000;
+    top: 0%;
+    width: 100%;
+    overflow: sticky;
+    /* padding: 12px 18px; */
+    /* left: 50%; */
+
+   width: inherit;
+  /* box-sizing: border-box; */
+   box-shadow: 0px 4px 7px #777;
+   height: 6em;
+  transition: background-color 0.4s ease-out;
 
    }
 
-   
+   .nav-contain{
+
+   background-color: #0079bf;
+   position: sticky;
+   overflow: sticky;
+   padding: 0;
+   z-index: 1000;
+   transition: background-color 0.4s ease-out;
+   height: 6em;
+
+   }
 
 
    .home{
@@ -449,8 +476,8 @@ form.home-signup{
   flex-direction: row;
   justify-content: center;
   position: relative;
-  left: 375px;
-  top: 145px;
+  left: 19%;
+  top: 120%;
   overflow: hidden;
 
 }
@@ -492,7 +519,8 @@ text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  position: absolute;
+  /* position: fixed; */
+  z-index: 1000;
   top: 0px;
   left: 0px;
   /* margin-left: auto; */
@@ -603,7 +631,7 @@ width: 540px;
 height: 81px;
 position: relative;
 top: 10px;
-left: 400px;
+left: 21%;
 /* text-align: center; */
 color: #ffffff;
 
@@ -613,7 +641,7 @@ color: #ffffff;
 
 .home-topt{
 
-margin-left: 400px;
+margin-left: 20.8%;
 font-family: 'Nunito', sans-serif;
 font-size: 48px;
 
@@ -628,8 +656,8 @@ background-color: inherit;
 background-size: cover;
 align-self: right;
 position: absolute;
-right: 380px;
-top: -30px;
+right: 20%;
+top: -1.5%;
 background-color: #0079bf;
 
 

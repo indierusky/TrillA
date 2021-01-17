@@ -65,7 +65,8 @@ class ListForm extends React.Component {
                         className="list-input" placeholder="Enter list title..." />
                     {/* <div className="btn-lst-wrap"> */}
                         <button type="submit" className="list-input-btn" disabled={!this.state.title} >Add List </button> 
-                        <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" ><FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
+                        <button className="home-lkk" onClick={(e) => this.handleButtonClick(e)} value = "showList" >
+                        <FontAwesomeIcon   icon={faTimes} className='fstylet'/> </button>
                     {/* </div> */}
                 </form>
 

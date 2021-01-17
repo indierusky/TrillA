@@ -47,14 +47,16 @@ class CardForm extends React.Component {
       if (this.addButtonRef.current.classList !== "hidden"){
 
             this.addButtonRef.current.classList.add("hidden")
+            //   window.location.reload();
+
 
       }else {
 
           this.addButtonRef.current.classList.add("button#addcard.card-start");
           this.addButtonRef2.current.classList.add("hidden");
-
+         
       }
-        // window.location.reload();
+       
         
 
     }

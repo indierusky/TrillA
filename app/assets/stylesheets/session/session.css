@@ -7,8 +7,8 @@ background-color: inherit;
 background-size: cover;
 align-self: right;
 position: absolute;
-right: 40px;
-bottom: 300px;
+right: 2%;
+bottom: 15.6%;
 }
 
 .bottom-img-left{
@@ -20,8 +20,8 @@ background-color: inherit;
 /* background-size: cover; */
 align-self: right;
 position: absolute;
-left: 40px;
-bottom: 300px;
+left: 2%;
+bottom: 15.6%;
 }
 
 
@@ -81,7 +81,7 @@ li.error-list {
  .login-header{
 
  color: #4D4D4D;
- margin-top: -300px;
+ margin-top: -99%;
   position: absolute;
   font-weight: 900;
  }
@@ -89,7 +89,7 @@ li.error-list {
  .login-header-signup{
 
  color: #4D4D4D;
- margin-top: -400px;
+ margin-top: -120%;
   position: absolute;
   font-weight: 900;
  }
@@ -144,7 +144,7 @@ li.error-list {
     display: block;
     /* float: middle; */
     position: absolute;
-    top: -5px;
+    top: -.2%;
     left: 45%;
     /* align-items: center; */
 
