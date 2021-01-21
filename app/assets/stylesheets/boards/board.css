@@ -21,7 +21,9 @@
   margin-top: 10.4%;
   text-align: right;
   border-radius: 4px;
-  
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Nunito:ital@0;1&display=swap');
@@ -249,7 +251,7 @@ div.board-list-item {
   width: 200px;
   height: 90px;
   padding: 8px;
-  justify-content: space-between;
+  justify-content: center;
   /* background-color: #091e4214; */
   background-image: linear-gradient(90deg,#2585d3,#0a4364);
   box-sizing: content-box;
@@ -259,6 +261,10 @@ div.board-list-item {
   box-sizing: border-box;
   cursor: pointer;
   color: #FFFFFF;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+
 }
 
 
@@ -287,6 +293,7 @@ img.tile{
 
   height: 40px;
   width: 40px;
+  
 }
 
 
